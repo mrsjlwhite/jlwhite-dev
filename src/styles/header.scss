@@ -1,15 +1,18 @@
 @import '../styles/styles.scss';
 
 .header {
-    margin-top: 2%;
+    background-color: $color-off-white;
+    display: grid;
+    grid-template-columns: 50vw 1fr;
+    height: 100vh;
+    padding: 2rem;
 }
 
 .text-container {
+    align-self: center;
     animation: fade-in 2.5s;
     position: absolute;
-    right: 5%;
-    top: 30%;
-    z-index: 1;
+    right: 3%;
 }
 
 .header-name {
@@ -19,34 +22,24 @@
 }
 
 .header-meta {
+    align-self: self-end;
     color: $color-sheen-gold;
     font-family: $font-sub-heading;
     font-size: 40px;
-    margin-top: -50px;
-    position: relative;
-    right: -55%;
+    position: absolute;
+    right: 0;
     text-transform: uppercase;
 }
 
-.img-container {
-    overflow: hidden;
-    width: 100%;
-}
-
 .header-img {
-    animation: 2s slide-right 2s forwards;
-    border-bottom-right-radius: 2px;
-    border-top-right-radius: 2px;
-    border: solid $color-white 25px;
+    animation: 1.5s slide-right 2s forwards;
+    border: solid $color-white 26px;
     box-shadow: $box-shadow;
-    height: 70vmin;
-    left: 20px;
+    height: 69vmin;
+    margin-top: 48px;
     object-fit: contain;
-    opacity: .9;
-    position: absolute;
-    top: 20px;
+    opacity: .8;
     transform: translateX(-100%);
-    z-index: 0;
 }
 
 // animations
@@ -65,5 +58,50 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes mini-fade-in {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .4;
+    }
+}
+
+// mobile responsiveness
+@media (max-width: 650px) {
+
+    .header {
+        display: block;
+        padding: 1rem;
+    }
+
+    .header-img {
+        animation: mini-fade-in 2s;
+        height: auto;
+        margin-top: 0;
+        opacity: .4;
+        padding: 5px;
+        transform: translateX(0);
+        width: 90vw;
+    }
+
+    .header-name {
+        font-size: 5em;
+    }
+
+    .header-meta {
+        font-size: 2em;
+        right: 22px;
+    }
+
+    .text-container {
+        max-width: 85vw;
+        text-align: center;
+        top: 25vh;
     }
 }

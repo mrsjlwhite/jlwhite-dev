@@ -14,18 +14,16 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <header className="app-header">
-        <Header></Header>
-      </header>
-      <MyNavbar></MyNavbar>
+    <div className="app-container">
+      <Header></Header>
+      {/* <MyNavbar></MyNavbar>
       <AboutMeBanner></AboutMeBanner>
       <section id='my-experience'>
         <p>gonna be my experience and stuff</p>
       </section>
       <section id='my-links'>
         <p>gonna be links to my stuff and things</p>
-      </section>
+      </section> */}
     </div>
   );
 }

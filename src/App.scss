@@ -1,11 +1,7 @@
 @import './styles/styles.scss';
 
-.app-header {
+.app-container {
   background-color: $color-off-white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 section {

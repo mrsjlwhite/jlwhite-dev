@@ -4,7 +4,8 @@ import { TypeAnimation } from 'react-type-animation';
 
 function Header() {
     return (
-        <div className='header'>
+        <header className="header">
+            <img className='header-img' src={header} alt='Bright blue skies with a green forest, and a Westfalia hidden between the trees.' />
             <div className='text-container'>
                 <span className="header-name">Jeslyn Leon White</span>
                 <TypeAnimation
@@ -24,10 +25,7 @@ function Header() {
                     className='header-meta'
                 />
             </div>
-            <div className='img-container'>
-                <img className='header-img' src={header} alt='Bright blue skies with a green forest, and a Westfalia hidden between the trees.' />
-            </div>
-        </div>
+        </header>
     );
 };
 
