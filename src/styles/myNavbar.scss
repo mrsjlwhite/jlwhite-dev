@@ -2,7 +2,6 @@
 
 .my-navbar {
     background-color: $color-off-white !important;
-    // box-shadow: $box-shadow-bottom;
 }
 
 .nav-links-container {
@@ -10,10 +9,10 @@
 }
 
 .nav-brand {
+    color: $color-rose-quartz !important;
     font-family: $font-heading-title;
     font-size: 35px !important;
     letter-spacing: 1px;
-    color: $color-rose-quartz !important;
 }
 
 .my-nav-link {

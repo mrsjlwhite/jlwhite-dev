@@ -16,8 +16,9 @@ function App() {
   return (
     <div className="app-container">
       <Header></Header>
-      {/* <MyNavbar></MyNavbar>
+      <MyNavbar></MyNavbar>
       <AboutMeBanner></AboutMeBanner>
+      {/* 
       <section id='my-experience'>
         <p>gonna be my experience and stuff</p>
       </section>

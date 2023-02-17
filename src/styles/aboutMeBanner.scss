@@ -1,35 +1,32 @@
 @import '../styles/styles.scss';
 
-#about-me {
+.banner-section {
     background-color: $color-off-white;
-    padding-top: 5%;
+    padding: 2rem 0;
 }
 
 .banner {
-    background-color: $color-rose-quartz;
-    width: 100vw;
-    height: 60vh;
-    display: flex;
-    flex-direction: row;
-    padding: 45px;
     align-items: center;
+    background-color: $color-rose-quartz;
+    display: grid;
+    grid-template-columns: 50vw 1fr;
+    padding: 6rem;
+    width: 100%;
 }
 
 .banner-text-container {
-    width: 70%;
-    height: 100%;
-    padding: 0 10px 30px 40px;
+    background: rgba($color-off-white, 0.2);
+    border-radius: 5px;
+    padding: 20px 30px;
 }
 
 .banner-img-container {
-    width: 30%;
     padding: 30px;
-    height: 100%;
 
     img {
-        max-width: 300px;
-        border-radius: 60%;
-        box-shadow: $box-shadow;
+        border-radius: 50%;
+        height: auto;
+        width: 70vh;
     }
 }
 
@@ -39,4 +36,19 @@
 
 .section-body {
     @include body-text;
+}
+
+@media (max-width: $mobile-width) {
+    .banner {
+        display: block;
+        padding: 2rem 1rem;
+    }
+
+    .banner-img-container {
+        padding: 20px 0;
+
+        img {
+            width: 40vh;
+        }
+    }
 }

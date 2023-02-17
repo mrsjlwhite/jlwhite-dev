@@ -3,7 +3,7 @@ import header from '../imgs/header.jpeg';
 
 function AboutMeBanner() {
     return (
-        <section id='about-me'>
+        <section id='about-me' className='banner-section'>
             <div className="banner">
                 <div className='banner-text-container'>
                     <h4 className='section-title'>about me.</h4>
