@@ -1,11 +1,18 @@
 @import '../styles/styles.scss';
 
+#about-me {
+    background-color: $color-off-white;
+    padding-top: 5%;
+}
+
 .banner {
     background-color: $color-rose-quartz;
     width: 100vw;
-    height: 100vh - 55vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
+    padding: 45px;
+    align-items: center;
 }
 
 .banner-text-container {
