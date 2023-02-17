@@ -1,0 +1,54 @@
+@import '../../styles/styles.scss';
+
+.header {
+    margin-top: 2%;
+}
+
+.header-name {
+    font-family: $font-heading-title;
+    color: $color-rose-quartz;
+    font-size: 95px;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    animation: fade-in 2.5s;
+    z-index: 1;
+}
+
+.img-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.header-img {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    object-fit: contain;
+    animation: 2s slide-right 2s forwards;
+    transform: translateX(-100%);
+    left: 20px;
+    top: 20px;
+    position: absolute;
+    opacity: .9;
+    border: solid $color-white 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 70vmin;
+    z-index: 0;
+}
+
+// animations
+@keyframes slide-right {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
