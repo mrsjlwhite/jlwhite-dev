@@ -1,5 +1,5 @@
-import './header.scss';
-import header from '../../imgs/header.jpeg';
+import '../styles/header.scss';
+import header from '../imgs/header.jpeg';
 import { TypeAnimation } from 'react-type-animation';
 
 function Header() {

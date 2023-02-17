@@ -1,14 +1,14 @@
 @import './styles/styles.scss';
 
 .app-header {
+  background-color: $color-off-white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 section {
   background-color: $color-off-white;
-  margin-bottom: 2%;
+  min-height: 100vh;
 }

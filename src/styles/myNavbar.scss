@@ -1,0 +1,21 @@
+@import '../styles/styles.scss';
+
+.my-navbar {
+    background-color: $color-off-white !important;
+}
+
+.nav-links-container {
+    justify-content: flex-end;
+}
+
+.nav-brand {
+    font-family: $font-heading-title;
+    font-size: 35px !important;
+    letter-spacing: 1px;
+}
+
+.my-nav-link {
+    font-family: $font-sub-heading;
+    font-size: 20px !important;
+    text-transform: lowercase;
+}
