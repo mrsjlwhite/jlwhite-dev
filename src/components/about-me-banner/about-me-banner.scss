@@ -1,0 +1,35 @@
+@import '../../styles/styles.scss';
+
+.banner {
+    background-color: $color-rose-quartz;
+    width: 100vw;
+    height: 100vh - 55vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.banner-text-container {
+    width: 70%;
+    height: 100%;
+    padding: 0 10px 30px 40px;
+}
+
+.banner-img-container {
+    width: 30%;
+    padding: 30px;
+    height: 100%;
+
+    img {
+        max-width: 300px;
+        border-radius: 60%;
+        box-shadow: $box-shadow;
+    }
+}
+
+.section-title {
+    @include section-title-text;
+}
+
+.section-body {
+    @include body-text;
+}
