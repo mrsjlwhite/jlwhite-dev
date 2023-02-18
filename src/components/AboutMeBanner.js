@@ -1,5 +1,5 @@
 import '../styles/aboutMeBanner.scss';
-import header from '../imgs/header.jpeg';
+import me from '../imgs/me.jpeg';
 
 function AboutMeBanner() {
     return (
@@ -10,7 +10,7 @@ function AboutMeBanner() {
                     <p className='section-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div className='banner-img-container'>
-                    <img src={header} alt='Jeslyn' />
+                    <img src={me} alt='Jeslyn' />
                 </div>
             </div>
         </section>
