@@ -9,9 +9,9 @@ import MyLinks from "./components/MyLinks";
 function App() {
 
   useEffect(() => {
-    let url = window.location.href.split("/");
-    let target = url[url.length - 1].toLowerCase();
-    let element = document.getElementById(target);
+    const url = window.location.href.split("/");
+    const target = url[url.length - 1].toLowerCase();
+    const element = document.getElementById(target);
     element && element.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
 

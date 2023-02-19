@@ -11,6 +11,7 @@ function MyLinks() {
     return (
         <section id='my-links' className='links-section'>
             <Container>
+                <h4 className='section-title'>my links.</h4>
                 <Button size='lg' className='link-button'
                     onClick={() => openLink(LinkUrls.get('github'))}>
                     <i className="devicon-github-original"></i>
