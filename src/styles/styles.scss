@@ -1,7 +1,7 @@
 // fonts
 $font-sub-heading: 'Josefin Sans', sans-serif;
 $font-heading-title: 'La Belle Aurore', cursive;
-$font-body: 'Playfair Display', serif;
+$font-body: 'Roboto Slab', serif;
 
 // colors
 $color-white: #F5F0EE;
@@ -26,7 +26,7 @@ $mobile-width: 650px;
 @mixin body-text {
     font-family: $font-body;
     color: $color-black;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: .4px;
     font-size: 18px;
 }
