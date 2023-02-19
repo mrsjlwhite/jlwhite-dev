@@ -3,6 +3,7 @@ import './App.scss';
 import AboutMeBanner from './components/AboutMeBanner';
 import Header from './components/Header';
 import MyNavbar from './components/MyNavbar';
+import ExperiencesGallery from "./components/ExperiencesGallery";
 
 function App() {
 
@@ -18,10 +19,8 @@ function App() {
       <Header></Header>
       <MyNavbar></MyNavbar>
       <AboutMeBanner></AboutMeBanner>
+      <ExperiencesGallery></ExperiencesGallery>
       {/* 
-      <section id='my-experience'>
-        <p>gonna be my experience and stuff</p>
-      </section>
       <section id='my-links'>
         <p>gonna be links to my stuff and things</p>
       </section> */}
