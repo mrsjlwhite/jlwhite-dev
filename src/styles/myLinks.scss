@@ -1,0 +1,68 @@
+@import '../styles/styles.scss';
+
+.links-section {
+    height: 65vh;
+
+
+    .container {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
+.link-button {
+    background-color: rgba($color-sheen-gold, 0.2) !important;
+    border: solid 2px rgba($color-sheen-gold, 0.8) !important;
+    margin: 0 2rem;
+    padding: 2rem 1rem 0 1rem !important;
+    width: 21vw;
+
+    i {
+        font-size: 250px;
+    }
+
+    .button-text {
+        display: block;
+        opacity: 0;
+
+        @include section-title-text;
+    }
+
+    &:hover {
+        background-color: rgba($color-sheen-gold, 0.6) !important;
+
+
+        .button-text {
+            color: rgba($color-off-white, 0.9) !important;
+            opacity: 1;
+        }
+    }
+
+    &:active {
+        background-color: rgba($color-sheen-gold, 0.8) !important;
+    }
+}
+
+// mobile responsiveness
+@media (max-width: $mobile-width) {
+
+    .links-section {
+
+        .container {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    .link-button {
+        margin: 1rem 1.5rem;
+        width: 90%;
+
+        .button-text {
+            color: rgba($color-off-white, 0.9) !important;
+            opacity: 1;
+        }
+    }
+}

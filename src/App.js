@@ -4,6 +4,7 @@ import AboutMeBanner from './components/AboutMeBanner';
 import Header from './components/Header';
 import MyNavbar from './components/MyNavbar';
 import ExperiencesGallery from "./components/ExperiencesGallery";
+import MyLinks from "./components/MyLinks";
 
 function App() {
 
@@ -20,10 +21,7 @@ function App() {
       <MyNavbar></MyNavbar>
       <AboutMeBanner></AboutMeBanner>
       <ExperiencesGallery></ExperiencesGallery>
-      {/* 
-      <section id='my-links'>
-        <p>gonna be links to my stuff and things</p>
-      </section> */}
+      <MyLinks></MyLinks>
     </div>
   );
 }
