@@ -8,3 +8,12 @@
     padding: 1rem;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .app-container {
+    footer {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}

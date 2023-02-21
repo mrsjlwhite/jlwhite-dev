@@ -49,6 +49,7 @@
 @media (max-width: $mobile-width) {
 
     .links-section {
+        height: unset;
 
         .container {
             flex-direction: column;
