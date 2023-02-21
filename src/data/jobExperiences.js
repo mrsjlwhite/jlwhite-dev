@@ -23,7 +23,6 @@ const JobExperiences = [
     {
         name: 'Tresta',
         time: 'Aug 2021 to Jan 2023',
-        style: '',
         title: 'Software Developer',
         description: 'Tresta is a powerful virtual phone application that helps businesses create and fully manage their business phone numbers, auto-assistants, and team communication, all from any device.',
         fullDescription: [
@@ -62,7 +61,6 @@ const JobExperiences = [
     {
         name: 'IAPMO',
         time: 'Apr 2018 to Aug 2021',
-        style: '',
         title: 'Applications & Web Developer',
         description: 'Founded in 1926, IAPMO coordinates the development and adaptation of plumbing, mechanical, swimming pool and solar energy codes to meet the specific needs of individual jurisdictions across North America and abroad.',
         fullDescription: [
@@ -104,7 +102,6 @@ const JobExperiences = [
     {
         name: 'Freelance',
         time: 'Jan 2018 to Apr 2018',
-        style: '',
         title: 'Web Developer',
         description: 'Working closely with remote clients to provide their web-app dreams.',
         fullDescription: [
@@ -137,7 +134,6 @@ const JobExperiences = [
     {
         name: 'Laso Concepts',
         time: 'Jul 2017 to Jan 2018',
-        style: '',
         title: 'Full Stack Developer',
         description: 'Laso Concepts is a platform for connecting healthcare institutions, patients, and support teams. The MVP was built as a mobile responsive single page application. It featured thorough user onboarding; multiple profile support; hierarchical group messaging; direct messaging; on-site and email notifications; blogging and content management system; and content moderation.',
         fullDescription: [
@@ -175,7 +171,6 @@ const JobExperiences = [
     {
         name: 'Prime Healthcare',
         time: 'Feb 2016 to Jul 2017',
-        style: '',
         title: 'Marketing Internal Communications Coordinator',
         description: 'Prime Healthcare is an award-winning health system operating 45 hospitals and more than 300 outpatient locations in 14 states, providing over 2.6 million patient visits annually. It is one of the nation\'s leading health systems dedicated to providing the highest quality healthcare.',
         fullDescription: [

@@ -3,7 +3,7 @@ import '../styles/experienceCard.scss'
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
-function ExperienceCard({ job }) {
+function ExperienceCard({ job, showModal }) {
     const defaultStyle = 'card-text-container';
     const [cardContainerStyle, setCardContainerStyle] = useState(defaultStyle);
 
@@ -48,7 +48,13 @@ function ExperienceCard({ job }) {
                                         </ul>
                                     </div>
                                 }
-                                <Button variant="light" size="lg" className='card-button'>Learn More</Button>
+                                <Button
+                                    variant="light"
+                                    size="lg"
+                                    className='card-button'
+                                    onClick={() => showModal(job)}>
+                                    Learn More
+                                </Button>
                             </div>
                         </div>
                     </Card.Body>

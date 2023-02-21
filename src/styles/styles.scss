@@ -35,3 +35,18 @@ $mobile-width: 650px;
     @include body-text;
     font-size: 16px;
 }
+
+@mixin green-button {
+    color: $color-spring-green !important;
+    font-family: $font-sub-heading !important;
+
+    &:hover {
+        background-color: rgba($color-spring-green, 0.2) !important;
+    }
+
+    &:active {
+        background-color: rgba($color-spring-green, 0.4) !important;
+        box-shadow: 0 2px rgba($color-black, 0.2);
+        transform: translateY(4px);
+    }
+}
