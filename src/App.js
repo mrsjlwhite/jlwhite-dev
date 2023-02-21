@@ -22,6 +22,9 @@ function App() {
       <AboutMeBanner></AboutMeBanner>
       <ExperiencesGallery></ExperiencesGallery>
       <MyLinks></MyLinks>
+      <footer>
+        Copyright &#169; Developerd by J.L. White
+      </footer>
     </div>
   );
 }

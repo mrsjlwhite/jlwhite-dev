@@ -2,4 +2,9 @@
 
 .app-container {
   background-color: $color-off-white;
+
+  footer {
+    @include body-text;
+    padding: 1rem;
+  }
 }
