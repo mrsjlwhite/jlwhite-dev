@@ -30,3 +30,8 @@ $mobile-width: 650px;
     letter-spacing: .4px;
     font-size: 18px;
 }
+
+@mixin small-body-text {
+    @include body-text;
+    font-size: 16px;
+}

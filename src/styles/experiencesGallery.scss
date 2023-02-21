@@ -1,108 +1,14 @@
 @import '../styles/styles.scss';
 
-.experience-section {
-    background-color: $color-off-white;
-    padding: 2rem 0;
-
-    .card-group {
-        display: flex;
-        height: 90vh;
-        justify-content: center;
-        overflow: hidden;
-        width: 90vw;
-    }
-}
-
-.experience-card {
-    background-color: rgba($color-white, 0.8) !important;
-    border-radius: 25px !important;
-    border: solid rgba($color-spring-green, 0.2) 2px !important;
-    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 28%);
-    height: 99% !important;
-    margin: 0.2rem 1.5rem;
-    min-width: 38vw !important;
-}
-
-.card-text-container {
-    display: grid;
-    grid-gap: .5rem;
-    grid-template-columns: 50% 1fr;
-    @include body-text;
-}
-
-.card-desc {
-    font-size: 17px;
-    padding: 1rem 0 3rem 2rem !important;
-}
-
-.card-title {
-    color: $color-sheen-gold;
-    font-size: 36px !important;
-    margin-bottom: 1rem !important;
-    text-align: center;
-    @include section-title-text;
-}
-
-.arrow-icon {
-    color: $color-spring-green;
-    cursor: pointer;
-    opacity: .6;
-
-    &:hover {
-        opacity: .9;
-    }
-}
-
-.section-body {
+.loading-icon-container {
     align-items: center;
     display: flex;
     justify-content: center;
 }
 
-.list-title {
-    @include section-title-text;
-    font-size: 30px;
-    text-transform: lowercase;
-    color: $color-sheen-gold;
-    text-align: center;
-}
-
-.loading-icon {
-    align-self: center;
-}
-
-.hide {
-    animation: fadeinout .5s linear forwards;
-}
-
-@keyframes fadeinout {
-    0% {
-        opacity: 0.6;
-    }
-
-    50% {
-        opacity: 0.2;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.show {
-    animation: display 1s linear forwards;
-}
-
-@keyframes display {
-    0% {
-        opacity: 0.2;
-    }
-
-    50% {
-        opacity: 0.6;
-    }
-
-    100% {
-        opacity: 1;
-    }
+.card-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
 }

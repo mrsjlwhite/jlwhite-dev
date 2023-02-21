@@ -1,0 +1,104 @@
+@import '../styles/styles.scss';
+
+.experience-card {
+    background-color: rgba($color-white, 0.8) !important;
+    border-radius: 25px !important;
+    border: solid rgba($color-spring-green, 0.2) 2px !important;
+    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 28%);
+    height: 38rem !important;
+    margin: 0.2rem 1.5rem;
+    width: 38rem !important;
+}
+
+.card-title {
+    color: $color-sheen-gold !important;
+    font-size: 36px !important;
+    margin-bottom: 1rem !important;
+    text-align: center;
+    @include section-title-text;
+}
+
+.card-text-container {
+    align-content: center;
+    justify-content: center;
+
+    @include small-body-text;
+}
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 50% 1fr;
+}
+
+.card-desc {
+    padding: 0 0.5rem !important;
+}
+
+.card-list-button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-title {
+    color: $color-sheen-gold !important;
+    font-size: 30px !important;
+    text-align: center;
+    text-transform: lowercase;
+    @include section-title-text;
+}
+
+.card-button {
+    color: $color-spring-green !important;
+    font-family: $font-sub-heading !important;
+
+    &:hover {
+        background-color: rgba($color-spring-green, 0.2) !important;
+    }
+
+    &:active {
+        background-color: rgba($color-spring-green, 0.4) !important;
+        box-shadow: 0 2px rgba($color-black, 0.2);
+        transform: translateY(4px);
+    }
+}
+
+.card-footer {
+    text-align: center;
+    min-height: 40px;
+
+    i {
+        margin: 5px 10px;
+    }
+}
+
+// mobile responsiveness
+@media (max-width: $mobile-width) {
+
+    .experience-card {
+        height: 45rem !important;
+    }
+
+    .card-text-container {
+        display: block;
+    }
+
+    .list-title {
+        font-size: 20px;
+    }
+
+    .card-desc,
+    .list-body {
+        font-size: 14px;
+    }
+
+    .card-button {
+        margin-top: 3%;
+        width: 85%;
+    }
+}
