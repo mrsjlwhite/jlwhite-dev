@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jlwhite-dev/static/css/main.650a40f7.css",
+    "main.js": "/jlwhite-dev/static/js/main.3639f249.js",
+    "static/media/header.jpeg": "/jlwhite-dev/static/media/header.4b07681032f6d5d6f4d7.jpeg",
+    "static/media/me.jpeg": "/jlwhite-dev/static/media/me.a5a9c1cc2c11a460511f.jpeg",
+    "index.html": "/jlwhite-dev/index.html",
+    "main.650a40f7.css.map": "/jlwhite-dev/static/css/main.650a40f7.css.map",
+    "main.3639f249.js.map": "/jlwhite-dev/static/js/main.3639f249.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.650a40f7.css",
+    "static/js/main.3639f249.js"
+  ]
+}

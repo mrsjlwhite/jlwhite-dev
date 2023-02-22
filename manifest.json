@@ -1,0 +1,15 @@
+{
+  "short_name": "JL White Dev",
+  "name": "Jeslyn's Software Developer Site",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#BAA1AD",
+  "background_color": "#F0E8E5"
+}
