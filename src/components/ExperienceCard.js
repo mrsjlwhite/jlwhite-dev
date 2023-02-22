@@ -20,9 +20,9 @@ function ExperienceCard({ job, showModal }) {
         <>
             {!job ? null
                 :
-                <Card className='experience-card'>
+                <Card id='experienceCard'>
                     <Card.Body>
-                        <Card.Title className='card-title'>
+                        <Card.Title id='experienceCardTitle'>
                             {job.name}
                         </Card.Title>
                         <div className={cardContainerStyle}>

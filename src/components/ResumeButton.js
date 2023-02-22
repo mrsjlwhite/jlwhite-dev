@@ -12,7 +12,7 @@ function ResumeButton({ jobName }) {
                 <Button
                     variant="light"
                     size="lg"
-                    className='resume-button'
+                    id='resumeButton'
                     onClick={goToResume}>
                     Download Resume
                 </Button>

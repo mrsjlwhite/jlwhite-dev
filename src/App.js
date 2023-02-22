@@ -23,7 +23,7 @@ function App() {
       <ExperiencesGallery></ExperiencesGallery>
       <MyLinks></MyLinks>
       <footer>
-        Copyright &#169; Developerd by J.L. White
+        Copyright &#169; Developerd by J.L. White 🤍
       </footer>
     </div>
   );
