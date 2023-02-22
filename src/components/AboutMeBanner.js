@@ -1,5 +1,7 @@
 import '../styles/aboutMeBanner.scss';
 import me from '../imgs/me.jpeg';
+import Image from 'react-bootstrap/Image';
+import blurb from '../data/meBlurb';
 
 function AboutMeBanner() {
     return (
@@ -7,10 +9,21 @@ function AboutMeBanner() {
             <div className="banner">
                 <div className='banner-text-container'>
                     <h4 className='section-title'>about me.</h4>
-                    <p className='section-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p className='section-body'>
+                        {blurb.about}
+                    </p>
+                    <h4 className='section-title'>fun facts about me.</h4>
+                    <p className='section-body'>
+                        {blurb.fun}
+                    </p>
                 </div>
                 <div className='banner-img-container'>
-                    <img src={me} alt='Jeslyn' />
+                    <Image
+                        fluid={true}
+                        rounded={true}
+                        src={me}
+                        alt='Jeslyn'>
+                    </Image>
                 </div>
             </div>
         </section>

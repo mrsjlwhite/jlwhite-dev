@@ -10,7 +10,7 @@
     background-color: $color-rose-quartz;
     display: grid;
     grid-template-columns: 50vw 1fr;
-    padding: 6rem;
+    padding: 5rem;
     width: 100%;
 }
 
@@ -21,13 +21,7 @@
 }
 
 .banner-img-container {
-    padding: 30px;
-
-    img {
-        border-radius: 50%;
-        height: auto;
-        width: 70vh;
-    }
+    padding: 6em;
 }
 
 .section-title {
