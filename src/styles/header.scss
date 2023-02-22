@@ -8,6 +8,18 @@
     padding: 2rem;
 }
 
+.hero-clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../imgs/clouds.png) 0px 100% repeat-x;
+    -webkit-animation: cloudLoop 80s linear infinite;
+    animation: cloudLoop 80s linear infinite;
+    z-index: 100;
+}
+
 .text-container {
     align-self: center;
     animation: fade-in 2.5s;
@@ -38,7 +50,7 @@
     height: 69vmin;
     margin-top: 48px;
     object-fit: contain;
-    opacity: .8;
+    opacity: .9;
     transform: translateX(-100%);
 }
 
@@ -61,14 +73,38 @@
     }
 }
 
-@keyframes mini-fade-in {
+@keyframes almost-fade-in {
 
     0% {
         opacity: 0;
     }
 
     100% {
-        opacity: .4;
+        opacity: .9;
+    }
+}
+
+@-webkit-keyframes cloudLoop {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes cloudLoop {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0);
     }
 }
 
@@ -81,10 +117,9 @@
     }
 
     .header-img {
-        animation: mini-fade-in 2s;
+        animation: almost-fade-in 2s;
         height: auto;
         margin-top: 0;
-        opacity: .4;
         padding: 5px;
         transform: translateX(0);
         width: 90vw;
