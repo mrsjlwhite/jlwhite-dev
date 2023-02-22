@@ -2,17 +2,19 @@ import '../styles/aboutMe.scss';
 import me from '../imgs/me.jpeg';
 import Image from 'react-bootstrap/Image';
 import blurb from '../data/meBlurb';
-import skillset from '../data/skillset';
 import { useEffect, useState } from 'react';
 import fun1 from '../imgs/fun1.jpg';
 import fun2 from '../imgs/fun2.jpeg';
 import fun3 from '../imgs/fun3.jpeg';
 import fun4 from '../imgs/fun4.jpeg';
 
-function AboutMe() {
+function AboutMe({ skillset }) {
     const [skills, setSkills] = useState([]);
 
     useEffect(() => {
+        if (!skillset.length) {
+            return;
+        }
         const unsortedSkills = Array.from(skillset);
         const divideBy = unsortedSkills.length / 4;
         const array1 = unsortedSkills.splice(0, divideBy);

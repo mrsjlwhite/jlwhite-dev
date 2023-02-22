@@ -1,14 +1,13 @@
 import '../styles/experiencesGallery.scss';
 import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
-import JobExperiences from '../data/jobExperiences';
 import { useMediaQuery } from 'react-responsive';
 import Carousel from 'react-bootstrap/Carousel';
 import ExperienceCard from './ExperienceCard';
 import LoadingIcon from './LoadingIcon';
 import MyModal from './MyModal';
 
-function ExperiencesGallery() {
+function ExperiencesGallery({ experiences }) {
     const defaultCarouselTime = 5000;
 
     const [jobs, setJobs] = useState([]);
@@ -21,13 +20,15 @@ function ExperiencesGallery() {
     const isMobile = useMediaQuery({ query: `(max-width: 650px)` });
 
     useEffect(() => {
-        const jobs = Array.from(JobExperiences);
-
-        if (isMobile) {
-            return setJobs(jobs);
+        if (!experiences.length) {
+            return;
         }
 
-        const jobPairs = jobs.reduce((accumulator, currentValue, currentIndex, array) => {
+        if (isMobile) {
+            return setJobs(experiences);
+        }
+
+        const jobPairs = experiences.reduce((accumulator, currentValue, currentIndex, array) => {
             if (currentIndex % 2 === 0) {
                 accumulator.push(array.slice(currentIndex, currentIndex + 2));
             }
@@ -35,7 +36,7 @@ function ExperiencesGallery() {
         }, []);
 
         setJobs(jobPairs);
-    }, [isMobile]);
+    }, [isMobile, experiences]);
 
     const handleSelect = (selectedIndex) => setIndex(selectedIndex);
 
