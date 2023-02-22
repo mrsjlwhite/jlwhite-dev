@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import './App.scss';
-import AboutMeBanner from './components/AboutMeBanner';
+import AboutMe from './components/AboutMe';
 import Header from './components/Header';
 import MyNavbar from './components/MyNavbar';
 import ExperiencesGallery from "./components/ExperiencesGallery";
@@ -19,7 +19,7 @@ function App() {
     <div className="app-container">
       <Header></Header>
       <MyNavbar></MyNavbar>
-      <AboutMeBanner></AboutMeBanner>
+      <AboutMe></AboutMe>
       <ExperiencesGallery></ExperiencesGallery>
       <MyLinks></MyLinks>
       <footer>

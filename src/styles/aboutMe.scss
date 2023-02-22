@@ -32,6 +32,12 @@
     @include body-text;
 }
 
+.skillset-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
 @media (max-width: $mobile-width) {
     .banner {
         display: block;
