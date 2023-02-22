@@ -1,4 +1,4 @@
-# My About-Me Site
+# My About-Me Site 🌲🏕️☁️
 
 ## About 🍵
 This is a react app to talk a lil' about me, and for me to add some project examples along the way.
@@ -7,4 +7,4 @@ This is a react app to talk a lil' about me, and for me to add some project exam
 <image src='./src/imgs/siteSample.png'>
 
 ### Visit 📍
-[jlwhite.dev](www.jlwhite.dev)
+<a href="https://www.jlwhite.dev" target="_blank">jlwhite.dev</a>
