@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '../styles/experienceCard.scss'
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import ResumeButton from './ResumeButton';
 
 function ExperienceCard({ job, showModal }) {
     const defaultStyle = 'card-text-container';
@@ -15,7 +16,6 @@ function ExperienceCard({ job, showModal }) {
         }
     }, [job])
 
-
     return (
         <>
             {!job ? null
@@ -28,6 +28,7 @@ function ExperienceCard({ job, showModal }) {
                         <div className={cardContainerStyle}>
                             <Card.Text className='card-desc'>
                                 {job.description}
+                                <ResumeButton jobName={job.name}></ResumeButton>
                             </Card.Text>
                             <div className='card-list-button-container'>
                                 {!job.tech || !job.tech.length

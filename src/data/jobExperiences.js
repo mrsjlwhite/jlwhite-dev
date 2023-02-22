@@ -180,6 +180,46 @@ const JobExperiences = [
         ],
         tech: [],
         techIcons: []
+    },
+    {
+        name: 'TL;DR',
+        time: '2017 to Present',
+        title: 'Fullstack Software Developer',
+        description: 'I\'ve enjoyed working in both backend and frontend development for both web and mobile applications. I\'ve worked on projects solo as well as in a team setting, where I strive to be a great team player.',
+        fullDescription: [
+            'Developed from UX/UI design mockups, and have gathered AC and designed mockups based on cliental.',
+            'Built mobile applications for both iOS and Android.',
+            'Built modern and seamless user experience that was cross-browser-compatible.',
+            'Expanded and improved upon existing APIs, internal and third-party systems.',
+            'Contributed in building enterprise-level, multi-tiered, MVC web application, utilizing object-oriented-programming.',
+            'Full Stack development, building features from the data layer up to the presentation layer.',
+            'Built RESTful APIs using WebAPI, on top of MVC frameworks, with back-end data validation.',
+            'Implemented Microsoft Office Interop and ClosedXML for automated Excel generation, Excel importing and processing, displaying and styling the data per the specifications along with multiple document layouts.',
+            'Developed with test driven development, resulting in a testable and maintainable isolated implementation.'
+        ],
+        tech: [
+            'React Native',
+            'TypeScript',
+            'JavaScript',
+            'Bootstrap',
+            'CSS3',
+            'HTML5',
+            'C#',
+            'Entity Framework',
+            'MySQL',
+            'GitHub'
+        ],
+        techIcons: [
+            react,
+            typescript,
+            javascript,
+            bootstrap,
+            css,
+            html5,
+            csharp,
+            mysql,
+            github
+        ]
     }
 ];
 

@@ -1,0 +1,22 @@
+@import '../styles/styles.scss';
+
+.resume-button {
+    margin: auto;
+    margin-top: 1em;
+    display: flex !important;
+    color: $color-rose-quartz !important;
+    font-family: $font-sub-heading !important;
+    font-weight: 400;
+    background-color: rgba($color-sheen-gold, 0.1) !important;
+
+    &:hover {
+        background-color: rgba($color-sheen-gold, 0.2) !important;
+        border-color: rgba($color-sheen-gold, 0.4) !important;
+    }
+
+    &:active {
+        background-color: rgba($color-sheen-gold, 0.4) !important;
+        box-shadow: 0 2px rgba($color-black, 0.2);
+        transform: translateY(4px);
+    }
+}
