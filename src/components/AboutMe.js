@@ -1,14 +1,13 @@
 import '../styles/aboutMe.scss';
 import me from '../imgs/me.jpeg';
 import Image from 'react-bootstrap/Image';
-import blurb from '../data/meBlurb';
 import { useEffect, useState } from 'react';
 import fun1 from '../imgs/fun1.jpg';
 import fun2 from '../imgs/fun2.jpeg';
 import fun3 from '../imgs/fun3.jpeg';
 import fun4 from '../imgs/fun4.jpeg';
 
-function AboutMe({ skillset }) {
+function AboutMe({ aboutBlurb, funBlurb, skillset }) {
     const [skills, setSkills] = useState([]);
 
     useEffect(() => {
@@ -30,7 +29,7 @@ function AboutMe({ skillset }) {
                 <div className='banner-text-container'>
                     <h4 className='section-title'>about me.</h4>
                     <p className='section-body'>
-                        {blurb.about}
+                        {aboutBlurb}
                     </p>
                     <h4 className='section-title'>my skills.</h4>
                     <ul className='section-body skillset-list'>
@@ -52,7 +51,7 @@ function AboutMe({ skillset }) {
                     </ul>
                     <h4 className='section-title'>fun facts about me.</h4>
                     <p className='section-body'>
-                        {blurb.fun}
+                        {funBlurb}
                     </p>
                 </div>
                 <div className='banner-img-container'>
