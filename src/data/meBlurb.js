@@ -7,7 +7,7 @@ const blurb = {
             I enjoy working on solo work as well as collaborative projects, as long as I get to code. ☕️💻
         `,
     fun: `
-        I'm a wannabe gamer who loves roguelites and farming sims, and who loves to go on hikes with her hubby and fur-baby. 🐾
+        I'm in love with caramel coffee, roguelites and farming sims, camping in our Westfalia, and going on hikes with my hubby and fur-baby. 🐾
         `
 };
 

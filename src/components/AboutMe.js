@@ -4,10 +4,14 @@ import Image from 'react-bootstrap/Image';
 import blurb from '../data/meBlurb';
 import skillset from '../data/skillset';
 import { useEffect, useState } from 'react';
+import fun1 from '../imgs/fun1.jpg';
+import fun2 from '../imgs/fun2.jpeg';
+import fun3 from '../imgs/fun3.jpeg';
+import fun4 from '../imgs/fun4.jpeg';
 
 function AboutMe() {
     const [skills, setSkills] = useState([]);
-    
+
     useEffect(() => {
         const unsortedSkills = Array.from(skillset);
         const divideBy = unsortedSkills.length / 4;
@@ -19,8 +23,8 @@ function AboutMe() {
     }, []);
 
     return (
-        <section id='about-me' className='banner-section'>
-            <div className="banner">
+        <section id='about-me' className='about-me-section'>
+            <div className='about-me-banner'>
                 <div className='banner-text-container'>
                     <h4 className='section-title'>about me.</h4>
                     <p className='section-body'>
@@ -57,6 +61,24 @@ function AboutMe() {
                         alt='Jeslyn'>
                     </Image>
                 </div>
+            </div>
+            <div className='about-me-gallery'>
+                <Image
+                    src={fun1}
+                    fluid={true}>
+                </Image>
+                <Image
+                    src={fun2}
+                    fluid={true}>
+                </Image>
+                <Image
+                    src={fun3}
+                    fluid={true}>
+                </Image>
+                <Image
+                    src={fun4}
+                    fluid={true}>
+                </Image>
             </div>
         </section>
     )
