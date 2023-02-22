@@ -1,5 +1,5 @@
-# My About-Me Site 🌲🏕️☁️
-## _est. Feb 2023_
+# My About-Me Site 🌲🏕️☁️ _est. Feb 2023_
+[![pages-build-deployment](https://github.com/mrsjlwhite/jlwhite-dev/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/mrsjlwhite/jlwhite-dev/actions/workflows/pages/pages-build-deployment)
 
 ## About 🍵
 This is a react app to talk a lil' about me, and for me to add some project examples along the way.
@@ -9,4 +9,3 @@ This is a react app to talk a lil' about me, and for me to add some project exam
 
 ### Visit 📍
 <a href="https://www.jlwhite.dev" target="_blank">jlwhite.dev</a>
-[![pages-build-deployment](https://github.com/mrsjlwhite/jlwhite-dev/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/mrsjlwhite/jlwhite-dev/actions/workflows/pages/pages-build-deployment)
