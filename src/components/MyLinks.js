@@ -23,7 +23,7 @@ function MyLinks() {
                     <span className='button-text'>LinkedIn</span>
                 </Button>
                 <Button size='lg' className='link-button' onClick={sendEmail}>
-                    <EnvelopeHeart size={250}></EnvelopeHeart>
+                    <EnvelopeHeart size={100}></EnvelopeHeart>
                     <span className='button-text'>Email Me</span>
                 </Button>
             </Container>

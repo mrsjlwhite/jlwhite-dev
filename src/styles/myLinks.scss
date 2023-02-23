@@ -16,18 +16,18 @@
     background-color: rgba($color-sheen-gold, 0.2) !important;
     border: solid 2px rgba($color-sheen-gold, 0.8) !important;
     margin: 0 2rem;
-    padding: 2rem 1rem 0 1rem !important;
-    width: 21vw;
+    padding: 1rem 1.5rem 0 !important;
 
     i {
-        font-size: 250px;
+        font-size: 100px;
+        padding: 0 10px;
     }
 
     .button-text {
-        display: block;
-        opacity: 0;
-
         @include section-title-text;
+        display: block;
+        font-size: 30px;
+        opacity: 0;
     }
 
     &:hover {
@@ -59,7 +59,6 @@
 
     .link-button {
         margin: 1rem 1.5rem;
-        width: 90%;
 
         .button-text {
             color: rgba($color-off-white, 0.9) !important;
