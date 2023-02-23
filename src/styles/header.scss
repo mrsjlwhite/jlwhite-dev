@@ -76,8 +76,11 @@
 @media (max-width: $mobile-width) {
 
     .header {
-        display: block;
-        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .header-img {
@@ -96,12 +99,12 @@
 
     .header-meta {
         font-size: 2em;
-        right: 22px;
+        left: 0;
     }
 
     .text-container {
-        max-width: 85vw;
+        padding: 0 1rem;
         text-align: center;
-        top: 25vh;
+        top: 36vh;
     }
 }
