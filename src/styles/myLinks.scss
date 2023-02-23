@@ -3,7 +3,6 @@
 .links-section {
     height: 65vh;
 
-
     .container {
         align-items: center;
         display: flex;
@@ -50,6 +49,7 @@
 
     .links-section {
         height: unset;
+        margin-top: 10%;
 
         .container {
             flex-direction: column;

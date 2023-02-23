@@ -42,18 +42,20 @@ function App() {
     fetch('https://gitconnected.com/v1/portfolio/mrsjlwhite')
       .then(res => res.json())
       .then(resume => {
-        setResumeAbout(resume.basics.summary);
+        const { basics, interests, work, skills } = resume;
+        setResumeAbout(basics.summary);
 
-        setResumeFun(resume.interests[resume.interests.length - 1].name);
+        setResumeFun(interests[0].name);
 
-        const jobs = resume.work.map(buildExperienceCard);
+        const jobs = work.map(buildExperienceCard);
         setResumeJobs(jobs);
 
-        const skillNames = resume.skills.map((skillset) => skillset.name);
+        const skillNames = skills.map((skillset) => skillset.name);
         setResumeSkills(skillNames);
 
         setFetchingData(false);
-      });
+      })
+      .catch((err) => console.error(`🚨Issue getting resume data: ${err}`));
   }, []);
 
   useEffect(() => {
