@@ -7,7 +7,7 @@ function Header() {
         <header className="header">
             <img className='header-img' src={header} alt='Bright blue skies with a green forest, and a Westfalia hidden between the trees.' />
             <div className='text-container'>
-                <span className="header-name">Jeslyn Leon White</span>
+                <span className="header-name">Jeslyn Le&oacute;n White</span>
                 <TypeAnimation
                     sequence={[
                         'developer', // Types
