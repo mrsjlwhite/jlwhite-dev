@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image';
 import { useEffect, useState } from 'react';
 import fun1 from '../imgs/fun1.jpg';
 import fun2 from '../imgs/fun2.jpeg';
-import fun3 from '../imgs/fun3.jpeg';
+import fun3 from '../imgs/fun3.jpg';
 import fun4 from '../imgs/fun4.jpeg';
 
 function AboutMe({ aboutBlurb, funBlurb, skillset }) {
