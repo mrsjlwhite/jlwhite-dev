@@ -16,28 +16,29 @@ function App() {
   const [resumeFun, setResumeFun] = useState('');
   const [fetchingData, setFetchingData] = useState(true);
 
-  const buildExperienceCard = (work) => {
-    const startDate = new Date(work.startDate).toLocaleDateString('en-us', { year: "numeric", month: "short" });
-    const endDate = new Date(work.endDate).toLocaleDateString('en-us', { year: "numeric", month: "short" });
-
-    const techStack = work.highlights[work.highlights.length - 1];
-    const techStackNames = techStack.replace('Technologies used: ', '').split(',');
-
-    const jobIcons = jobTechIcons.get(work.name);
-    const icons = jobIcons ? jobIcons : [];
-
-    return {
-      name: work.company,
-      time: `${startDate} to ${endDate}`,
-      title: work.position,
-      description: work.summary,
-      fullDescription: work.highlights.splice(0, work.highlights.length - 1),
-      tech: techStackNames,
-      techIcons: icons
-    }
-  };
-
   useEffect(() => {
+    const buildExperienceCard = (work) => {
+      const dateOptions = { year: "numeric", month: "short" };
+      const startDate = new Date(work.startDate).toLocaleDateString('en-us', dateOptions);
+      const endDate = new Date(work.endDate).toLocaleDateString('en-us', dateOptions);
+
+      const techStack = work.highlights[work.highlights.length - 1];
+      const techStackNames = techStack.replace('Technologies used: ', '').split(',');
+
+      const jobIcons = jobTechIcons.get(work.name);
+      const icons = jobIcons ? jobIcons : [];
+
+      return {
+        name: work.company,
+        time: `${startDate} to ${endDate}`,
+        title: work.position,
+        description: work.summary,
+        fullDescription: work.highlights.splice(0, work.highlights.length - 1),
+        tech: techStackNames,
+        techIcons: icons
+      }
+    };
+
     fetch('https://gitconnected.com/v1/portfolio/mrsjlwhite')
       .then(res => res.json())
       .then(resume => {
@@ -59,7 +60,10 @@ function App() {
     const url = window.location.href.split("/");
     const target = url[url.length - 1].toLowerCase();
     const element = document.getElementById(target);
-    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!element) {
+      return;
+    }
+    element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
   }, []);
 
   return (
