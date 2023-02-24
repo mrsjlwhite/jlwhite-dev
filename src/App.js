@@ -8,6 +8,7 @@ import MyLinks from "./components/MyLinks";
 import LoadingIcon from "./components/LoadingIcon";
 import { Container } from "react-bootstrap";
 import jobTechIcons from "./data/jobTechIcons";
+import MyFooter from './components/MyFooter';
 
 function App() {
   const [resumeJobs, setResumeJobs] = useState([]);
@@ -84,9 +85,7 @@ function App() {
           <MyLinks></MyLinks>
         </>
       }
-      <footer>
-        Copyright &#169; Developerd by J.L. White 🤍
-      </footer>
+      <MyFooter></MyFooter>
     </div>
   );
 }

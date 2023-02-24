@@ -2,11 +2,6 @@
 
 .app-container {
   background-color: $color-off-white;
-
-  footer {
-    @include body-text;
-    padding: 1rem;
-  }
 }
 
 .loading-container {
@@ -14,13 +9,4 @@
   justify-content: center;
   height: 90vh;
   align-items: center;
-}
-
-@media (max-width: $mobile-width) {
-  .app-container {
-    footer {
-      font-size: 14px;
-      text-align: center;
-    }
-  }
 }
