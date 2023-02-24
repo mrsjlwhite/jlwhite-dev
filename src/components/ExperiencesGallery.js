@@ -1,6 +1,5 @@
 import '../styles/experiencesGallery.scss';
 import React, { useEffect, useState } from 'react';
-import Container from 'react-bootstrap/Container';
 import { useMediaQuery } from 'react-responsive';
 import Carousel from 'react-bootstrap/Carousel';
 import ExperienceCard from './ExperienceCard';
@@ -8,7 +7,7 @@ import LoadingIcon from './LoadingIcon';
 import MyModal from './MyModal';
 
 function ExperiencesGallery({ experiences }) {
-    const defaultCarouselTime = 5000;
+    const defaultCarouselTime = 8000;
 
     const [jobs, setJobs] = useState([]);
     const [index, setIndex] = useState(0);
@@ -53,48 +52,46 @@ function ExperiencesGallery({ experiences }) {
     };
 
     return (
-        <section id='my-experience'>
-            <Container>
-                <h4 className='section-title'>my experience.</h4>
-                {!jobs || !jobs.length
-                    ?
-                    <div className='loading-icon-container'>
-                        <LoadingIcon></LoadingIcon>
-                    </div>
-                    :
-                    <Carousel
-                        activeIndex={index}
-                        onSelect={handleSelect}
-                        fade
-                        indicators={false}
-                        interval={carouselTime}>
-                        {isMobile
-                            ? jobs.map((job, index) => {
-                                return (
-                                    <Carousel.Item key={index}>
-                                        <div className='card-container'>
-                                            <ExperienceCard job={job} showModal={showModal}></ExperienceCard>
-                                        </div>
-                                    </Carousel.Item>
-                                )
-                            })
-                            : jobs.map((jobPair, index) => {
-                                return (
-                                    <Carousel.Item key={index}>
-                                        <div className='card-container'>
-                                            <ExperienceCard job={jobPair[0]} showModal={showModal}></ExperienceCard>
-                                            <ExperienceCard job={jobPair[1]} showModal={showModal}></ExperienceCard>
-                                        </div>
-                                    </Carousel.Item>
-                                )
-                            })}
-                    </Carousel>
-                }
-                <MyModal
-                    show={modalShow}
-                    onHide={hideModal}
-                    job={selectedJob}></MyModal>
-            </Container >
+        <section id='my-experience' className='experience-gallery-section'>
+            <h4 className='section-title'>my experience.</h4>
+            {!jobs || !jobs.length
+                ?
+                <div className='loading-icon-container'>
+                    <LoadingIcon></LoadingIcon>
+                </div>
+                :
+                <Carousel
+                    activeIndex={index}
+                    onSelect={handleSelect}
+                    fade
+                    indicators={false}
+                    interval={carouselTime}>
+                    {isMobile
+                        ? jobs.map((job, index) => {
+                            return (
+                                <Carousel.Item key={index}>
+                                    <div className='card-container'>
+                                        <ExperienceCard job={job} showModal={showModal}></ExperienceCard>
+                                    </div>
+                                </Carousel.Item>
+                            )
+                        })
+                        : jobs.map((jobPair, index) => {
+                            return (
+                                <Carousel.Item key={index}>
+                                    <div className='card-container'>
+                                        <ExperienceCard job={jobPair[0]} showModal={showModal}></ExperienceCard>
+                                        <ExperienceCard job={jobPair[1]} showModal={showModal}></ExperienceCard>
+                                    </div>
+                                </Carousel.Item>
+                            )
+                        })}
+                </Carousel>
+            }
+            <MyModal
+                show={modalShow}
+                onHide={hideModal}
+                job={selectedJob}></MyModal>
         </section >
     )
 }

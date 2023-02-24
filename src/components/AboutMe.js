@@ -21,7 +21,7 @@ function AboutMe({ aboutBlurb, funBlurb, skillset }) {
         const array3 = unsortedSkills.splice(0, divideBy);
         const array4 = unsortedSkills.splice(0, divideBy);
         setSkills([array1, array2, array3, array4]);
-    }, []);
+    }, [skillset]);
 
     return (
         <section id='about-me' className='about-me-section'>

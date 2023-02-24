@@ -1,5 +1,10 @@
 @import '../styles/styles.scss';
 
+.card-body {
+    margin: 2% 0;
+    overflow: scroll;
+}
+
 #experienceCard {
     background-color: rgba($color-white, 0.8);
     border-radius: 25px;
@@ -55,6 +60,7 @@
 
 .card-button {
     @include green-button;
+    margin: auto;
 }
 
 .card-footer {
