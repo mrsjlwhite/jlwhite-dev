@@ -21,7 +21,9 @@
 }
 
 .banner-img-container {
-    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
     img {
         max-height: 50vh;
