@@ -10,7 +10,7 @@
     background-color: $color-rose-quartz;
     display: grid;
     grid-template-columns: 50vw 1fr;
-    padding: 5rem;
+    padding: 4.5rem 5rem;
     width: 100%;
 }
 
@@ -21,7 +21,11 @@
 }
 
 .banner-img-container {
-    padding: 6em;
+    margin: auto;
+
+    img {
+        max-height: 50vh;
+    }
 }
 
 .section-title {
@@ -36,6 +40,7 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    justify-content: space-evenly;
 }
 
 .about-me-gallery {
@@ -52,6 +57,15 @@
     }
 }
 
+.about-me-more-info {
+    display: flex;
+    flex-direction: column;
+
+    .more-info-col {
+        padding: 4em 2em 0 2em;
+    }
+}
+
 @media (max-width: $mobile-width) {
     .about-me-banner {
         display: block;
@@ -59,11 +73,7 @@
     }
 
     .banner-img-container {
-        padding: 20px 0;
-
-        img {
-            width: 40vh;
-        }
+        padding: 30px;
     }
 
     .about-me-gallery {
@@ -74,5 +84,9 @@
         img {
             max-width: 17em;
         }
+    }
+
+    .skillset-list {
+        display: block;
     }
 }

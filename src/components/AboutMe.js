@@ -31,6 +31,18 @@ function AboutMe({ aboutBlurb, funBlurb, skillset }) {
                     <p className='section-body'>
                         {aboutBlurb}
                     </p>
+                </div>
+                <div className='banner-img-container'>
+                    <Image
+                        fluid={true}
+                        rounded={true}
+                        src={me}
+                        alt='Jeslyn'>
+                    </Image>
+                </div>
+            </div>
+            <div className='about-me-more-info'>
+                <div className='more-info-col'>
                     <h4 className='section-title'>my skills.</h4>
                     <ul className='section-body skillset-list'>
                         {skills.map((skillset, index) => {
@@ -49,18 +61,12 @@ function AboutMe({ aboutBlurb, funBlurb, skillset }) {
                             )
                         })}
                     </ul>
+                </div>
+                <div className='more-info-col'>
                     <h4 className='section-title'>fun facts about me.</h4>
                     <p className='section-body'>
                         {funBlurb}
                     </p>
-                </div>
-                <div className='banner-img-container'>
-                    <Image
-                        fluid={true}
-                        rounded={true}
-                        src={me}
-                        alt='Jeslyn'>
-                    </Image>
                 </div>
             </div>
             <div className='about-me-gallery'>
