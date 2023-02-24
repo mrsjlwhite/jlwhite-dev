@@ -3,7 +3,7 @@
 .my-modal {
 
     h6 {
-        color: $color-rose-quartz;
+        color: $color-purple;
         font-family: $font-sub-heading;
         font-size: 25px;
         font-weight: 300;
@@ -23,7 +23,7 @@
     @include section-title-text;
 
     h5 {
-        color: $color-sheen-gold;
+        color: $color-gold;
     }
 }
 
@@ -39,5 +39,5 @@
 
 .my-modal-header,
 .my-modal-footer {
-    background-color: rgba($color-rose-quartz, 0.3) !important;
+    background-color: rgba($color-purple, 0.3) !important;
 }

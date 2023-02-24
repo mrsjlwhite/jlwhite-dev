@@ -8,7 +8,7 @@
 #experienceCard {
     background-color: rgba($color-white, 0.8);
     border-radius: 25px;
-    border: solid rgba($color-spring-green, 0.2) 2px;
+    border: solid rgba($color-green, 0.2) 2px;
     box-shadow: 0 7px 10px 0 rgb(0 0 0 / 28%);
     height: 38rem;
     margin: 0.2rem 1.5rem;
@@ -16,7 +16,7 @@
 }
 
 #experienceCardTitle {
-    color: $color-sheen-gold;
+    color: $color-gold;
     font-size: 36px;
     margin-bottom: 1rem;
     text-align: center;
@@ -52,7 +52,7 @@
 
 .list-title {
     @include section-title-text;
-    color: $color-sheen-gold;
+    color: $color-gold;
     font-size: 30px;
     text-align: center;
     text-transform: lowercase;

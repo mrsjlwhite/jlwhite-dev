@@ -4,18 +4,18 @@
     margin: auto;
     margin-top: 1em;
     display: flex !important;
-    color: $color-rose-quartz;
+    color: $color-purple;
     font-family: $font-sub-heading;
     font-weight: 400;
-    background-color: rgba($color-sheen-gold, 0.1);
+    background-color: rgba($color-gold, 0.1);
 
     &:hover {
-        background-color: rgba($color-sheen-gold, 0.2);
-        border-color: rgba($color-sheen-gold, 0.4);
+        background-color: rgba($color-gold, 0.2);
+        border-color: rgba($color-gold, 0.4);
     }
 
     &:active {
-        background-color: rgba($color-sheen-gold, 0.4);
+        background-color: rgba($color-gold, 0.4);
         box-shadow: 0 2px rgba($color-black, 0.2);
         transform: translateY(4px);
     }
