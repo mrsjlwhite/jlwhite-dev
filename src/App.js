@@ -16,6 +16,22 @@ function App() {
   const [resumeAbout, setResumeAbout] = useState('');
   const [resumeFun, setResumeFun] = useState('');
   const [fetchingData, setFetchingData] = useState(true);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleWindowSizeChange = () => setScreenWidth(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
+
+  useEffect(() => {
+    const isMobile = screenWidth <= 650;
+    setIsMobile(isMobile);
+  }, [screenWidth])
 
   useEffect(() => {
     const buildExperienceCard = (work) => {
@@ -79,9 +95,9 @@ function App() {
         :
         <>
           <Header></Header>
-          <MyNavbar></MyNavbar>
+          <MyNavbar isMobile={isMobile}></MyNavbar>
           <AboutMe aboutBlurb={resumeAbout} funBlurb={resumeFun} skillset={resumeSkills}></AboutMe>
-          <ExperiencesGallery experiences={resumeJobs}></ExperiencesGallery>
+          <ExperiencesGallery experiences={resumeJobs} isMobile={isMobile}></ExperiencesGallery>
           <MyLinks></MyLinks>
         </>
       }

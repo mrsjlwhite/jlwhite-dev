@@ -10,26 +10,11 @@
   padding: 2.5rem 4rem;
 }
 
-.socials-container {
-  i {
-    cursor: pointer;
-    font-size: 3em;
-    margin: 0 .2em;
-
-    &:hover {
-      color: $color-green;
-    }
-  }
-}
-
 @media (max-width: $mobile-width) {
   .my-footer {
     font-size: 14px;
     flex-direction: column;
+    margin-top: 10%;
     text-align: center;
-  }
-
-  .socials-container {
-    margin-bottom: 5%;
   }
 }

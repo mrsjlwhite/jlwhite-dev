@@ -1,22 +1,18 @@
 import '../styles/experiencesGallery.scss';
 import React, { useEffect, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import Carousel from 'react-bootstrap/Carousel';
 import ExperienceCard from './ExperienceCard';
 import LoadingIcon from './LoadingIcon';
 import MyModal from './MyModal';
 
-function ExperiencesGallery({ experiences }) {
-    const defaultCarouselTime = 8000;
+function ExperiencesGallery({ experiences, isMobile }) {
+    const defaultCarouselTime = 10000;
 
     const [jobs, setJobs] = useState([]);
     const [index, setIndex] = useState(0);
     const [modalShow, setModalShow] = useState(false);
     const [selectedJob, setSelectedJob] = useState(null);
     const [carouselTime, setCarouselTime] = useState(defaultCarouselTime);
-
-
-    const isMobile = useMediaQuery({ query: `(max-width: 650px)` });
 
     useEffect(() => {
         if (!experiences.length) {

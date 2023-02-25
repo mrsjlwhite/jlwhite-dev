@@ -2,8 +2,9 @@ import '../styles/myNavbar.scss';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import SocialsIcons from './SocialsIcons';
 
-function MyNavbar() {
+function MyNavbar({ isMobile }) {
 
     const navigateToSection = (event, sectionName) => {
         const section = document.getElementById(sectionName);
@@ -37,6 +38,11 @@ function MyNavbar() {
                             onClick={(e) => navigateToSection(e, 'my-links')}>
                             Contact
                         </Nav.Link>
+                        {!isMobile ? null :
+                            <Nav.Link>
+                                <SocialsIcons></SocialsIcons>
+                            </Nav.Link>
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Container>
