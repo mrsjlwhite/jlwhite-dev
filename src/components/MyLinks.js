@@ -1,6 +1,7 @@
 import { Button, Container } from 'react-bootstrap';
 import '../styles/myLinks.scss';
-import { EnvelopeHeart, CupHot } from 'react-bootstrap-icons';
+// import { EnvelopeHeart, CupHot } from 'react-bootstrap-icons';
+import { EnvelopeHeart } from 'react-bootstrap-icons';
 import LinkUrls from '../data/linkUrls';
 
 function MyLinks() {
@@ -26,10 +27,10 @@ function MyLinks() {
                     <EnvelopeHeart size={100}></EnvelopeHeart>
                     <span className='button-text'>Email Me</span>
                 </Button>
-                <Button size='lg' className='link-button' onClick={() => openLink(LinkUrls.get('blog'))}>
+                {/* <Button size='lg' className='link-button' onClick={() => openLink(LinkUrls.get('blog'))}>
                     <CupHot size={100}></CupHot>
                     <span className='button-text'>My Blog</span>
-                </Button>
+                </Button> */}
             </Container>
         </section>
     )
