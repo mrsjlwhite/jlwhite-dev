@@ -11,7 +11,7 @@ function MyLinks() {
 
     return (
         <section id='my-links' className={styles.linksSection}>
-            <Container>
+            <Container className={styles.linksSectionContainer}>
                 <h4 className='section-title'>my links.</h4>
                 <Button
                     size='lg'

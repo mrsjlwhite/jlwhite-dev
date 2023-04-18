@@ -35,9 +35,10 @@
     animation: 2.5s slide-right .5s forwards;
     border: solid $color-white 26px;
     box-shadow: $box-shadow;
-    height: 69vmin;
+    height: 70vh;
     margin-top: 48px;
-    object-fit: contain;
+    max-width: 750px;
+    object-fit: cover;
     opacity: .8;
     transform: translateX(-100%);
 }
@@ -72,7 +73,7 @@
     }
 }
 
-@media (max-width: $mobile-width) {
+@media screen and (max-width: $mobile-width) {
 
     .header {
         display: flex;

@@ -19,6 +19,8 @@ function Header() {
                         2000, // Waits
                         'engineer', // Deletes 'One' and types 'Two'
                         2000, // Waits 2s
+                        'creative',
+                        2000,
                         'coffee addict',
                         3000,
                         'driven',

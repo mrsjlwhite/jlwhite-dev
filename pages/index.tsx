@@ -6,6 +6,7 @@ import ExperiencesGallery from "@/components/ExperiencesGallery";
 import MyLinks from "@/components/MyLinks";
 import LoadingIcon from "@/components/LoadingIcon";
 import jobTechIcons from "@/data/jobTechIcons";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 function App() {
   const [resumeJobs, setResumeJobs] = useState([]);
@@ -13,22 +14,13 @@ function App() {
   const [resumeAbout, setResumeAbout] = useState('');
   const [resumeFun, setResumeFun] = useState('');
   const [fetchingData, setFetchingData] = useState(true);
-  const [screenWidth, setScreenWidth] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-
-  const handleWindowSizeChange = () => setScreenWidth(window.innerWidth);
-
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    }
-  }, []);
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
-    const isMobile = screenWidth <= 650;
+    const isMobile = width <= 650;
     setIsMobile(isMobile);
-  }, [screenWidth])
+  }, [width])
 
   useEffect(() => {
     const buildExperienceCard = (work) => {

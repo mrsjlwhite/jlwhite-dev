@@ -1,4 +1,4 @@
-import '@/styles/resumeButton.module.scss';
+import styles from '@/styles/resumeButton.module.scss';
 import LinkUrls from "../data/linkUrls";
 import Button from 'react-bootstrap/Button';
 
@@ -17,7 +17,7 @@ function ResumeButton({ jobName }: Props) {
         <Button
             variant="light"
             size="lg"
-            id='resumeButton'
+            className={styles.resumeButton}
             onClick={goToResume}>
             Download Resume
         </Button>

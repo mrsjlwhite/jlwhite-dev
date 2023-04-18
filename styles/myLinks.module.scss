@@ -3,7 +3,7 @@
 .linksSection {
     height: 65vh;
 
-    .container {
+    .linksSectionContainer {
         align-items: center;
         display: flex;
         height: 100%;
@@ -45,14 +45,13 @@
     }
 }
 
-// mobile responsiveness
-@media (max-width: $mobile-width) {
+@media screen and (max-width: $mobile-width) {
 
     .linksSection {
         height: unset;
         margin-top: 10%;
 
-        .container {
+        .linksSectionContainer {
             flex-direction: column;
             justify-content: space-between;
         }

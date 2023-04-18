@@ -53,8 +53,8 @@ function ExperiencesGallery({ experiences, isMobile }: Props) {
     };
 
     return (
-        <section id='my-experience' className='experience-gallery-section'>
-            <h4 className='section-title'>my experience.</h4>
+        <section id='my-experience'>
+            <h4 className={`section-title ${styles.experienceGallerySectionTitle}`}>my experience.</h4>
             {!jobs || !jobs.length
                 ?
                 <LoadingIcon />

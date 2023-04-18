@@ -12,7 +12,7 @@ type Props = {
 function ExperienceCard({ job, showModal }: Props) {
     const defaultStyle = styles.cardTextContainer;
     const [cardContainerStyle, setCardContainerStyle] = useState(defaultStyle);
-    
+
     if (!job) {
         return <></>
     }
@@ -26,54 +26,54 @@ function ExperienceCard({ job, showModal }: Props) {
     }, [job])
 
     return (
-        <Card id='experienceCard'>
-                    <Card.Body>
-                        <Card.Title id='experienceCardTitle'>
-                            {job.name}
-                        </Card.Title>
-                        <div className={cardContainerStyle}>
-                            <Card.Text className={styles.cardDesc}>
-                                {job.description}
-                                <ResumeButton jobName={job.name}></ResumeButton>
-                            </Card.Text>
-                            <div className={styles.cardListButtonContainer}>
-                                {!job.tech || !job.tech.length
-                                    ? null
-                                    : <div>
-                                        <h5 className='list-title'>Tech Used</h5>
-                                        <hr />
-                                        <ul className='list'>
-                                            {job.tech.map((tech, index) => {
-                                                return (
-                                                    <li key={index}>
-                                                        <Card.Text>
-                                                            {tech}
-                                                        </Card.Text>
-                                                    </li>
-                                                );
-                                            })}
-                                        </ul>
-                                    </div>
-                                }
-                                <Button
-                                    variant="light"
-                                    size="lg"
-                                    className={styles.cardButton}
-                                    onClick={() => showModal(job)}>
-                                    Learn More
-                                </Button>
+        <Card className={styles.experienceCard}>
+            <Card.Body className={styles.cardBody}>
+                <Card.Title className={styles.experienceCardTitle}>
+                    {job.name}
+                </Card.Title>
+                <div className={cardContainerStyle}>
+                    <Card.Text className={styles.cardDesc}>
+                        {job.description}
+                        <ResumeButton jobName={job.name} />
+                    </Card.Text>
+                    <div className={styles.cardListButtonContainer}>
+                        {!job.tech || !job.tech.length
+                            ? null
+                            : <div>
+                                <h5 className='section-title'>Tech Used</h5>
+                                <hr />
+                                <ul className='section-body'>
+                                    {job.tech.map((tech, index) => {
+                                        return (
+                                            <li key={index}>
+                                                <Card.Text>
+                                                    {tech}
+                                                </Card.Text>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
                             </div>
-                        </div>
-                    </Card.Body>
-                    <Card.Footer className={styles.cardFooter}>
-                        {!job.techIcons || !job.techIcons.length ? null :
-                            job.techIcons.map((icon) => {
-                                return (
-                                    <i key={icon} className={`devicon-${icon} colored`}></i>
-                                )
-                            })}
-                    </Card.Footer>
-                </Card>
+                        }
+                        <Button
+                            variant="light"
+                            size="lg"
+                            className={styles.cardButton}
+                            onClick={() => showModal(job)}>
+                            Learn More
+                        </Button>
+                    </div>
+                </div>
+            </Card.Body>
+            <Card.Footer className={styles.cardFooter}>
+                {!job.techIcons || !job.techIcons.length ? null :
+                    job.techIcons.map((icon) => {
+                        return (
+                            <i key={icon} className={`devicon-${icon} colored`}></i>
+                        )
+                    })}
+            </Card.Footer>
+        </Card>
     );
 }
 

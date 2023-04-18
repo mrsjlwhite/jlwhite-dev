@@ -5,7 +5,7 @@
     overflow: scroll;
 }
 
-#experienceCard {
+.experienceCard {
     background-color: rgba($color-white, 0.8);
     border-radius: 25px;
     border: solid rgba($color-green, 0.2) 2px;
@@ -15,7 +15,7 @@
     width: 38rem;
 }
 
-#experienceCardTitle {
+.experienceCardTitle {
     color: $color-gold;
     font-size: 36px;
     margin-bottom: 1rem;
@@ -72,10 +72,9 @@
     }
 }
 
-// mobile responsiveness
-@media (max-width: $mobile-width) {
+@media screen and (max-width: $mobile-width) {
 
-    #experienceCard {
+    .experienceCard {
         height: 45rem;
     }
 
