@@ -12,16 +12,14 @@ type Props = {
 function ExperienceCard({ job, showModal }: Props) {
     const defaultStyle = styles.cardTextContainer;
     const [cardContainerStyle, setCardContainerStyle] = useState(defaultStyle);
-
-    if (!job) {
-        return <></>
-    }
+    const [theJob, setCardJob] = useState(null);
 
     useEffect(() => {
         if (job) {
             const isTechJob = job.tech && job.tech.length ? true : false;
             const newStyle = isTechJob ? `${defaultStyle} ${styles.gridContainer}` : `${defaultStyle} ${styles.columnContainer}`;
             setCardContainerStyle(newStyle);
+            setCardJob(job);
         }
     }, [job])
 
@@ -29,20 +27,20 @@ function ExperienceCard({ job, showModal }: Props) {
         <Card className={styles.experienceCard}>
             <Card.Body className={styles.cardBody}>
                 <Card.Title className={styles.experienceCardTitle}>
-                    {job.name}
+                    {theJob.name}
                 </Card.Title>
                 <div className={cardContainerStyle}>
                     <Card.Text className={styles.cardDesc}>
-                        {job.description}
+                        {theJob.description}
                     </Card.Text>
                     <div className={styles.cardListButtonContainer}>
-                        {!job.tech || !job.tech.length
+                        {!theJob.tech || !theJob.tech.length
                             ? null
                             : <div>
                                 <h5 className='section-title'>Tech Used</h5>
                                 <hr />
                                 <ul className='section-body'>
-                                    {job.tech.map((tech, index) => {
+                                    {theJob.tech.map((tech, index) => {
                                         return (
                                             <li key={index}>
                                                 <Card.Text>
@@ -58,19 +56,15 @@ function ExperienceCard({ job, showModal }: Props) {
                             variant="light"
                             size="lg"
                             className={styles.cardButton}
-                            onClick={() => showModal(job)}>
+                            onClick={() => showModal(theJob)}>
                             Learn More
                         </Button>
                     </div>
                 </div>
             </Card.Body>
             <Card.Footer className={styles.cardFooter}>
-                {!job.techIcons || !job.techIcons.length ? null :
-                    job.techIcons.map((icon) => {
-                        return (
-                            <i key={icon} className={`devicon-${icon} colored`}></i>
-                        )
-                    })}
+                {!theJob.techIcons || !theJob.techIcons.length ? null
+                    : theJob.techIcons.map((icon) => <i key={icon} className={`devicon-${icon} colored`}></i>)}
             </Card.Footer>
         </Card>
     );
