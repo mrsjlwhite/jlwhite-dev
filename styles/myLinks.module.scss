@@ -66,3 +66,14 @@
         }
     }
 }
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
+    .linksSection {
+        margin: 5% 0;
+
+        .linksSectionContainer {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}

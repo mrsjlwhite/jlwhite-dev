@@ -19,8 +19,16 @@ function App() {
   const { width } = useWindowDimensions();
 
   useEffect(() => {
-    const isMobile = width <= 650;
-    setIsMobile(isMobile);
+    if (!width) {
+      return;
+    }
+    const mobile = width <= 650;
+    const tablet = width <= 768;
+    const results = mobile || tablet ? true : false;
+    // const results = width <= tabletWidth ? false : true;
+    // console.log({mobile})
+    // console.log({tablet})
+    setIsMobile(results);
   }, [width])
 
   useEffect(() => {
@@ -28,6 +36,7 @@ function App() {
       const dateOptions: any = { year: "numeric", month: "short" };
       const startDate = new Date(work.startDate).toLocaleDateString('en-us', dateOptions);
       const endDate = new Date(work.endDate).toLocaleDateString('en-us', dateOptions);
+      const timeResults = endDate === 'Invalid Date' ? `${startDate} to Present` : `${startDate} to ${endDate}`;
 
       const techStack = work.highlights[work.highlights.length - 1];
       const techStackNames = techStack.replace('Technologies used: ', '').split(',');
@@ -37,7 +46,7 @@ function App() {
 
       return {
         name: work.company,
-        time: `${startDate} to ${endDate}`,
+        time: timeResults,
         title: work.position,
         description: work.summary,
         fullDescription: work.highlights.splice(0, work.highlights.length - 1),

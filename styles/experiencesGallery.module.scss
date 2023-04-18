@@ -10,3 +10,16 @@
 .experienceGallerySectionTitle {
     margin: 0 1em .5em 1em;
 }
+
+@media screen and (max-width: $mobile-width) {
+
+    .cardContainer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
+    .cardContainer {
+        flex-direction: column;
+    }
+}

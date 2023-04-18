@@ -13,6 +13,10 @@ body {
     @include body-text;
 }
 
+.green-button {
+    @include green-button;
+}
+
 // Thanks https://stackoverflow.com/a/53336754/16305154
 .filter-white {
     filter: invert(100%) sepia(77%) saturate(86%) hue-rotate(58deg) brightness(113%) contrast(108%);

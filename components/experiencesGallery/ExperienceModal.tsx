@@ -1,7 +1,21 @@
-import styles from '@/styles/myModal.module.scss';
+import styles from '@/styles/experienceModal.module.scss';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Experience from '@/interfaces/experience';
+import { useEffect, useState } from 'react';
+import { emptyJob } from '@/data/emptyJobExperience';
+import { Josefin_Sans, Roboto_Slab } from 'next/font/google'; // Modal doesn't have access to CSS variables
+
+const fontSubHeading = Josefin_Sans({
+    weight: ['100', '200', '300'],
+    subsets: ['latin'],
+    variable: '--font-sub-heading'
+});
+const fontBody = Roboto_Slab({
+    weight: ['100', '200', '300', '400'],
+    subsets: ['latin'],
+    variable: '--font-body'
+});
 
 type Props = {
     show: boolean
@@ -10,9 +24,16 @@ type Props = {
 }
 
 function ExperienceModal({ show, onHide, job }: Props) {
-    if (!job) {
-        return <></>
-    }
+    const [modalJob, setModalJob] = useState<Experience>(emptyJob);
+
+    useEffect(() => {
+        if (job) {
+            setModalJob(job)
+        }
+    }, [job])
+
+    const bodyTitleStyles = `${fontSubHeading.className} ${styles.bodySectionText}`;
+    const bodyTextStyles = `${styles.modalBodyText} ${fontBody.className}`;
 
     return (
         <Modal
@@ -20,41 +41,46 @@ function ExperienceModal({ show, onHide, job }: Props) {
             size="lg"
             scrollable
             centered
-            onHide={onHide}
-            className={styles.myModal}>
-            <Modal.Header className={styles.myModalHeader}>
-                <Modal.Title className={styles.myModalTitle}>
-                    <h3>{job.name} &#124; {job.title}</h3>
-                    <h5>{job.time}</h5>
+            onHide={onHide}>
+            <Modal.Header className={styles.purpleBackground}>
+                <Modal.Title className={`${styles.modalTitle} ${fontSubHeading.className}`}>
+                    <h3>{modalJob.name} &#124; {modalJob.title}</h3>
+                    <h5>{modalJob.time}</h5>
                 </Modal.Title>
             </Modal.Header>
-            <Modal.Body className={styles.myModalBody}>
-                <h6>about the company.</h6>
-                <p>{job.description}</p>
-                <h6>things i did.</h6>
+            <Modal.Body className={styles.offWhiteBackground}>
+                <h6 className={bodyTitleStyles}>
+                    about the company.
+                </h6>
+                <p className={bodyTextStyles}>
+                    {modalJob.description}
+                </p>
+                <h6 className={bodyTitleStyles}>
+                    things i did.
+                </h6>
                 <ul>
-                    {job.fullDescription.map((desc, index) => {
+                    {modalJob.fullDescription.map((desc, index) => {
                         return (
-                            <li key={index}>
+                            <li key={index} className={bodyTextStyles}>
                                 {desc}
                             </li>
                         )
                     })}
                 </ul>
-                {!job.techIcons || !job.techIcons.length ? null :
+                {!modalJob.techIcons || !modalJob.techIcons.length ? null :
                     <>
-                        <h6 className={styles.techIconsContainer}>
+                        <h6 className={`${styles.techIconsContainer} ${bodyTitleStyles}`}>
                             tech i used.
-                            {job.techIcons.map((icon) => {
+                            {modalJob.techIcons.map((icon) => {
                                 return (
                                     <i key={icon} className={`devicon-${icon} colored`}></i>
                                 )
                             })}
                         </h6>
-                        <ul className='list'>
-                            {job.tech.map((tech, index) => {
+                        <ul>
+                            {modalJob.tech.map((tech, index) => {
                                 return (
-                                    <li key={index}>
+                                    <li key={index} className={bodyTextStyles}>
                                         {tech}
                                     </li>
                                 );
@@ -63,10 +89,10 @@ function ExperienceModal({ show, onHide, job }: Props) {
                     </>
                 }
             </Modal.Body>
-            <Modal.Footer className={styles.myModalFooter}>
+            <Modal.Footer className={styles.purpleBackground}>
                 <Button
                     onClick={onHide}
-                    className={styles.myModalButton}
+                    className='green-button'
                     variant="light">
                     Close
                 </Button>

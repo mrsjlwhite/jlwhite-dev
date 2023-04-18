@@ -3,6 +3,7 @@ import styles from '@/styles/experienceCard.module.scss';
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Experience from '@/interfaces/experience';
+import { emptyJob } from '@/data/emptyJobExperience';
 
 type Props = {
     job: Experience
@@ -11,8 +12,9 @@ type Props = {
 
 function ExperienceCard({ job, showModal }: Props) {
     const defaultStyle = styles.cardTextContainer;
+
     const [cardContainerStyle, setCardContainerStyle] = useState(defaultStyle);
-    const [theJob, setCardJob] = useState(null);
+    const [theJob, setCardJob] = useState(emptyJob);
 
     useEffect(() => {
         if (job) {
