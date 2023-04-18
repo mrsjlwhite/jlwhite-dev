@@ -26,6 +26,9 @@
             "@/imgs/*": [
                 "public/imgs/*"
             ],
+            "@/svgs/*": [
+                "public/svgs/*"
+            ],
             "@/lib/*": [
                 "lib/*"
             ],

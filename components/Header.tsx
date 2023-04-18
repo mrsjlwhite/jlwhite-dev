@@ -10,6 +10,7 @@ function Header() {
                 className={styles.headerImg}
                 src={header}
                 alt='Bright blue skies with a green forest, and a Westfalia hidden between the trees.'
+                priority
             />
             <div className={styles.textContainer}>
                 <span className={styles.headerName}>Jeslyn Le&oacute;n White</span>
