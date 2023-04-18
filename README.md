@@ -11,6 +11,18 @@ This is a react app to talk a lil' about me, and for me to add some project exam
 <a href="https://www.jlwhite.dev" target="_blank">jlwhite.dev</a>
 
 ### Tech Used ⚙️
-- Next.js
-- TypeScript
-- GitHub Pages
+- 💬 Languages
+  - [TypeScript](https://www.typescriptlang.org/docs/)
+- 📚 Libraries
+  - [React](https://react.dev/)
+- 🧰 Frameworks
+  - [Next.js](https://nextjs.org/)
+  - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- 📦 Packages
+  -  [Sass](https://sass-lang.com/documentation/)
+  - [`react-loader-spinner`](https://mhnpd.github.io/react-loader-spinner/)
+- 🍱 Assets
+  - [Devicon Icons](https://devicon.dev/)
+  - [Bootstrap Icons](https://icons.getbootstrap.com/)
+- 🚀 Deployment
+  - [GitHub Pages](https://pages.github.com/)
