@@ -1,0 +1,69 @@
+@import './styles.scss';
+
+.linksSection {
+    height: 65vh;
+
+    .container {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
+.linkButton {
+    background-color: rgba($color-gold, 0.2) !important;
+    border: solid 2px rgba($color-gold, 0.8) !important;
+    margin: 0 2rem;
+    padding: 1rem 1.5rem 0 !important;
+    min-width: 173px;
+
+    i {
+        font-size: 100px;
+        padding: 0 10px;
+    }
+
+    .buttonText {
+        @include section-title-text;
+        display: block;
+        font-size: 30px;
+        opacity: 0;
+    }
+
+    &:hover {
+        background-color: rgba($color-gold, 0.6) !important;
+
+
+        .buttonText {
+            color: rgba($color-off-white, 0.9) !important;
+            opacity: 1;
+        }
+    }
+
+    &:active {
+        background-color: rgba($color-gold, 0.8) !important;
+    }
+}
+
+// mobile responsiveness
+@media (max-width: $mobile-width) {
+
+    .linksSection {
+        height: unset;
+        margin-top: 10%;
+
+        .container {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    .linkButton {
+        margin: 1rem 1.5rem;
+
+        .buttonText {
+            color: rgba($color-off-white, 0.9) !important;
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import './styles.scss';
+
+.cardContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+.experience-gallery-section {
+    .section-title {
+        margin: 0 1em .5em 1em;
+    }
+}

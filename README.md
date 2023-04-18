@@ -9,3 +9,8 @@ This is a react app to talk a lil' about me, and for me to add some project exam
 
 ### Visit 📍
 <a href="https://www.jlwhite.dev" target="_blank">jlwhite.dev</a>
+
+### Tech Used ⚙️
+- Next.js
+- TypeScript
+- GitHub Pages

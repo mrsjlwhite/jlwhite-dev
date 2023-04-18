@@ -1,0 +1,14 @@
+@import './styles.scss';
+
+body {
+    margin: 0;
+    background-color: $color-off-white;
+}
+
+.section-title {
+    @include section-title-text;
+}
+
+.section-body {
+    @include body-text;
+}
