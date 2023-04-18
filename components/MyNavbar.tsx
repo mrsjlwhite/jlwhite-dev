@@ -3,19 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import SocialsIcons from './SocialsIcons';
+import Link from 'next/link';
+import { navigateToSection } from '@/lib/utils';
 
 type Props = {
-    isMobile: any
+    isMobile: boolean
 }
 
 function MyNavbar({ isMobile }: Props) {
-
-    const navigateToSection = (event, sectionName) => {
-        const section = document.getElementById(sectionName);
-        event.preventDefault();
-        section && section.scrollIntoView({ behavior: "smooth", block: "start" });
-        window.history.pushState(sectionName, sectionName, `/${sectionName}`);
-    }
 
     return (
         <Navbar expand="lg" sticky='top' className={styles.myNavbar}>
@@ -25,18 +20,21 @@ function MyNavbar({ isMobile }: Props) {
                 <Navbar.Collapse id="basic-navbar-nav" className={styles.navLinksContainer}>
                     <Nav>
                         <Nav.Link
+                            as={Link}
                             className={styles.myNavLink}
                             href="/"
                             onClick={(e) => navigateToSection(e, 'about-me')}>
                             About
                         </Nav.Link>
                         <Nav.Link
+                            as={Link}
                             className={styles.myNavLink}
                             href="/"
                             onClick={(e) => navigateToSection(e, 'my-experience')}>
                             Experience
                         </Nav.Link>
                         <Nav.Link
+                            as={Link}
                             className={styles.myNavLink}
                             href="/"
                             onClick={(e) => navigateToSection(e, 'my-links')}>
@@ -44,7 +42,7 @@ function MyNavbar({ isMobile }: Props) {
                         </Nav.Link>
                         {!isMobile ? null :
                             <Nav.Link>
-                                <SocialsIcons></SocialsIcons>
+                                <SocialsIcons />
                             </Nav.Link>
                         }
                     </Nav>

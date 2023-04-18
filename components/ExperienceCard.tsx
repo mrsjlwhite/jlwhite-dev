@@ -3,10 +3,11 @@ import styles from '@/styles/experienceCard.module.scss';
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import ResumeButton from './ResumeButton';
+import Experience from '@/interfaces/experience';
 
 type Props = {
-    job: any
-    showModal: any
+    job: Experience
+    showModal: (job: Experience) => void
 }
 
 function ExperienceCard({ job, showModal }: Props) {

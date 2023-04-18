@@ -1,9 +1,10 @@
 import styles from '@/styles/resumeButton.module.scss';
 import LinkUrls from "../data/linkUrls";
 import Button from 'react-bootstrap/Button';
+import { openLink } from '@/lib/utils';
 
 type Props = {
-    jobName: any
+    jobName: string
 }
 
 function ResumeButton({ jobName }: Props) {
@@ -11,14 +12,12 @@ function ResumeButton({ jobName }: Props) {
         return <></>
     }
 
-    const goToResume = () => window.open(LinkUrls.get('resume'), '_blank', 'noreferrer');
-
     return (
         <Button
             variant="light"
             size="lg"
             className={styles.resumeButton}
-            onClick={goToResume}>
+            onClick={() => openLink(LinkUrls.get('resume'))}>
             Download Resume
         </Button>
     )

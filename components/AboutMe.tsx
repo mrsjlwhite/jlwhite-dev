@@ -8,13 +8,13 @@ import fun4 from '@/imgs/fun4.jpeg';
 import Image from 'next/image';
 
 type Props = {
-    aboutBlurb: any
-    funBlurb: any
-    skillset: any
+    aboutBlurb: string
+    funBlurb: string
+    skillset: string[]
 }
 
 function AboutMe({ aboutBlurb, funBlurb, skillset }: Props) {
-    const [skills, setSkills] = useState([]);
+    const [skills, setSkills] = useState<string[][]>([]);
 
     useEffect(() => {
         if (!skillset.length) {

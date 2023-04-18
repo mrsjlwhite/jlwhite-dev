@@ -2,11 +2,12 @@ import styles from '@/styles/myModal.module.scss';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ResumeButton from './ResumeButton';
+import Experience from '@/interfaces/experience';
 
 type Props = {
-    show: any
-    onHide: any
-    job: any
+    show: boolean
+    onHide: () => void
+    job: Experience
 }
 
 function MyModal({ show, onHide, job }: Props) {

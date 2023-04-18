@@ -1,6 +1,7 @@
 import styles from '@/styles/socialsIcons.module.scss';
 import LinkUrls from '../data/linkUrls';
 // import { CupHot } from 'react-bootstrap-icons';
+import { openLink } from '@/lib/utils';
 
 function SocialsIcons() {
     // const renderSocialIcon = (socialName: string): JSX.Element => {
@@ -17,9 +18,6 @@ function SocialsIcons() {
     //         <i className="devicon-github-original" onClick={() => openLink(LinkUrls.get('github'))}></i>
     //     )
     // }
-
-
-    const openLink = (url) => window.open(url, '_blank', 'noreferrer');
 
     return (
         <div className={styles.socialsContainer}>

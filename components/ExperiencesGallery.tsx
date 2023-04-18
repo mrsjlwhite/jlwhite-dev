@@ -4,10 +4,11 @@ import Carousel from 'react-bootstrap/Carousel';
 import ExperienceCard from './ExperienceCard';
 import LoadingIcon from './LoadingIcon';
 import MyModal from './MyModal';
+import Experience from '@/interfaces/experience';
 
 type Props = {
-    experiences: any
-    isMobile: any
+    experiences: Experience[]
+    isMobile: boolean
 }
 
 function ExperiencesGallery({ experiences, isMobile }: Props) {
@@ -16,7 +17,7 @@ function ExperiencesGallery({ experiences, isMobile }: Props) {
     const [jobs, setJobs] = useState([]);
     const [index, setIndex] = useState(0);
     const [modalShow, setModalShow] = useState(false);
-    const [selectedJob, setSelectedJob] = useState(null);
+    const [selectedJob, setSelectedJob] = useState<Experience>(null);
     const [carouselTime, setCarouselTime] = useState(defaultCarouselTime);
 
     useEffect(() => {
@@ -40,7 +41,7 @@ function ExperiencesGallery({ experiences, isMobile }: Props) {
 
     const handleSelect = (selectedIndex) => setIndex(selectedIndex);
 
-    const showModal = (job) => {
+    const showModal = (job: Experience) => {
         setSelectedJob(job);
         setModalShow(true);
         setCarouselTime(null);

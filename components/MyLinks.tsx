@@ -3,10 +3,10 @@ import styles from '@/styles/myLinks.module.scss';
 // import { EnvelopeHeart, CupHot } from 'react-bootstrap-icons';
 import { EnvelopeHeart } from 'react-bootstrap-icons';
 import LinkUrls from '../data/linkUrls';
+import { openLink } from '@/lib/utils';
 
 function MyLinks() {
-
-    const openLink = (url) => window.open(url, '_blank', 'noreferrer');
+    
     const sendEmail = () => window.open(`mailto:${LinkUrls.get('email')}`);
 
     return (

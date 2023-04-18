@@ -7,10 +7,11 @@ import MyLinks from "@/components/MyLinks";
 import LoadingIcon from "@/components/LoadingIcon";
 import jobTechIcons from "@/data/jobTechIcons";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
+import Experience from "@/interfaces/experience";
 
 function App() {
-  const [resumeJobs, setResumeJobs] = useState([]);
-  const [resumeSkills, setResumeSkills] = useState([]);
+  const [resumeJobs, setResumeJobs] = useState<Experience[]>([]);
+  const [resumeSkills, setResumeSkills] = useState<string[]>([]);
   const [resumeAbout, setResumeAbout] = useState('');
   const [resumeFun, setResumeFun] = useState('');
   const [fetchingData, setFetchingData] = useState(true);
@@ -23,7 +24,7 @@ function App() {
   }, [width])
 
   useEffect(() => {
-    const buildExperienceCard = (work) => {
+    const buildExperienceCard = (work): Experience => {
       const dateOptions: any = { year: "numeric", month: "short" };
       const startDate = new Date(work.startDate).toLocaleDateString('en-us', dateOptions);
       const endDate = new Date(work.endDate).toLocaleDateString('en-us', dateOptions);
