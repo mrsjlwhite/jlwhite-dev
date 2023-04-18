@@ -2,8 +2,8 @@ import styles from '@/styles/experiencesGallery.module.scss'
 import { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import ExperienceCard from './ExperienceCard';
-import LoadingIcon from './LoadingIcon';
-import MyModal from './MyModal';
+import LoadingIcon from '../shared/LoadingIcon';
+import ExperienceModal from './ExperienceModal';
 import Experience from '@/interfaces/experience';
 
 type Props = {
@@ -88,7 +88,7 @@ function ExperiencesGallery({ experiences, isMobile }: Props) {
                         })}
                 </Carousel>
             }
-            <MyModal
+            <ExperienceModal
                 show={modalShow}
                 onHide={hideModal}
                 job={selectedJob} />

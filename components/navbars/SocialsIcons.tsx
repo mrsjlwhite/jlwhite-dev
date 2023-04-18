@@ -1,7 +1,7 @@
 import styles from '@/styles/socialsIcons.module.scss';
 import LinkUrls from '@/data/linkUrls';
 import LinkUrl from '@/interfaces/linkUrl';
-import SocialIconImage from './SocialIconImage';
+import SocialIconImage from '../shared/SocialIconImage';
 
 function SocialsIcons() {
     const renderSocialIcon = (linkUrl: LinkUrl): JSX.Element => <SocialIconImage link={linkUrl} size={20} />

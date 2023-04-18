@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import AboutMe from '@/components/AboutMe';
+import AboutMe from '@/components/aboutMe/AboutMe';
 import Header from '@/components/Header';
-import MyNavbar from '@/components/MyNavbar';
-import ExperiencesGallery from "@/components/ExperiencesGallery";
+import MyNavbar from '@/components/navbars/MyNavbar';
+import ExperiencesGallery from "@/components/experiencesGallery/ExperiencesGallery";
 import MyLinks from "@/components/MyLinks";
-import LoadingIcon from "@/components/LoadingIcon";
+import LoadingIcon from "@/components/shared/LoadingIcon";
 import jobTechIcons from "@/data/jobTechIcons";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Experience from "@/interfaces/experience";

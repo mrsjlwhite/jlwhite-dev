@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/global.scss';
 import Head from 'next/head';
 import { Josefin_Sans, La_Belle_Aurore, Roboto_Slab } from 'next/font/google';
-import MyFooter from '@/components/MyFooter';
+import MyFooter from '@/components/navbars/MyFooter';
 
 const josefSans = Josefin_Sans({
     weight: ['100', '200', '300'],

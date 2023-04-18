@@ -3,7 +3,7 @@ import styles from '@/styles/myLinks.module.scss';
 import LinkUrls from '@/data/linkUrls';
 import { openLink } from '@/lib/utils';
 import LinkUrl from '@/interfaces/linkUrl';
-import SocialIconImage from './SocialIconImage';
+import SocialIconImage from './shared/SocialIconImage';
 
 function MyLinks() {
     const renderSocialButton = (linkUrl: LinkUrl): JSX.Element => {

@@ -9,7 +9,7 @@ type Props = {
     job: Experience
 }
 
-function MyModal({ show, onHide, job }: Props) {
+function ExperienceModal({ show, onHide, job }: Props) {
     if (!job) {
         return <></>
     }
@@ -75,4 +75,4 @@ function MyModal({ show, onHide, job }: Props) {
     );
 }
 
-export default MyModal;
+export default ExperienceModal;

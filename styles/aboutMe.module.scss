@@ -52,13 +52,8 @@
     }
 }
 
-.aboutMeMoreInfo {
-    display: flex;
-    flex-direction: column;
-
-    .moreInfoCol {
-        padding: 4em 2em 0 2em;
-    }
+.moreInfoCol {
+    padding: 4em 2em 0 2em;
 }
 
 @media screen and (max-width: $mobile-width) {
