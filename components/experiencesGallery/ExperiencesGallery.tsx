@@ -5,6 +5,7 @@ import ExperienceCard from './ExperienceCard';
 import LoadingIcon from '../shared/LoadingIcon';
 import ExperienceModal from './ExperienceModal';
 import Experience from '@/interfaces/experience';
+import { Container } from 'react-bootstrap';
 
 type Props = {
     experiences: Experience[]
@@ -79,10 +80,10 @@ function ExperiencesGallery({ experiences, isMobile }: Props) {
                         : jobs.map((jobPair, index) => {
                             return (
                                 <Carousel.Item key={index}>
-                                    <div className={styles.cardContainer}>
+                                    <Container className={styles.cardContainer}>
                                         <ExperienceCard job={jobPair[0]} showModal={showModal} />
                                         <ExperienceCard job={jobPair[1]} showModal={showModal} />
-                                    </div>
+                                    </Container>
                                 </Carousel.Item>
                             )
                         })}
