@@ -8,8 +8,21 @@ import LoadingIcon from "@/components/shared/LoadingIcon";
 import jobTechIcons from "@/data/jobTechIcons";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Experience from "@/interfaces/experience";
+import GitConnectedPortfolio from "@/interfaces/gitConnected";
+import GitConnectedWork from "@/interfaces/gitConnectedWork";
 
-function App() {
+type ResumeProps = {
+  summary: string
+  interests: string
+  work: GitConnectedWork[]
+  skillNames: string[]
+}
+
+type Props = {
+  resume: ResumeProps
+}
+
+function App({ resume }: Props) {
   const [resumeJobs, setResumeJobs] = useState<Experience[]>([]);
   const [resumeSkills, setResumeSkills] = useState<string[]>([]);
   const [resumeAbout, setResumeAbout] = useState('');
@@ -32,6 +45,10 @@ function App() {
   }, [width])
 
   useEffect(() => {
+    if (!resume) {
+      return;
+    }
+
     const buildExperienceCard = (work): Experience => {
       const dateOptions: any = { year: "numeric", month: "short" };
       const startDate = new Date(work.startDate).toLocaleDateString('en-us', dateOptions);
@@ -55,24 +72,16 @@ function App() {
       }
     };
 
-    fetch('https://gitconnected.com/v1/portfolio/mrsjlwhite')
-      .then(res => res.json())
-      .then(resume => {
-        const { basics, interests, work, skills } = resume;
-        setResumeAbout(basics.summary);
-
-        setResumeFun(interests[0].name);
-
-        const jobs = work.map(buildExperienceCard);
-        setResumeJobs(jobs);
-
-        const skillNames = skills.map((skillset) => skillset.name);
-        setResumeSkills(skillNames);
-
-        setFetchingData(false);
-      })
-      .catch((err) => console.error(`🚨Issue getting resume data: ${err}`));
-  }, []);
+    const { summary, interests, work, skillNames } = resume;
+    const jobs = work.map(buildExperienceCard);
+    setResumeJobs(jobs);
+    setResumeAbout(summary);
+    setResumeFun(interests);
+    setResumeSkills(skillNames);
+    
+    // allow single spin for loading icon
+    setTimeout(() => setFetchingData(false), 800);
+  }, [resume]);
 
   useEffect(() => {
     const url = window.location.href.split("/");
@@ -100,6 +109,33 @@ function App() {
       }
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const data: GitConnectedPortfolio = await fetch('https://gitconnected.com/v1/portfolio/mrsjlwhite')
+    .then(res => res.json())
+    .catch((err) => console.error(`🚨Issue getting resume data: ${err}`));
+
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
+  const { basics, interests, work, skills } = data;
+
+  const resume: ResumeProps = {
+    summary: basics.summary,
+    interests: interests[0].name,
+    work: work,
+    skillNames: skills.map((skillset) => skillset.name)
+  }
+
+  return {
+    props: {
+      resume: resume
+    }
+  }
 }
 
 export default App;
