@@ -16,17 +16,5 @@ LinkUrls.set('twitter', {
     url: 'https://twitter.com/jlwhite_dev',
     name: 'Twitter'
 });
-LinkUrls.set('email', {
-    url: 'jlwhite.codes@gmail.com',
-    name: ''
-});
-LinkUrls.set('resume', {
-    url: 'https://gitconnected.com/mrsjlwhite/resume',
-    name: ''
-});
-// LinkUrls.set('blog', {
-//     url: 'https://heyyokimba.com',
-//     name: ''
-// });
 
 export default LinkUrls;

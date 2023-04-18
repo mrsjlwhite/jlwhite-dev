@@ -1,7 +1,6 @@
 import styles from '@/styles/myModal.module.scss';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import ResumeButton from './ResumeButton';
 import Experience from '@/interfaces/experience';
 
 type Props = {
@@ -32,7 +31,6 @@ function MyModal({ show, onHide, job }: Props) {
             <Modal.Body className={styles.myModalBody}>
                 <h6>about the company.</h6>
                 <p>{job.description}</p>
-                <ResumeButton jobName={job.name}></ResumeButton>
                 <h6>things i did.</h6>
                 <ul>
                     {job.fullDescription.map((desc, index) => {

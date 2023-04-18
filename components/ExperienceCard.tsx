@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import styles from '@/styles/experienceCard.module.scss';
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
-import ResumeButton from './ResumeButton';
 import Experience from '@/interfaces/experience';
 
 type Props = {
@@ -35,7 +34,6 @@ function ExperienceCard({ job, showModal }: Props) {
                 <div className={cardContainerStyle}>
                     <Card.Text className={styles.cardDesc}>
                         {job.description}
-                        <ResumeButton jobName={job.name} />
                     </Card.Text>
                     <div className={styles.cardListButtonContainer}>
                         {!job.tech || !job.tech.length
