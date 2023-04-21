@@ -1,0 +1,54 @@
+// fonts
+$font-sub-heading: var(--font-sub-heading); //'Josefin Sans', sans-serif;
+$font-heading-title: var(--font-heading-title); //'La Belle Aurore', cursive;
+$font-body: var(--font-body); //'Roboto Slab', serif;
+
+// colors
+$color-white: #F5F0EE; //isabelline
+$color-off-white: #F0E8E5; //isabelline
+$color-black: #141414; // night
+$color-purple: #BAA1AD; //rose quartz
+$color-green: #5A7557; //reseda green
+$color-gold: #BF984A; //satin sheen gold
+
+// variables
+$box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$mobile-width: 650px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// shared classes
+@mixin section-title-text {
+    font-family: $font-sub-heading;
+    color: $color-green;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+@mixin body-text {
+    font-family: $font-body;
+    color: $color-black;
+    font-weight: 300;
+    letter-spacing: .4px;
+    font-size: 18px;
+}
+
+@mixin small-body-text {
+    @include body-text;
+    font-size: 16px;
+}
+
+@mixin green-button {
+    color: $color-green !important;
+    font-family: $font-sub-heading !important;
+
+    &:hover {
+        background-color: rgba($color-green, 0.2) !important;
+    }
+
+    &:active {
+        background-color: rgba($color-green, 0.4) !important;
+        box-shadow: 0 2px rgba($color-black, 0.2);
+        transform: translateY(4px);
+    }
+}
