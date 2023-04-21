@@ -18,7 +18,7 @@
     }
 }
 
-@media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
+@media screen and (min-device-width : $tablet-width) and (max-device-width : 1180px) {
     .cardContainer {
         flex-direction: column;
     }

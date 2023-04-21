@@ -6,13 +6,13 @@ import LoadingIcon from '../shared/LoadingIcon';
 import ExperienceModal from './ExperienceModal';
 import Experience from '@/interfaces/experience';
 import { Container } from 'react-bootstrap';
+import { isMobile } from 'react-device-detect';
 
 type Props = {
     experiences: Experience[]
-    isMobile: boolean
 }
 
-function ExperiencesGallery({ experiences, isMobile }: Props) {
+function ExperiencesGallery({ experiences }: Props) {
     const defaultCarouselTime = 10000;
 
     const [jobs, setJobs] = useState([]);

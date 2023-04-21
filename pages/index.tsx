@@ -6,7 +6,6 @@ import ExperiencesGallery from "@/components/experiencesGallery/ExperiencesGalle
 import MyLinks from "@/components/MyLinks";
 import LoadingIcon from "@/components/shared/LoadingIcon";
 import jobTechIcons from "@/data/jobTechIcons";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Experience from "@/interfaces/experience";
 import GitConnectedPortfolio from "@/interfaces/gitConnected";
 import GitConnectedWork from "@/interfaces/gitConnectedWork";
@@ -28,21 +27,6 @@ function App({ resume }: Props) {
   const [resumeAbout, setResumeAbout] = useState('');
   const [resumeFun, setResumeFun] = useState('');
   const [fetchingData, setFetchingData] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
-  const { width } = useWindowDimensions();
-
-  useEffect(() => {
-    if (!width) {
-      return;
-    }
-    const mobile = width <= 650;
-    const tablet = width <= 768;
-    const results = mobile || tablet ? true : false;
-    // const results = width <= tabletWidth ? false : true;
-    // console.log({mobile})
-    // console.log({tablet})
-    setIsMobile(results);
-  }, [width])
 
   useEffect(() => {
     if (!resume) {
@@ -78,7 +62,7 @@ function App({ resume }: Props) {
     setResumeAbout(summary);
     setResumeFun(interests);
     setResumeSkills(skillNames);
-    
+
     // allow single spin for loading icon
     setTimeout(() => setFetchingData(false), 800);
   }, [resume]);
@@ -101,9 +85,9 @@ function App({ resume }: Props) {
         :
         <>
           <Header />
-          <MyNavbar isMobile={isMobile} />
+          <MyNavbar />
           <AboutMe aboutBlurb={resumeAbout} funBlurb={resumeFun} skillset={resumeSkills} />
-          <ExperiencesGallery experiences={resumeJobs} isMobile={isMobile} />
+          <ExperiencesGallery experiences={resumeJobs} />
           <MyLinks />
         </>
       }

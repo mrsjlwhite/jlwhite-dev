@@ -6,14 +6,22 @@ import Image from 'next/image';
 import LinkUrl from '@/interfaces/linkUrl';
 import { useEffect, useState } from 'react';
 import { openLink } from '@/lib/utils';
+import { isMobile } from 'react-device-detect';
+
+export enum IconSize {
+    small = 20,
+    large = 100,
+    largeMobile = 80
+}
 
 type Props = {
     link: LinkUrl,
-    size?: number
+    size: IconSize
 }
 
-const SocialIconImage = ({ link, size = 100 }: Props) => {
+const SocialIconImage = ({ link, size }: Props) => {
     const [imageSrc, setImageSrc] = useState(null);
+    const [imageSize, setImageSize] = useState<IconSize>(IconSize.large);
 
     useEffect(() => {
         switch (link.name.toLowerCase()) {
@@ -34,6 +42,20 @@ const SocialIconImage = ({ link, size = 100 }: Props) => {
         }
     }, [link])
 
+    useEffect(() => {
+        let newSize;
+
+        switch (size) {
+            case IconSize.large:
+                newSize = isMobile ? IconSize.largeMobile : IconSize.large;
+                setImageSize(newSize);
+                break;
+            default:
+                setImageSize(size);
+                break;
+        }
+    }, [size, isMobile])
+
     if (!imageSrc) {
         return <></>
     }
@@ -42,8 +64,8 @@ const SocialIconImage = ({ link, size = 100 }: Props) => {
         <Image
             src={imageSrc}
             className='filter-white'
-            height={size}
-            width={size}
+            height={imageSize}
+            width={imageSize}
             alt={`${link.name} Logo`}
             onClick={() => openLink(link.url)}
         />

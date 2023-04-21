@@ -14,13 +14,13 @@
 .linkButton {
     background-color: rgba($color-gold, 0.2) !important;
     border: solid 2px rgba($color-gold, 0.8) !important;
-    margin: 0 2rem;
+    margin: 1.5rem 2rem;
     padding: 1rem 1.5rem 0 !important;
     min-width: 173px;
 
     i {
         font-size: 100px;
-        padding: 0 10px;
+        padding: 0 8px;
     }
 
     .buttonText {
@@ -52,8 +52,15 @@
         margin-top: 10%;
 
         .linksSectionContainer {
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            .buttonsContainer {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
 
@@ -69,11 +76,26 @@
 
 @media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
     .linksSection {
+        height: unset;
         margin: 5% 0;
 
-        .linksSectionContainer {
-            flex-direction: column;
-            justify-content: space-between;
+        .buttonsContainer {
+            display: grid;
+
+            /* define only 2 columns*/
+            grid-template-columns: 1fr 1fr;
+
+            /* control the gap between both columns*/
+            column-gap: 4em;
+        }
+    }
+
+    .linkButton {
+        margin: 1rem 1.5rem;
+
+        .buttonText {
+            color: rgba($color-off-white, 0.9) !important;
+            opacity: 1;
         }
     }
 }

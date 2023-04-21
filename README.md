@@ -21,6 +21,7 @@ This is a react app to talk a lil' about me, and for me to add some project exam
 - 📦 Packages
   -  [Sass](https://sass-lang.com/documentation/)
   - [`react-loader-spinner`](https://mhnpd.github.io/react-loader-spinner/)
+  - [`react-device-detect`](https://www.npmjs.com/package/react-device-detect)
 - 🍱 Assets
   - [Devicon Icons](https://devicon.dev/)
   - [Bootstrap Icons](https://icons.getbootstrap.com/)

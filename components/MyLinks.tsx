@@ -3,7 +3,7 @@ import styles from '@/styles/myLinks.module.scss';
 import LinkUrls from '@/data/linkUrls';
 import { openLink } from '@/lib/utils';
 import LinkUrl from '@/interfaces/linkUrl';
-import SocialIconImage from './shared/SocialIconImage';
+import SocialIconImage, { IconSize } from './shared/SocialIconImage';
 
 function MyLinks() {
     const renderSocialButton = (linkUrl: LinkUrl): JSX.Element => {
@@ -12,7 +12,7 @@ function MyLinks() {
                 size='lg'
                 className={styles.linkButton}
                 onClick={() => openLink(linkUrl.url)}>
-                <SocialIconImage link={linkUrl} />
+                <SocialIconImage link={linkUrl} size={IconSize.large} />
                 <span className={styles.buttonText}>
                     {linkUrl.name}
                 </span>
@@ -24,10 +24,12 @@ function MyLinks() {
         <section id='my-links' className={styles.linksSection}>
             <Container className={styles.linksSectionContainer}>
                 <h4 className='section-title'>my links.</h4>
-                {renderSocialButton(LinkUrls.get('github'))}
-                {renderSocialButton(LinkUrls.get('linkedin'))}
-                {renderSocialButton(LinkUrls.get('instagram'))}
-                {renderSocialButton(LinkUrls.get('twitter'))}
+                <div className={styles.buttonsContainer}>
+                    {renderSocialButton(LinkUrls.get('github'))}
+                    {renderSocialButton(LinkUrls.get('linkedin'))}
+                    {renderSocialButton(LinkUrls.get('instagram'))}
+                    {renderSocialButton(LinkUrls.get('twitter'))}
+                </div>
             </Container>
         </section>
     )

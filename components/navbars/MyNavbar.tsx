@@ -5,12 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import SocialsIcons from './SocialsIcons';
 import Link from 'next/link';
 import { navigateToSection } from '@/lib/utils';
+import { MobileView } from 'react-device-detect';
 
-type Props = {
-    isMobile: boolean
-}
-
-function MyNavbar({ isMobile }: Props) {
+function MyNavbar() {
 
     return (
         <Navbar expand="lg" sticky='top' className={styles.myNavbar}>
@@ -38,13 +35,13 @@ function MyNavbar({ isMobile }: Props) {
                             className={styles.myNavLink}
                             href="/"
                             onClick={(e) => navigateToSection(e, 'my-links')}>
-                            Contact
+                            Connect
                         </Nav.Link>
-                        {!isMobile ? null :
+                        <MobileView>
                             <Nav.Link>
                                 <SocialsIcons />
                             </Nav.Link>
-                        }
+                        </MobileView>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
