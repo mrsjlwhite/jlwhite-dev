@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Experience from '@/interfaces/experience';
 import { emptyJob } from '@/data/emptyJobExperience';
+import TechIcon from './TechIcon';
 
 type Props = {
     job: Experience
@@ -66,7 +67,7 @@ function ExperienceCard({ job, showModal }: Props) {
             </Card.Body>
             <Card.Footer className={styles.cardFooter}>
                 {!theJob.techIcons || !theJob.techIcons.length ? null
-                    : theJob.techIcons.map((icon) => <i key={icon} className={`devicon-${icon} colored`}></i>)}
+                    : theJob.techIcons.map((icon) => <TechIcon key={icon} icon={icon} />)}
             </Card.Footer>
         </Card>
     );

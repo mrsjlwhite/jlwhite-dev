@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import AboutMe from '@/components/aboutMe/AboutMe';
 import Header from '@/components/Header';
 import MyNavbar from '@/components/navbars/MyNavbar';
-import ExperiencesGallery from "@/components/experiencesGallery/ExperiencesGallery";
+import MyExperience from "@/components/myExperience/myExperience";
 import MyLinks from "@/components/MyLinks";
 import LoadingIcon from "@/components/shared/LoadingIcon";
-import jobTechIcons from "@/data/jobTechIcons";
 import Experience from "@/interfaces/experience";
-import GitConnectedPortfolio from "@/interfaces/gitConnected";
 import GitConnectedWork from "@/interfaces/gitConnectedWork";
+import { getGitConnectedPortfolio } from "@/lib/api";
+import { getTechIconsByJobName } from "@/lib/utils";
 
 type ResumeProps = {
   summary: string
@@ -42,9 +42,6 @@ function App({ resume }: Props) {
       const techStack = work.highlights[work.highlights.length - 1];
       const techStackNames = techStack.replace('Technologies used: ', '').split(',');
 
-      const jobIcons = jobTechIcons.get(work.name);
-      const icons = jobIcons ? jobIcons : [];
-
       return {
         name: work.company,
         time: timeResults,
@@ -52,7 +49,7 @@ function App({ resume }: Props) {
         description: work.summary,
         fullDescription: work.highlights.splice(0, work.highlights.length - 1),
         tech: techStackNames,
-        techIcons: icons
+        techIcons: getTechIconsByJobName(work.name)
       }
     };
 
@@ -87,7 +84,7 @@ function App({ resume }: Props) {
           <Header />
           <MyNavbar />
           <AboutMe aboutBlurb={resumeAbout} funBlurb={resumeFun} skillset={resumeSkills} />
-          <ExperiencesGallery experiences={resumeJobs} />
+          <MyExperience experiences={resumeJobs} />
           <MyLinks />
         </>
       }
@@ -96,14 +93,10 @@ function App({ resume }: Props) {
 }
 
 export async function getServerSideProps() {
-  const data: GitConnectedPortfolio = await fetch('https://gitconnected.com/v1/portfolio/mrsjlwhite')
-    .then(res => res.json())
-    .catch((err) => console.error(`🚨Issue getting resume data: ${err}`));
+  const data = await getGitConnectedPortfolio();
 
   if (!data) {
-    return {
-      notFound: true,
-    }
+    return { notFound: true }
   }
 
   const { basics, interests, work, skills } = data;
@@ -114,7 +107,7 @@ export async function getServerSideProps() {
     work: work,
     skillNames: skills.map((skillset) => skillset.name)
   }
-
+  
   return {
     props: {
       resume: resume
