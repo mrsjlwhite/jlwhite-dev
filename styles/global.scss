@@ -5,12 +5,20 @@ body {
     background-color: $color-off-white;
 }
 
+small {
+    font-size: 80%;
+}
+
 .section-title {
     @include section-title-text;
 }
 
 .section-body {
     @include body-text;
+}
+
+.section-title-margin {
+    margin: 0 1em .5em 1em;
 }
 
 .green-button {

@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import AboutMe from '@/components/aboutMe/AboutMe';
 import Header from '@/components/Header';
 import MyNavbar from '@/components/navbars/MyNavbar';
-import MyExperience from "@/components/myExperience/myExperience";
+import MyExperience from "@/components/myExperience/MyExperience";
 import MyLinks from "@/components/MyLinks";
 import LoadingIcon from "@/components/shared/LoadingIcon";
 import Experience from "@/interfaces/experience";
 import GitConnectedWork from "@/interfaces/gitConnectedWork";
 import { getGitConnectedPortfolio } from "@/lib/api";
 import { getTechIconsByJobName } from "@/lib/utils";
+import MyWork from "@/components/MyWork";
 
 type ResumeProps = {
   summary: string
@@ -85,6 +86,7 @@ function App({ resume }: Props) {
           <MyNavbar />
           <AboutMe aboutBlurb={resumeAbout} funBlurb={resumeFun} skillset={resumeSkills} />
           <MyExperience experiences={resumeJobs} />
+          <MyWork />
           <MyLinks />
         </>
       }
@@ -107,7 +109,7 @@ export async function getServerSideProps() {
     work: work,
     skillNames: skills.map((skillset) => skillset.name)
   }
-  
+
   return {
     props: {
       resume: resume
