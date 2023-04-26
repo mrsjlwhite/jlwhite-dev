@@ -25,7 +25,7 @@ const MyWork = () => {
                 {workProjects.map((project: IWorkProject, index: number) => {
                     let imgSrc = null;
                     let imgAlt = '';
-                    
+
                     switch (project.name) {
                         case 'Heyyo Kimba':
                             imgSrc = kimba;
@@ -61,6 +61,7 @@ const MyWork = () => {
                     )
                 })}
             </div>
+            <Link href='/work' className={styles.viewAllLink}>View All</Link>
         </section>
     )
 }
