@@ -24,7 +24,8 @@ const MyWork = () => {
             <div className={styles.workCardsContainer}>
                 {workProjects.map((project: IWorkProject, index: number) => {
                     let imgSrc = null;
-                    let imgAlt = ''
+                    let imgAlt = '';
+                    
                     switch (project.name) {
                         case 'Heyyo Kimba':
                             imgSrc = kimba;
@@ -46,7 +47,7 @@ const MyWork = () => {
 
                     return (
                         <div key={index} className={styles.workCard}>
-                            <Link href={`/work/${project.slug}`}>
+                            <Link href={`/work/details/${project.slug}`}>
                                 <Image
                                     src={imgSrc}
                                     alt={imgAlt}

@@ -33,6 +33,12 @@ function MyNavbar() {
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
+                            href="/work">
+                            Work
+                        </Nav.Link>
+                        <Nav.Link
+                            as={Link}
+                            className={styles.myNavLink}
                             href="/"
                             onClick={(e) => navigateToSection(e, 'my-links')}>
                             Connect
