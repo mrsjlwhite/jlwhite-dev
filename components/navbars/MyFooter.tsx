@@ -5,7 +5,7 @@ function MyFooter() {
   return (
     <footer className={styles.myFooter}>
       <SocialsIcons />
-      Copyright &#169; Developerd by J.L. White 🤍
+      Copyright &#169; Developed by J.L. White 🤍
     </footer>
   )
 }
