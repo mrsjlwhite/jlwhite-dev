@@ -1,4 +1,5 @@
 import Experience from "@/interfaces/experience";
+import jobTechIcons from "./jobTechIcons";
 
 export const tldr: Experience = {
     name: 'TL;DR',
@@ -29,5 +30,5 @@ export const tldr: Experience = {
         "HTML5",
         "GitHub"
     ],
-    techIcons: []
+    techIcons: jobTechIcons.get('TL;DR')
 }

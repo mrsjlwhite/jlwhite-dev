@@ -7,8 +7,7 @@ import ExperienceModal from './ExperienceModal';
 import Experience from '@/interfaces/experience';
 import { Container } from 'react-bootstrap';
 import { isMobile } from 'react-device-detect';
-import { tldr } from '@/lib/data';
-import { getTechIconsByJobName } from '@/lib/utils';
+import { tldr } from '@/data/tldrExperience';
 import TechIcon from './TechIcon';
 
 type Props = {
@@ -46,12 +45,7 @@ function MyExperience({ experiences }: Props) {
 
     useEffect(() => {
         if (tldr) {
-            const summary = {
-                ...tldr,
-                techIcons: getTechIconsByJobName(tldr.name)
-            }
-
-            setExperienceSummary(summary);
+            setExperienceSummary(tldr);
         }
     }, [tldr])
 
@@ -71,7 +65,7 @@ function MyExperience({ experiences }: Props) {
 
     return (
         <section id='my-experience'>
-            <h4 className={`section-title ${styles.experienceGallerySectionTitle}`}>my experience.</h4>
+            <h4 className='section-title section-title-margin'>my experience.</h4>
             <div className='m-4'>
                 {!experienceSummary ? null : (
                     <div className={styles.summarySection}>

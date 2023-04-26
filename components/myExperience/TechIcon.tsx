@@ -24,8 +24,7 @@ const TechIcon = ({ icon, className }: Props) => {
     }, [className])
 
     return (
-        <i key={iconName}
-            className={`devicon-${iconName} colored ${iconClassName}`}
+        <i className={`devicon-${iconName} colored ${iconClassName}`}
             data-toggle="tooltip"
             data-placement="top"
             title={iconTooltip}>
