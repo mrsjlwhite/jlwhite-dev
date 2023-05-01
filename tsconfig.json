@@ -18,10 +18,10 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "incremental": true,
-        "baseUrl": "./",
+        "baseUrl": ".",
         "paths": {
             "@/components/*": [
-                "components/*"
+                "/components/*"
             ],
             "@/imgs/*": [
                 "public/imgs/*"
