@@ -20,9 +20,11 @@ const Work = () => {
             <div className={styles.wrapper}>
                 <h4 className='section-title section-title-margin mt-5'>my work.</h4>
                 <ul className={styles.workGallery}>
-                    {workProjects.map((project) => <li>
-                        <WorkPolaroid key={project.name} name={project.name} slug={project.slug} date={project.date} />
-                    </li>)}
+                    {workProjects.map((project) =>
+                        <li key={project.name}>
+                            <WorkPolaroid name={project.name} slug={project.slug} date={project.date} />
+                        </li>)
+                    }
                 </ul>
             </div>
         </>
