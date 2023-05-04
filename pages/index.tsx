@@ -10,6 +10,7 @@ import GitConnectedWork from "@/interfaces/gitConnectedWork";
 import { getGitConnectedPortfolio } from "@/lib/api";
 import { getTechIconsByJobName } from "@/lib/utils";
 import MyWork from "@/components/MyWork";
+import { useRouter } from "next/router";
 
 type ResumeProps = {
   summary: string
@@ -28,6 +29,9 @@ function App({ resume }: Props) {
   const [resumeAbout, setResumeAbout] = useState('');
   const [resumeFun, setResumeFun] = useState('');
   const [fetchingData, setFetchingData] = useState(true);
+  const [scrollingToSection, setIsScrolling] = useState(false);
+  const [routeUrl, setRouteUrl] = useState(undefined);
+  const router = useRouter();
 
   useEffect(() => {
     if (!resume) {
@@ -66,14 +70,42 @@ function App({ resume }: Props) {
   }, [resume]);
 
   useEffect(() => {
-    const url = window.location.href.split("/");
-    const target = url[url.length - 1].toLowerCase();
-    const element = document.getElementById(target);
-    if (!element) {
+    const url = router.asPath.replace('/', '').toLowerCase();
+    setRouteUrl(url);
+    setIsScrolling(false);
+  }, [router.asPath]);
+
+  useEffect(() => {
+    if (!routeUrl || routeUrl.includes('work')) {
       return;
     }
-    element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
-  }, []);
+
+    const waitToScroll = () => {
+      return setTimeout(() => {
+        setIsScrolling(true);
+        scrollToSection();
+      }, 1000);
+    }
+
+    const scrollToSection = () => {
+      if (fetchingData && !scrollingToSection) {
+        return waitToScroll();
+      }
+
+      const section = document.getElementById(routeUrl);
+
+      if (!section) {
+        return waitToScroll();
+      }
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      // section.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+      setIsScrolling(false);
+    }
+
+    if (routeUrl) {
+      scrollToSection();
+    }
+  }, [routeUrl, scrollingToSection]);
 
   return (
     <>

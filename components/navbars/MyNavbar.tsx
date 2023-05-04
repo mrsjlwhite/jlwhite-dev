@@ -4,7 +4,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import SocialsIcons from './SocialsIcons';
 import Link from 'next/link';
-import { navigateToSection } from '@/lib/utils';
 import { MobileView } from 'react-device-detect';
 
 function MyNavbar() {
@@ -19,15 +18,15 @@ function MyNavbar() {
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
-                            href="/"
-                            onClick={(e) => navigateToSection(e, 'about-me')}>
+                            href="/about-me"
+                            scroll={false}>
                             About
                         </Nav.Link>
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
-                            href="/"
-                            onClick={(e) => navigateToSection(e, 'my-experience')}>
+                            href="/my-experience"
+                            scroll={false}>
                             Experience
                         </Nav.Link>
                         <Nav.Link
@@ -39,8 +38,8 @@ function MyNavbar() {
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
-                            href="/"
-                            onClick={(e) => navigateToSection(e, 'my-links')}>
+                            href="/my-links"
+                            scroll={false}>
                             Connect
                         </Nav.Link>
                         <MobileView>
