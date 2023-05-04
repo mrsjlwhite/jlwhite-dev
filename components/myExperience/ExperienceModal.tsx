@@ -5,6 +5,7 @@ import Experience from '@/interfaces/experience';
 import { useEffect, useState } from 'react';
 import { emptyJob } from '@/data/emptyJobExperience';
 import { Josefin_Sans, Roboto_Slab } from 'next/font/google'; // Modal doesn't have access to CSS variables
+import TechIcon from './TechIcon';
 
 const fontSubHeading = Josefin_Sans({
     weight: ['100', '200', '300'],
@@ -71,11 +72,7 @@ function ExperienceModal({ show, onHide, job }: Props) {
                     <>
                         <h6 className={`${styles.techIconsContainer} ${bodyTitleStyles}`}>
                             tech i used.
-                            {modalJob.techIcons.map((icon) => {
-                                return (
-                                    <i key={icon} className={`devicon-${icon} colored`}></i>
-                                )
-                            })}
+                            {modalJob.techIcons.map((icon) => <TechIcon key={icon} icon={icon} />)}
                         </h6>
                         <ul>
                             {modalJob.tech.map((tech, index) => {

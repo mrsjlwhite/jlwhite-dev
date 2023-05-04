@@ -82,7 +82,10 @@ jobTechIcons.set('TL;DR', [
     html5,
     csharp,
     mysql,
-    github
+    github,
+    atlassian,
+    node,
+    net
 ]);
 
 export default jobTechIcons;

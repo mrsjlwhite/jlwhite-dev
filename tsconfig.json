@@ -21,7 +21,11 @@
         "baseUrl": ".",
         "paths": {
             "@/components/*": [
-                "components/*"
+                "components/*",
+                "components/aboutMe/*",
+                "components/myExperience/*",
+                "components/navbars/*",
+                "components/shared/*"
             ],
             "@/imgs/*": [
                 "public/imgs/*"

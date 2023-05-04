@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import AboutMe from '@/components/aboutMe/AboutMe';
 import Header from '@/components/Header';
 import MyNavbar from '@/components/navbars/MyNavbar';
-import ExperiencesGallery from "@/components/experiencesGallery/ExperiencesGallery";
+import MyExperience from "@/components/MyExperience";
 import MyLinks from "@/components/MyLinks";
 import LoadingIcon from "@/components/shared/LoadingIcon";
-import jobTechIcons from "@/data/jobTechIcons";
 import Experience from "@/interfaces/experience";
-import GitConnectedPortfolio from "@/interfaces/gitConnected";
 import GitConnectedWork from "@/interfaces/gitConnectedWork";
+import { getGitConnectedPortfolio } from "@/lib/api";
+import { getTechIconsByJobName } from "@/lib/utils";
+import MyWork from "@/components/MyWork";
+import { useRouter } from "next/router";
 
 type ResumeProps = {
   summary: string
@@ -27,6 +29,9 @@ function App({ resume }: Props) {
   const [resumeAbout, setResumeAbout] = useState('');
   const [resumeFun, setResumeFun] = useState('');
   const [fetchingData, setFetchingData] = useState(true);
+  const [scrollingToSection, setIsScrolling] = useState(false);
+  const [routeUrl, setRouteUrl] = useState(undefined);
+  const router = useRouter();
 
   useEffect(() => {
     if (!resume) {
@@ -42,9 +47,6 @@ function App({ resume }: Props) {
       const techStack = work.highlights[work.highlights.length - 1];
       const techStackNames = techStack.replace('Technologies used: ', '').split(',');
 
-      const jobIcons = jobTechIcons.get(work.name);
-      const icons = jobIcons ? jobIcons : [];
-
       return {
         name: work.company,
         time: timeResults,
@@ -52,7 +54,7 @@ function App({ resume }: Props) {
         description: work.summary,
         fullDescription: work.highlights.splice(0, work.highlights.length - 1),
         tech: techStackNames,
-        techIcons: icons
+        techIcons: getTechIconsByJobName(work.name)
       }
     };
 
@@ -68,14 +70,42 @@ function App({ resume }: Props) {
   }, [resume]);
 
   useEffect(() => {
-    const url = window.location.href.split("/");
-    const target = url[url.length - 1].toLowerCase();
-    const element = document.getElementById(target);
-    if (!element) {
+    const url = router.asPath.replace('/', '').toLowerCase();
+    setRouteUrl(url);
+    setIsScrolling(false);
+  }, [router.asPath]);
+
+  useEffect(() => {
+    if (!routeUrl || routeUrl.includes('work')) {
       return;
     }
-    element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
-  }, []);
+
+    const waitToScroll = () => {
+      return setTimeout(() => {
+        setIsScrolling(true);
+        scrollToSection();
+      }, 1000);
+    }
+
+    const scrollToSection = () => {
+      if (fetchingData && !scrollingToSection) {
+        return waitToScroll();
+      }
+
+      const section = document.getElementById(routeUrl);
+
+      if (!section) {
+        return waitToScroll();
+      }
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      // section.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+      setIsScrolling(false);
+    }
+
+    if (routeUrl) {
+      scrollToSection();
+    }
+  }, [routeUrl, scrollingToSection]);
 
   return (
     <>
@@ -87,7 +117,8 @@ function App({ resume }: Props) {
           <Header />
           <MyNavbar />
           <AboutMe aboutBlurb={resumeAbout} funBlurb={resumeFun} skillset={resumeSkills} />
-          <ExperiencesGallery experiences={resumeJobs} />
+          <MyExperience experiences={resumeJobs} />
+          <MyWork />
           <MyLinks />
         </>
       }
@@ -96,14 +127,10 @@ function App({ resume }: Props) {
 }
 
 export async function getServerSideProps() {
-  const data: GitConnectedPortfolio = await fetch('https://gitconnected.com/v1/portfolio/mrsjlwhite')
-    .then(res => res.json())
-    .catch((err) => console.error(`🚨Issue getting resume data: ${err}`));
+  const data = await getGitConnectedPortfolio();
 
   if (!data) {
-    return {
-      notFound: true,
-    }
+    return { notFound: true }
   }
 
   const { basics, interests, work, skills } = data;

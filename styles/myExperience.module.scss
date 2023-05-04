@@ -7,8 +7,18 @@
     justify-items: center;
 }
 
-.experienceGallerySectionTitle {
-    margin: 0 1em .5em 1em;
+.summarySection {
+    max-width: 70vw;
+    text-align: center;
+    margin: auto;
+
+    .summaryDetailsContainer {
+        display: flex;
+    }
+    
+    li {
+        list-style: none;
+    }
 }
 
 @media screen and (max-width: $mobile-width) {
@@ -16,10 +26,18 @@
     .cardContainer {
         flex-direction: column;
     }
+
+    .summaryDetailsContainer {
+        flex-direction: column;
+    }
 }
 
 @media screen and (min-device-width : $tablet-width) and (max-device-width : 1180px) {
     .cardContainer {
+        flex-direction: column;
+    }
+
+    .summaryDetailsContainer {
         flex-direction: column;
     }
 }
