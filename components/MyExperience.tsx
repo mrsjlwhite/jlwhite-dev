@@ -1,14 +1,14 @@
 import styles from '@/styles/myExperience.module.scss'
 import { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import ExperienceCard from './ExperienceCard';
-import LoadingIcon from '../shared/LoadingIcon';
-import ExperienceModal from './ExperienceModal';
+import ExperienceCard from './myExperience/ExperienceCard';
+import LoadingIcon from './shared/LoadingIcon';
+import ExperienceModal from './myExperience/ExperienceModal';
 import Experience from '@/interfaces/experience';
 import { Container } from 'react-bootstrap';
 import { isMobile } from 'react-device-detect';
 import { tldr } from '@/data/tldrExperience';
-import TechIcon from './TechIcon';
+import TechIcon from './myExperience/TechIcon';
 
 type Props = {
     experiences: Experience[]

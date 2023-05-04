@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AboutMe from '@/components/aboutMe/AboutMe';
 import Header from '@/components/Header';
 import MyNavbar from '@/components/navbars/MyNavbar';
-import MyExperience from "@/components/myExperience/MyExperience";
+import MyExperience from "@/components/MyExperience";
 import MyLinks from "@/components/MyLinks";
 import LoadingIcon from "@/components/shared/LoadingIcon";
 import Experience from "@/interfaces/experience";
