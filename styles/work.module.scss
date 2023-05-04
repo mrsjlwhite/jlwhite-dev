@@ -90,3 +90,54 @@
         @include animated-box-shadow;
     }
 }
+
+@media screen and (max-width: $mobile-width) {
+    .workGallery {
+        grid-template-columns: 1fr;
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    .workDetailsCols {
+        flex-direction: column;
+
+        .projectNameText {
+            margin-left: 3%;
+            overflow-wrap: break-word;
+        }
+
+        .projectDescText {
+            max-width: 60vw !important;
+        }
+    }
+
+    .mainImg,
+    .secondImg {
+        border: none !important;
+        box-shadow: none !important;
+        object-fit: cover !important;
+    }
+}
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
+    .workGallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .workDetailsCols {
+        flex-direction: column;
+
+        .projectDescText {
+            max-width: unset !important;
+        }
+    }
+
+    .mainImg,
+    .secondImg {
+        border: none !important;
+        box-shadow: none !important;
+        object-fit: cover !important;
+    }
+}

@@ -23,6 +23,7 @@ function MyExperience({ experiences }: Props) {
     const [selectedJob, setSelectedJob] = useState<Experience>(null);
     const [carouselTime, setCarouselTime] = useState(defaultCarouselTime);
     const [experienceSummary, setExperienceSummary] = useState<Experience>(null);
+    const [summaryTechIconStyles, setSummaryTechIconStyles] = useState('');
 
     useEffect(() => {
         if (!experiences.length) {
@@ -30,6 +31,7 @@ function MyExperience({ experiences }: Props) {
         }
 
         if (isMobile) {
+            setSummaryTechIconStyles('');
             return setJobs(experiences);
         }
 
@@ -41,6 +43,7 @@ function MyExperience({ experiences }: Props) {
         }, []);
 
         setJobs(jobPairs);
+        setSummaryTechIconStyles('m-4');
     }, [isMobile, experiences]);
 
     useEffect(() => {
@@ -78,7 +81,7 @@ function MyExperience({ experiences }: Props) {
                                 <p className='section-body pr-4 pl-4'>
                                     {experienceSummary.description}
                                 </p>
-                                <p className='m-4'>
+                                <p className={summaryTechIconStyles}>
                                     {experienceSummary.techIcons.map((icon) => <TechIcon key={icon} icon={icon} className='m-1' />)}
                                 </p>
                             </div>
