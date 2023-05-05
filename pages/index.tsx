@@ -30,6 +30,7 @@ function App({ resume }: Props) {
   const [resumeFun, setResumeFun] = useState('');
   const [fetchingData, setFetchingData] = useState(true);
   const [scrollingToSection, setIsScrolling] = useState(false);
+  const [successfullyScrolled, setSuccessfullyScrolled] = useState(false);
   const [routeUrl, setRouteUrl] = useState(undefined);
   const router = useRouter();
 
@@ -73,6 +74,7 @@ function App({ resume }: Props) {
     const url = router.asPath.replace('/', '').toLowerCase();
     setRouteUrl(url);
     setIsScrolling(false);
+    setSuccessfullyScrolled(false);
   }, [router.asPath]);
 
   useEffect(() => {
@@ -88,6 +90,10 @@ function App({ resume }: Props) {
     }
 
     const scrollToSection = () => {
+      if (successfullyScrolled) {
+        return;
+      }
+
       if (fetchingData && !scrollingToSection) {
         return waitToScroll();
       }
@@ -100,6 +106,7 @@ function App({ resume }: Props) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
       // section.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
       setIsScrolling(false);
+      setSuccessfullyScrolled(true);
     }
 
     if (routeUrl) {
