@@ -36,5 +36,22 @@ export const projects: IWorkProject[] = [
         liveLink: 'https://mrsjlwhite.github.io/poke-quiz/',
         date: 'March 27, 2023',
         slug: 'poke-quiz'
+    },
+    {
+        name: 'Bride Entourage',
+        description: `
+        A website for a bride to share with her bridesmaids. 
+        Features included
+        : Post-it like notes to share.
+        : Calendar to post events to be aware of.
+        : Live countdowns for upcoming events.
+        : Links the bride needed to share.
+        : A photo gallery.
+        `,
+        tech: ['react', 'next.js', 'sass'],
+        githubLink: '',
+        liveLink: '',
+        date: 'May 16, 2023',
+        slug: 'bride-entourage'
     }
 ]

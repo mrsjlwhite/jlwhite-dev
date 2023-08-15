@@ -13,6 +13,9 @@ import hundekey1 from '@/imgs/workSamples/hundekey/hundekey1.png';
 import hundekey2 from '@/imgs/workSamples/hundekey/hundekey2.png';
 import poke1 from '@/imgs/workSamples/poke/poke1.png';
 import poke2 from '@/imgs/workSamples/poke/poke2.png';
+import entourage1 from '@/imgs/workSamples/brideEntourage/entourage1.png';
+import entourage2 from '@/imgs/workSamples/brideEntourage/entourage2.png';
+import entourage3 from '@/imgs/workSamples/brideEntourage/entourage3.png';
 import Image from 'next/image';
 
 type Props = {
@@ -44,12 +47,41 @@ const WorkDetails = ({ workProject }: Props) => {
                     setSecondImg(poke2);
                     setThirdImg(null);
                     break;
+                case 'Bride Entourage':
+                    setMainImg(entourage1);
+                    setSecondImg(entourage2);
+                    setThirdImg(entourage3);
+                    break;
                 default:
                     setMainImg(placeholder);
                     break;
             }
         }
-    }, [workProject])
+    }, [workProject]);
+
+    function setProjectDescription() {
+        if (!workProject.description.includes(':')) {
+            return (
+                <p className={styles.projectDescText}>
+                    {workProject.description}
+                </p>
+            )
+        }
+
+        const descSplit = workProject.description.split(':');
+        const desc = descSplit[0];
+
+        return (
+            <p className={styles.projectDescText}>
+                {desc}
+                <ul>
+                    {descSplit.map(function (name, index) {
+                        return index === 0 ? null : <li key={index}>{name}</li>;
+                    })}
+                </ul>
+            </p>
+        )
+    }
 
     if (!router.isFallback && !workProject?.slug) {
         console.log('no bueno');
@@ -73,9 +105,7 @@ const WorkDetails = ({ workProject }: Props) => {
                         <h1 className={styles.projectNameText}>
                             {workProject.name}
                         </h1>
-                        <p className={styles.projectDescText}>
-                            {workProject.description}
-                        </p>
+                        {setProjectDescription()}
                         {!workProject.githubLink ? null : (<Link href={workProject.githubLink} target='_blank' className={styles.projectLink}>View Repo</Link>)}
                         {!workProject.liveLink ? null : (<Link href={workProject.liveLink} target='_blank' className={styles.projectLink}>View Live</Link>)}
                     </div>

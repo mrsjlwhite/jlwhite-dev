@@ -5,6 +5,7 @@ import placeholder from '@/imgs/placeholder.png';
 import kimba from '@/imgs/workSamples/kimba/kimba0.png';
 import hundekey from '@/imgs/workSamples/hundekey/hundekey0.png';
 import poke from '@/imgs/workSamples/poke/poke0.png';
+import entourage from '@/imgs/workSamples/brideEntourage/entourage0.png';
 import Image from 'next/image';
 
 type Props = {
@@ -30,6 +31,10 @@ function WorkPolaroid({ name, slug, date }: Props) {
             case 'Poke Quiz':
                 setImgSrc(poke);
                 setImgAlt('Retro Pokémon poké ball as site logo');
+                break;
+            case 'Bride Entourage':
+                setImgSrc(entourage);
+                setImgAlt('Bridesmaids dashboard')
                 break;
             default:
                 setImgSrc(placeholder);
