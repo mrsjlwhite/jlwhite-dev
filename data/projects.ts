@@ -2,6 +2,51 @@ import { IWorkProject } from "@/interfaces/workProject";
 
 export const projects: IWorkProject[] = [
     {
+        name: 'Digital Resume',
+        description: `
+        A digital resume for a neurologist with a diverse set of resumes and accoredations to present.
+        Features included
+        : Clean UI/UX professional design with a retro colorway.
+        : A seamless homepage with "endless" scroll.
+        : Simple solution for client to update content on site with Markdown syntax.
+        : Ability to download client-provided documents.
+        `,
+        tech: ['react', 'next.js', 'typescript', 'sass'],
+        githubLink: '',
+        liveLink: '',
+        date: 'September 18, 2023',
+        slug: 'digital-resume'
+    },
+    {
+        name: 'Bride Entourage',
+        description: `
+        A website for a bride to share with her bridesmaids. 
+        Features included
+        : Post-it like notes to share.
+        : Calendar to post events to be aware of.
+        : Live countdowns for upcoming events.
+        : Links the bride needed to share.
+        : A photo gallery.
+        `,
+        tech: ['react', 'next.js', 'sass'],
+        githubLink: '',
+        liveLink: '',
+        date: 'May 16, 2023',
+        slug: 'bride-entourage'
+    },
+    {
+        name: 'Poke Quiz',
+        description: `
+        For a tech interview, I was tasked to work with an external API while only using vanilla JavaScript.
+        Hence this project is using an open source Pokémon API to randomly provide you a pocket monster based on your selections.
+        `,
+        tech: ['html', 'css', 'javascript'],
+        githubLink: 'https://github.com/mrsjlwhite/poke-quiz',
+        liveLink: 'https://mrsjlwhite.github.io/poke-quiz/',
+        date: 'March 27, 2023',
+        slug: 'poke-quiz'
+    },
+    {
         name: 'Heyyo Kimba',
         description: `
         A tech & lifestyle blog, utilizing responsive design and a static application for performance. 
@@ -24,34 +69,5 @@ export const projects: IWorkProject[] = [
         liveLink: 'https://hundekeycreeates.com/',
         date: 'December 10, 2022',
         slug: 'hundekey-creeates'
-    },
-    {
-        name: 'Poke Quiz',
-        description: `
-        For a tech interview, I was tasked to work with an external API while only using vanilla JavaScript.
-        Hence this project is using an open source Pokémon API to randomly provide you a pocket monster based on your selections.
-        `,
-        tech: ['html', 'css', 'javascript'],
-        githubLink: 'https://github.com/mrsjlwhite/poke-quiz',
-        liveLink: 'https://mrsjlwhite.github.io/poke-quiz/',
-        date: 'March 27, 2023',
-        slug: 'poke-quiz'
-    },
-    {
-        name: 'Bride Entourage',
-        description: `
-        A website for a bride to share with her bridesmaids. 
-        Features included
-        : Post-it like notes to share.
-        : Calendar to post events to be aware of.
-        : Live countdowns for upcoming events.
-        : Links the bride needed to share.
-        : A photo gallery.
-        `,
-        tech: ['react', 'next.js', 'sass'],
-        githubLink: '',
-        liveLink: '',
-        date: 'May 16, 2023',
-        slug: 'bride-entourage'
     }
 ]

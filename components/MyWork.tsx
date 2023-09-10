@@ -10,7 +10,7 @@ const MyWork = () => {
 
     useEffect(() => {
         if (projects && projects.length) {
-            setWorkProjects(projects);
+            setWorkProjects(projects.splice(0, 3));
         }
     }, [projects])
 
