@@ -8,6 +8,7 @@ import poke from '@/imgs/workSamples/poke/poke0.png';
 import entourage from '@/imgs/workSamples/brideEntourage/entourage0.png';
 import resume from '@/imgs/workSamples/digitalResume/resume0.png';
 import Image from 'next/image';
+import { ProjectNames } from 'constants/projectNames';
 
 type Props = {
     name: string
@@ -23,23 +24,23 @@ function WorkPolaroid({ name, slug, date, type }: Props) {
 
     useEffect(() => {
         switch (name) {
-            case 'Heyyo Kimba':
+            case ProjectNames.Kimba:
                 setImgSrc(kimba);
                 setImgAlt(`${name} blog logo`);
                 break;
-            case 'HundekeyCreeates':
+            case ProjectNames.Hundekey:
                 setImgSrc(hundekey);
                 setImgAlt(`${name} portfolio logo`);
                 break;
-            case 'Poke Quiz':
+            case ProjectNames.PokeQuiz:
                 setImgSrc(poke);
                 setImgAlt('Retro Pokémon poké ball as site logo');
                 break;
-            case 'Bride Entourage':
+            case ProjectNames.Entourage:
                 setImgSrc(entourage);
                 setImgAlt('Bridesmaids dashboard')
                 break;
-            case 'Digital Resume':
+            case ProjectNames.DigitalResume:
                 setImgSrc(resume);
                 setImgAlt('A living resume');
                 break;

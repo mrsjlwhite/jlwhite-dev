@@ -1,8 +1,9 @@
 import { IWorkProject } from "@/interfaces/workProject";
+import { ProjectNames } from "constants/projectNames";
 
 export const projects: IWorkProject[] = [
     {
-        name: 'Digital Resume',
+        name: ProjectNames.DigitalResume,
         description: `
         A digital resume for a neurologist with a diverse set of resumes and accreditations & accolades to present.
         Features included
@@ -19,7 +20,7 @@ export const projects: IWorkProject[] = [
         slug: 'digital-resume'
     },
     {
-        name: 'Bride Entourage',
+        name: ProjectNames.Entourage,
         description: `
         A website for a bride to share with her bridesmaids. 
         Features included
@@ -37,7 +38,7 @@ export const projects: IWorkProject[] = [
         slug: 'bride-entourage'
     },
     {
-        name: 'Poke Quiz',
+        name: ProjectNames.PokeQuiz,
         description: `
         For a tech interview, I was tasked to work with an external API while only using vanilla JavaScript.
         Hence this project is using an open source Pokémon API to randomly provide you a pocket monster based on your selections.
@@ -50,7 +51,7 @@ export const projects: IWorkProject[] = [
         slug: 'poke-quiz'
     },
     {
-        name: 'Heyyo Kimba',
+        name: ProjectNames.Kimba,
         description: `
         A tech & lifestyle blog, utilizing responsive design and a static application for performance. 
         Includes integration with SendGrid for sending emails to the blogger, with reCAPTCHA validation to prevent spams.
@@ -63,7 +64,7 @@ export const projects: IWorkProject[] = [
         slug: 'heyyo-kimba'
     },
     {
-        name: 'HundekeyCreeates',
+        name: ProjectNames.Hundekey,
         description: `
         An art portfolio for a graphic designer, displaying a plethora of art samples with a custom photo & video viewer.
         Has responsive design and hosted for free with GitHub Pages

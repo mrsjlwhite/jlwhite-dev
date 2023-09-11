@@ -20,6 +20,7 @@ import resume1 from '@/imgs/workSamples/digitalResume/resume1.png';
 import resume2 from '@/imgs/workSamples/digitalResume/resume2.png';
 import resume3 from '@/imgs/workSamples/digitalResume/resume3.png';
 import Image from 'next/image';
+import { ProjectNames } from 'constants/projectNames';
 
 type Props = {
     workProject: IWorkProject
@@ -35,27 +36,27 @@ const WorkDetails = ({ workProject }: Props) => {
     useEffect(() => {
         if (workProject) {
             switch (workProject.name) {
-                case 'Heyyo Kimba':
+                case ProjectNames.Kimba:
                     setMainImg(kimba1);
                     setSecondImg(kimba2);
                     setThirdImg(kimba3);
                     break;
-                case 'HundekeyCreeates':
+                case ProjectNames.Hundekey:
                     setMainImg(hundekey1);
                     setSecondImg(hundekey2);
                     setThirdImg(null);
                     break;
-                case 'Poke Quiz':
+                case ProjectNames.PokeQuiz:
                     setMainImg(poke1);
                     setSecondImg(poke2);
                     setThirdImg(null);
                     break;
-                case 'Bride Entourage':
+                case ProjectNames.Entourage:
                     setMainImg(entourage1);
                     setSecondImg(entourage2);
                     setThirdImg(entourage3);
                     break;
-                case 'Digital Resume':
+                case ProjectNames.DigitalResume:
                     setMainImg(resume1);
                     setSecondImg(resume2);
                     setThirdImg(resume3);
