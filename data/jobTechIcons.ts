@@ -1,9 +1,11 @@
 // programmer icon names
+const vue = 'vuejs-plain';
 const react = 'react-original';
 const typescript = 'typescript-plain';
 const javascript = 'javascript-plain';
 const csharp = 'csharp-plain';
 const mysql = 'mysql-plain';
+const sql = 'microsoftsqlserver-plain';
 const atlassian = 'matlab-plain';
 const jira = 'jira-plain';
 const confluence = 'confluence-original';
@@ -20,6 +22,15 @@ const bitbucket = 'bitbucket-original';
 const trello = 'trello-plain';
 
 const jobTechIcons = new Map();
+
+jobTechIcons.set('Xerox Business Solutions Southwest', [
+    vue,
+    javascript,
+    csharp,
+    net,
+    sql,
+    github
+]);
 
 jobTechIcons.set('Tresta', [
     react,
@@ -39,6 +50,7 @@ jobTechIcons.set('IAPMO', [
     javascript,
     angular,
     net,
+    sql,
     bootstrap,
     css,
     html5,
@@ -75,6 +87,7 @@ jobTechIcons.set('Laso Concepts', [
 
 jobTechIcons.set('TL;DR', [
     react,
+    vue,
     typescript,
     javascript,
     bootstrap,
@@ -82,6 +95,7 @@ jobTechIcons.set('TL;DR', [
     html5,
     csharp,
     mysql,
+    sql,
     github,
     atlassian,
     node,
