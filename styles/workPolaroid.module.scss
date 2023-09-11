@@ -19,4 +19,8 @@
         color: lightgray;
         font-family: $font-body;
     }
+
+    img {
+        object-fit: contain;
+    }
 }
