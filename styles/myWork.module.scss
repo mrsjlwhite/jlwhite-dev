@@ -18,8 +18,22 @@
     display: block;
     text-align: center;
     font-size: 28px;
-    
+
     &:hover {
         color: $color-green;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .workCardsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : 1180px) {
+    .workCardsContainer {
+        flex-direction: column;
+        align-items: center;
     }
 }

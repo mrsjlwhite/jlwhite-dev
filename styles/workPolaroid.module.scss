@@ -24,3 +24,29 @@
         object-fit: contain;
     }
 }
+
+@media screen and (max-width: $mobile-width) {
+    .workPolaroidCard {
+        margin-bottom: 10%;
+        max-width: 350px;
+        text-align: center;
+
+        img {
+            height: auto;
+            width: 250px;
+        }
+    }
+}
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : 1180px) {
+    .workPolaroidCard {
+        margin-bottom: 10%;
+        max-width: 350px;
+        text-align: center;
+
+        img {
+            height: auto;
+            width: 250px;
+        }
+    }
+}
