@@ -22,7 +22,7 @@ const Work = () => {
                 <ul className={styles.workGallery}>
                     {workProjects.map((project) =>
                         <li key={project.name}>
-                            <WorkPolaroid name={project.name} slug={project.slug} date={project.date} />
+                            <WorkPolaroid name={project.name} slug={project.slug} date={project.date} type={project.projectType} />
                         </li>)
                     }
                 </ul>

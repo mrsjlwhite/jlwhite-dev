@@ -13,11 +13,13 @@ type Props = {
     name: string
     slug: string
     date: string
+    type: string
 }
 
-function WorkPolaroid({ name, slug, date }: Props) {
+function WorkPolaroid({ name, slug, date, type }: Props) {
     const [imgSrc, setImgSrc] = useState(placeholder);
     const [imgAlt, setImgAlt] = useState('');
+    const [typeColor, setTypeColor] = useState('');
 
     useEffect(() => {
         switch (name) {
@@ -48,6 +50,20 @@ function WorkPolaroid({ name, slug, date }: Props) {
         }
     }, [name])
 
+    useEffect(() => {
+        switch (type) {
+            case 'Personal Project':
+                setTypeColor(styles.goldBadge);
+                break;
+            case 'Client Work':
+                setTypeColor(styles.greenBadge);
+                break;
+            case 'Tech Interview':
+                setTypeColor(styles.purpleBadge);
+                break;
+        }
+    }, [type])
+
     return (
         <div className={styles.workPolaroidCard}>
             <Link href={`/work/details/${slug}`}>
@@ -59,6 +75,9 @@ function WorkPolaroid({ name, slug, date }: Props) {
                 />
                 <h4>{name}</h4>
                 <p>{date}</p>
+                <p className={`${styles.typeBadge} ${typeColor}`}>
+                    {type}
+                </p>
             </Link>
         </div>
     )
