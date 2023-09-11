@@ -1,18 +1,14 @@
 import styles from '@/styles/work.module.scss';
 import MyNavbar from '@/components/navbars/MyNavbar';
-import { useEffect, useState } from 'react';
 import { projects } from '@/data/projects';
 import WorkPolaroid from '@/components/shared/WorkPolaroid';
 import { IWorkProject } from '@/interfaces/workProject';
 
-const Work = () => {
-    const [workProjects, setWorkProjects] = useState<IWorkProject[]>([]);
+type Props = {
+    workProjects: IWorkProject[]
+}
 
-    useEffect(() => {
-        if (projects && projects.length) {
-            setWorkProjects(projects);
-        }
-    }, [projects])
+const Work = ({ workProjects }: Props) => {
 
     return (
         <>
@@ -29,6 +25,16 @@ const Work = () => {
             </div>
         </>
     )
+}
+
+export async function getStaticProps() {
+    const workProjects = projects;
+
+    return {
+        props: {
+            workProjects
+        }
+    }
 }
 
 export default Work
