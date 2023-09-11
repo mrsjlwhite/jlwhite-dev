@@ -99,6 +99,7 @@
 @media screen and (max-width: $mobile-width) {
     .workGallery {
         grid-template-columns: 1fr;
+        margin-left: -15px;
 
         ul {
             list-style: none;
