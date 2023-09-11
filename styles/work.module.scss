@@ -91,6 +91,11 @@
     }
 }
 
+.badgeContainer {
+    justify-content: center;
+    display: flex;
+}
+
 @media screen and (max-width: $mobile-width) {
     .workGallery {
         grid-template-columns: 1fr;

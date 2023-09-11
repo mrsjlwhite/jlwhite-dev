@@ -19,25 +19,4 @@
         color: lightgray;
         font-family: $font-body;
     }
-
-    .typeBadge {
-        color: $color-white;
-        background-color: $color-green;
-        font-family: $font-body;
-        border-radius: 5px;
-        width: 8rem;
-        text-align: center;
-    }
-    
-    .greenBadge {
-        background-color: $color-green;
-    }
-    
-    .goldBadge {
-        background-color: $color-gold;
-    }
-    
-    .purpleBadge {
-        background-color: $color-purple;
-    }
 }

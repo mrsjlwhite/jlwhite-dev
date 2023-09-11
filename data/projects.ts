@@ -1,5 +1,6 @@
 import { IWorkProject } from "@/interfaces/workProject";
 import { ProjectNames } from "constants/projectNames";
+import { ProjectTypes } from "constants/projectTypes";
 
 export const projects: IWorkProject[] = [
     {
@@ -13,7 +14,7 @@ export const projects: IWorkProject[] = [
         : Users can download client-provided documents.
         `,
         tech: ['react', 'next.js', 'typescript', 'bootstrap', 'sass'],
-        projectType: 'Client Work',
+        projectType: ProjectTypes.Client,
         githubLink: '',
         liveLink: '',
         date: 'September 18, 2023',
@@ -31,7 +32,7 @@ export const projects: IWorkProject[] = [
         : A photo gallery.
         `,
         tech: ['react', 'next.js', 'sass'],
-        projectType: 'Client Work',
+        projectType: ProjectTypes.Client,
         githubLink: '',
         liveLink: '',
         date: 'May 16, 2023',
@@ -44,7 +45,7 @@ export const projects: IWorkProject[] = [
         Hence this project is using an open source Pokémon API to randomly provide you a pocket monster based on your selections.
         `,
         tech: ['html', 'css', 'javascript'],
-        projectType: 'Tech Interview',
+        projectType: ProjectTypes.Interview,
         githubLink: 'https://github.com/mrsjlwhite/poke-quiz',
         liveLink: 'https://mrsjlwhite.github.io/poke-quiz/',
         date: 'March 27, 2023',
@@ -57,7 +58,7 @@ export const projects: IWorkProject[] = [
         Includes integration with SendGrid for sending emails to the blogger, with reCAPTCHA validation to prevent spams.
         `,
         tech: ['react', 'next.js', 'typescript', 'sass'],
-        projectType: 'Personal Project',
+        projectType: ProjectTypes.Personal,
         githubLink: 'https://github.com/mrsjlwhite/heyyo-kimba',
         liveLink: 'https://heyyokimba.com',
         date: 'September 4, 2022',
@@ -70,7 +71,7 @@ export const projects: IWorkProject[] = [
         Has responsive design and hosted for free with GitHub Pages
         `,
         tech: ['react', 'javascript', 'sass'],
-        projectType: 'Client Work',
+        projectType: ProjectTypes.Client,
         githubLink: 'https://github.com/mrsjlwhite/hundekeycreeates',
         liveLink: 'https://hundekeycreeates.com/',
         date: 'December 10, 2022',

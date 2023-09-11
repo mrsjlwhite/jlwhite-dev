@@ -20,6 +20,7 @@ export const tldr: Experience = {
     tech: [
         "React",
         "React Native",
+        "Vue.js",
         "TypeScript",
         "JavaScript",
         "C#",

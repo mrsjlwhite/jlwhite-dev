@@ -21,6 +21,7 @@ import resume2 from '@/imgs/workSamples/digitalResume/resume2.png';
 import resume3 from '@/imgs/workSamples/digitalResume/resume3.png';
 import Image from 'next/image';
 import { ProjectNames } from 'constants/projectNames';
+import TypeBadge from '@/components/shared/TypeBadge';
 
 type Props = {
     workProject: IWorkProject
@@ -115,6 +116,9 @@ const WorkDetails = ({ workProject }: Props) => {
                             {workProject.name}
                         </h1>
                         {setProjectDescription()}
+                        <div className={styles.badgeContainer}>
+                            <TypeBadge type={workProject.projectType} />
+                        </div>
                         {!workProject.githubLink ? null : (<Link href={workProject.githubLink} target='_blank' className={styles.projectLink}>View Repo</Link>)}
                         {!workProject.liveLink ? null : (<Link href={workProject.liveLink} target='_blank' className={styles.projectLink}>View Live</Link>)}
                     </div>
