@@ -16,6 +16,9 @@ import poke2 from '@/imgs/workSamples/poke/poke2.png';
 import entourage1 from '@/imgs/workSamples/brideEntourage/entourage1.png';
 import entourage2 from '@/imgs/workSamples/brideEntourage/entourage2.png';
 import entourage3 from '@/imgs/workSamples/brideEntourage/entourage3.png';
+import resume1 from '@/imgs/workSamples/digitalResume/resume1.png';
+import resume2 from '@/imgs/workSamples/digitalResume/resume2.png';
+import resume3 from '@/imgs/workSamples/digitalResume/resume3.png';
 import Image from 'next/image';
 
 type Props = {
@@ -51,6 +54,11 @@ const WorkDetails = ({ workProject }: Props) => {
                     setMainImg(entourage1);
                     setSecondImg(entourage2);
                     setThirdImg(entourage3);
+                    break;
+                case 'Digital Resume':
+                    setMainImg(resume1);
+                    setSecondImg(resume2);
+                    setThirdImg(resume3);
                     break;
                 default:
                     setMainImg(placeholder);

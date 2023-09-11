@@ -6,6 +6,7 @@ import kimba from '@/imgs/workSamples/kimba/kimba0.png';
 import hundekey from '@/imgs/workSamples/hundekey/hundekey0.png';
 import poke from '@/imgs/workSamples/poke/poke0.png';
 import entourage from '@/imgs/workSamples/brideEntourage/entourage0.png';
+import resume from '@/imgs/workSamples/digitalResume/resume0.png';
 import Image from 'next/image';
 
 type Props = {
@@ -35,6 +36,10 @@ function WorkPolaroid({ name, slug, date }: Props) {
             case 'Bride Entourage':
                 setImgSrc(entourage);
                 setImgAlt('Bridesmaids dashboard')
+                break;
+            case 'Digital Resume':
+                setImgSrc(resume);
+                setImgAlt('A living resume');
                 break;
             default:
                 setImgSrc(placeholder);

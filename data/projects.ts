@@ -4,14 +4,14 @@ export const projects: IWorkProject[] = [
     {
         name: 'Digital Resume',
         description: `
-        A digital resume for a neurologist with a diverse set of resumes and accoredations to present.
+        A digital resume for a neurologist with a diverse set of resumes and accreditations & accolades to present.
         Features included
         : Clean UI/UX professional design with a retro colorway.
-        : A seamless homepage with "endless" scroll.
-        : Simple solution for client to update content on site with Markdown syntax.
-        : Ability to download client-provided documents.
+        : A seamless homepage with "endless" scroll, with clean informational cards that fade in on scroll.
+        : Ability for client to update content on site with Markdown syntax.
+        : Users can download client-provided documents.
         `,
-        tech: ['react', 'next.js', 'typescript', 'sass'],
+        tech: ['react', 'next.js', 'typescript', 'bootstrap', 'sass'],
         githubLink: '',
         liveLink: '',
         date: 'September 18, 2023',
