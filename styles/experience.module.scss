@@ -1,0 +1,20 @@
+@import './styles.scss';
+
+.wrapper {
+    min-height: 95vh;
+}
+
+.titleStyles {
+    font-family: $font-sub-heading;
+    color: $color-purple;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.bodyTextStyles {
+    font-family: $font-body;
+    color: $color-black;
+    font-weight: 300;
+    letter-spacing: .4px;
+    font-size: 16px;
+}

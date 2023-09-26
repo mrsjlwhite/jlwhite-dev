@@ -25,6 +25,11 @@ $desktop-width: 1024px;
     font-weight: 200;
 }
 
+@mixin section-title-text-small {
+    @include section-title-text;
+    font-size: 25px;
+}
+
 @mixin body-text {
     font-family: $font-body;
     color: $color-black;

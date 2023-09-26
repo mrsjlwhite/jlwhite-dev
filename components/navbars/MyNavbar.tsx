@@ -25,7 +25,7 @@ function MyNavbar() {
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
-                            href="/my-experience"
+                            href="/experience"
                             scroll={false}>
                             Experience
                         </Nav.Link>
