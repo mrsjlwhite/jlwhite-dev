@@ -1,0 +1,90 @@
+@import '../../styles/styles.scss';
+
+.myCard {
+    background-color: rgba($color-white, 0.8);
+    border-radius: 25px;
+    border: solid rgba($color-green, 0.2) 2px;
+    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 28%);
+    margin: 2rem 1.5rem;
+}
+
+.smallCard {
+    height: 38rem;
+    width: 38rem;
+}
+
+.cardTitle {
+    color: $color-gold;
+    font-size: 36px;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include section-title-text;
+}
+
+.cardBody {
+    margin: 2% 0;
+    overflow: scroll;
+}
+
+.cardTextContainer {
+    align-content: center;
+    justify-content: center;
+
+    @include small-body-text;
+}
+
+.columnContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.gridContainer {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 50% 1fr;
+}
+
+.cardDesc {
+    padding: 0 0.5rem !important;
+}
+
+.cardContentContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardButton {
+    @include green-button;
+    margin: auto;
+}
+
+.cardFooter {
+    text-align: center;
+    min-height: 40px;
+
+    i {
+        margin: 5px 10px;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+
+    .myCard {
+        height: 45rem;
+        max-width: 90vw;
+    }
+
+    .cardTextContainer {
+        display: block;
+    }
+
+    .cardDesc,
+    .listBody {
+        font-size: 14px;
+    }
+
+    .cardButton {
+        margin-top: 3%;
+        width: 85%;
+    }
+}
