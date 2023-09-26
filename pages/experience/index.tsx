@@ -44,10 +44,10 @@ const Experience = ({ experiences }: Props) => {
         <>
             <MyNavbar />
             <div className={styles.wrapper}>
-                <h4 className='section-title section-title-margin mt-5'>my experiences.</h4>
                 <div className='container'>
                     <div className='row'>
                         <div className='col'>
+                            <h4 className='section-title mt-5'>my experiences.</h4>
                             <Accordion className='pb-5'>
                                 {jobExperiences.map((je, index) =>
                                     <Accordion.Item eventKey={`${index}`} key={je.name}>

@@ -18,6 +18,13 @@ function MyNavbar() {
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
+                            href="/"
+                            scroll={false}>
+                            Home
+                        </Nav.Link>
+                        <Nav.Link
+                            as={Link}
+                            className={styles.myNavLink}
                             href="/about-me"
                             scroll={false}>
                             About

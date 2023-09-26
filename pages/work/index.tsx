@@ -14,14 +14,20 @@ const Work = ({ workProjects }: Props) => {
         <>
             <MyNavbar />
             <div className={styles.wrapper}>
-                <h4 className='section-title section-title-margin mt-5'>my work.</h4>
-                <ul className={styles.workGallery}>
-                    {workProjects.map((project) =>
-                        <li key={project.name}>
-                            <WorkPolaroid name={project.name} slug={project.slug} date={project.date} type={project.projectType} />
-                        </li>)
-                    }
-                </ul>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col'>
+                            <h4 className='section-title mt-5'>my work.</h4>
+                            <ul className={styles.workGallery}>
+                                {workProjects.map((project) =>
+                                    <li key={project.name}>
+                                        <WorkPolaroid name={project.name} slug={project.slug} date={project.date} type={project.projectType} />
+                                    </li>)
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )
