@@ -50,23 +50,18 @@ const Experience = ({ experiences }: Props) => {
                             <Accordion className='pb-5'>
                                 {jobExperiences.map((je, index) =>
                                     <Accordion.Item eventKey={`${index}`} key={je.name}>
-                                        <Accordion.Header>
+                                        <Accordion.Header className={styles.accordionHeader}>
                                             <div className='d-flex flex-column'>
                                                 <div className='d-flex flex-row justify-content-between'>
-                                                    <h5 className='section-title'>
-                                                        {je.name.toLowerCase()}
-                                                    </h5>
-                                                    <p className='section-title-small'>
-                                                        {je.techIcons.map((icon) => <TechIcon key={icon} icon={icon} className='m-1' />)}
-                                                        <small className='pl-2'>{je.time}</small>
-                                                    </p>
+                                                    <h3>{je.name} &#124; {je.title}</h3>
+                                                    <h5>{je.time}</h5>
                                                 </div>
                                                 <p className='section-body-small pr-4 pl-4'>
                                                     {je.description}
                                                 </p>
                                             </div>
                                         </Accordion.Header>
-                                        <Accordion.Body>
+                                        <Accordion.Body className={styles.offWhiteBackground}>
                                             <h6 className={styles.titleStyles}>
                                                 about the company.
                                             </h6>
@@ -80,13 +75,17 @@ const Experience = ({ experiences }: Props) => {
                                                 {je.fullDescription.map((desc, index) => {
                                                     return (
                                                         <li key={index}>
-                                                            <p className={index == je.fullDescription.length - 1 ? styles.titleStyles : styles.bodyTextStyles}>
+                                                            <p className={styles.bodyTextStyles}>
                                                                 {desc}
                                                             </p>
                                                         </li>
                                                     )
                                                 })}
                                             </ul>
+                                            <div className={styles.accordionFooter}>
+                                                {!je.techIcons || !je.techIcons.length ? null
+                                                    : je.techIcons.map((icon) => <TechIcon key={icon} icon={icon} />)}
+                                            </div>
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 )}
