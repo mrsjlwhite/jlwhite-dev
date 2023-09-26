@@ -1,4 +1,3 @@
-import MyNavbar from '@/components/navbars/MyNavbar';
 import { projects } from '@/data/projects';
 import { IWorkProject } from '@/interfaces/workProject';
 import { useRouter } from 'next/router';
@@ -22,6 +21,7 @@ import resume3 from '@/imgs/workSamples/digitalResume/resume3.png';
 import Image from 'next/image';
 import { ProjectNames } from 'constants/projectNames';
 import TypeBadge from '@/components/shared/TypeBadge';
+import PageContainer from 'containers/PageContainer';
 
 type Props = {
     workProject: IWorkProject
@@ -99,52 +99,49 @@ const WorkDetails = ({ workProject }: Props) => {
     }
 
     return (
-        <>
-            <MyNavbar />
-            <div className={styles.wrapper}>
-                <div className={styles.workDetailsCols}>
-                    <div>
-                        {workProject.tech.map((t, index) => {
-                            const techName = t.toUpperCase();
-                            const closing = index === workProject.tech.length - 1 ? '' : ' | ';
+        <PageContainer>
+            <div className={styles.workDetailsCols}>
+                <div>
+                    {workProject.tech.map((t, index) => {
+                        const techName = t.toUpperCase();
+                        const closing = index === workProject.tech.length - 1 ? '' : ' | ';
 
-                            return (
-                                <span key={t} className={styles.workTechText}>{`${techName}${closing}`}</span>
-                            )
-                        })}
-                        <h1 className={styles.projectNameText}>
-                            {workProject.name}
-                        </h1>
-                        {setProjectDescription()}
-                        <div className={styles.badgeContainer}>
-                            <TypeBadge type={workProject.projectType} />
-                        </div>
-                        {!workProject.githubLink ? null : (<Link href={workProject.githubLink} target='_blank' className={styles.projectLink}>View Repo</Link>)}
-                        {!workProject.liveLink ? null : (<Link href={workProject.liveLink} target='_blank' className={styles.projectLink}>View Live</Link>)}
+                        return (
+                            <span key={t} className={styles.workTechText}>{`${techName}${closing}`}</span>
+                        )
+                    })}
+                    <h1 className={styles.projectNameText}>
+                        {workProject.name}
+                    </h1>
+                    {setProjectDescription()}
+                    <div className={styles.badgeContainer}>
+                        <TypeBadge type={workProject.projectType} />
                     </div>
-                    <div>
-                        <Image src={mainImg}
-                            className={styles.mainImg}
-                            priority
-                            height={500}
-                            alt={`Landing page details of ${workProject.name}`}
-                        />
-                    </div>
+                    {!workProject.githubLink ? null : (<Link href={workProject.githubLink} target='_blank' className={styles.projectLink}>View Repo</Link>)}
+                    {!workProject.liveLink ? null : (<Link href={workProject.liveLink} target='_blank' className={styles.projectLink}>View Live</Link>)}
                 </div>
-                <div className={styles.secondaryImgsCol}>
-                    <Image
-                        className={styles.secondImg}
-                        src={imgTwo}
-                        alt={`Showing a nested page from ${workProject.name}`} />
-                    {imgThree && imgThree !== placeholder ? (
-                        <Image
-                            className={styles.secondImg}
-                            src={imgThree}
-                            alt={`Showing a nested page from ${workProject.name}`} />
-                    ) : null}
+                <div>
+                    <Image src={mainImg}
+                        className={styles.mainImg}
+                        priority
+                        height={500}
+                        alt={`Landing page details of ${workProject.name}`}
+                    />
                 </div>
             </div>
-        </>
+            <div className={styles.secondaryImgsCol}>
+                <Image
+                    className={styles.secondImg}
+                    src={imgTwo}
+                    alt={`Showing a nested page from ${workProject.name}`} />
+                {imgThree && imgThree !== placeholder ? (
+                    <Image
+                        className={styles.secondImg}
+                        src={imgThree}
+                        alt={`Showing a nested page from ${workProject.name}`} />
+                ) : null}
+            </div>
+        </PageContainer>
     )
 }
 

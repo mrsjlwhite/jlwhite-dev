@@ -1,5 +1,4 @@
 import styles from '@/styles/experience.module.scss';
-import MyNavbar from '@/components/navbars/MyNavbar';
 import Experience from '@/interfaces/experience';
 import TechIcon from '@/components/myExperience/TechIcon';
 import { getGitConnectedPortfolio } from '@/lib/api';
@@ -7,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { getMonthName, getTechIconsByJobName } from '@/lib/utils';
 import Accordion from 'react-bootstrap/Accordion';
 import GitConnectedWork from '@/interfaces/gitConnectedWork';
+import PageContainer from 'containers/PageContainer';
 
 type Props = {
     experiences: GitConnectedWork[]
@@ -41,61 +41,51 @@ const Experience = ({ experiences }: Props) => {
     }, [experiences]);
 
     return (
-        <>
-            <MyNavbar />
-            <div className={styles.wrapper}>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col'>
-                            <h4 className='section-title mt-5'>my experiences.</h4>
-                            <Accordion className='pb-5'>
-                                {jobExperiences.map((je, index) =>
-                                    <Accordion.Item eventKey={`${index}`} key={je.name}>
-                                        <Accordion.Header className={styles.accordionHeader}>
-                                            <div className='d-flex flex-column'>
-                                                <div className='d-flex flex-row justify-content-between'>
-                                                    <h3>{je.name} &#124; {je.title}</h3>
-                                                    <h5>{je.time}</h5>
-                                                </div>
-                                                <p className='section-body-small pr-4 pl-4'>
-                                                    {je.description}
-                                                </p>
-                                            </div>
-                                        </Accordion.Header>
-                                        <Accordion.Body className={styles.offWhiteBackground}>
-                                            <h6 className={styles.titleStyles}>
-                                                about the company.
-                                            </h6>
+        <PageContainer>
+            <Accordion className='pb-5'>
+                {jobExperiences.map((je, index) =>
+                    <Accordion.Item eventKey={`${index}`} key={je.name}>
+                        <Accordion.Header className={styles.accordionHeader}>
+                            <div className='d-flex flex-column'>
+                                <div className='d-flex flex-row justify-content-between'>
+                                    <h3>{je.name} &#124; {je.title}</h3>
+                                    <h5>{je.time}</h5>
+                                </div>
+                                <p className='section-body-small pr-4 pl-4'>
+                                    {je.description}
+                                </p>
+                            </div>
+                        </Accordion.Header>
+                        <Accordion.Body className={styles.offWhiteBackground}>
+                            <h6 className={styles.titleStyles}>
+                                about the company.
+                            </h6>
+                            <p className={styles.bodyTextStyles}>
+                                {je.description}
+                            </p>
+                            <h6 className={styles.titleStyles}>
+                                things i did.
+                            </h6>
+                            <ul>
+                                {je.fullDescription.map((desc, index) => {
+                                    return (
+                                        <li key={index}>
                                             <p className={styles.bodyTextStyles}>
-                                                {je.description}
+                                                {desc}
                                             </p>
-                                            <h6 className={styles.titleStyles}>
-                                                things i did.
-                                            </h6>
-                                            <ul>
-                                                {je.fullDescription.map((desc, index) => {
-                                                    return (
-                                                        <li key={index}>
-                                                            <p className={styles.bodyTextStyles}>
-                                                                {desc}
-                                                            </p>
-                                                        </li>
-                                                    )
-                                                })}
-                                            </ul>
-                                            <div className={styles.accordionFooter}>
-                                                {!je.techIcons || !je.techIcons.length ? null
-                                                    : je.techIcons.map((icon) => <TechIcon key={icon} icon={icon} />)}
-                                            </div>
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                )}
-                            </Accordion>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                            <div className={styles.accordionFooter}>
+                                {!je.techIcons || !je.techIcons.length ? null
+                                    : je.techIcons.map((icon) => <TechIcon key={icon} icon={icon} />)}
+                            </div>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                )}
+            </Accordion>
+        </PageContainer>
     )
 }
 
