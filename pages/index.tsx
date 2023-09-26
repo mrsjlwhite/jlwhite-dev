@@ -5,17 +5,13 @@ import MyNavbar from '@/components/navbars/MyNavbar';
 import MyExperience from "@/components/MyExperience";
 import MyLinks from "@/components/MyLinks";
 import LoadingIcon from "@/components/shared/LoadingIcon";
-import Experience from "@/interfaces/experience";
-import GitConnectedWork from "@/interfaces/gitConnectedWork";
 import { getGitConnectedPortfolio } from "@/lib/api";
-import { getTechIconsByJobName } from "@/lib/utils";
 import MyWork from "@/components/MyWork";
 import { useRouter } from "next/router";
 
 type ResumeProps = {
   summary: string
   interests: string
-  work: GitConnectedWork[]
   skillNames: string[]
 }
 
@@ -24,7 +20,6 @@ type Props = {
 }
 
 function App({ resume }: Props) {
-  const [resumeJobs, setResumeJobs] = useState<Experience[]>([]);
   const [resumeSkills, setResumeSkills] = useState<string[]>([]);
   const [resumeAbout, setResumeAbout] = useState('');
   const [resumeFun, setResumeFun] = useState('');
@@ -39,29 +34,7 @@ function App({ resume }: Props) {
       return;
     }
 
-    const buildExperienceCard = (work): Experience => {
-      const dateOptions: any = { year: "numeric", month: "short" };
-      const startDate = new Date(work.startDate).toLocaleDateString('en-us', dateOptions);
-      const endDate = new Date(work.endDate).toLocaleDateString('en-us', dateOptions);
-      const timeResults = endDate === 'Invalid Date' ? `${startDate} to Present` : `${startDate} to ${endDate}`;
-
-      const techStack = work.highlights[work.highlights.length - 1];
-      const techStackNames = techStack.replace('Technologies used: ', '').split(',');
-
-      return {
-        name: work.company,
-        time: timeResults,
-        title: work.position,
-        description: work.summary,
-        fullDescription: work.highlights.splice(0, work.highlights.length - 1),
-        tech: techStackNames,
-        techIcons: getTechIconsByJobName(work.name)
-      }
-    };
-
-    const { summary, interests, work, skillNames } = resume;
-    const jobs = work.map(buildExperienceCard);
-    setResumeJobs(jobs);
+    const { summary, interests, skillNames } = resume;
     setResumeAbout(summary);
     setResumeFun(interests);
     setResumeSkills(skillNames);
@@ -124,7 +97,7 @@ function App({ resume }: Props) {
           <Header />
           <MyNavbar />
           <AboutMe aboutBlurb={resumeAbout} funBlurb={resumeFun} skillset={resumeSkills} />
-          <MyExperience experiences={resumeJobs} />
+          <MyExperience />
           <MyWork />
           <MyLinks />
         </>
@@ -140,12 +113,11 @@ export async function getServerSideProps() {
     return { notFound: true }
   }
 
-  const { basics, interests, work, skills } = data;
+  const { basics, interests, skills } = data;
 
   const resume: ResumeProps = {
     summary: basics.summary,
     interests: interests[0].name,
-    work: work,
     skillNames: skills.map((skillset) => skillset.name)
   }
 

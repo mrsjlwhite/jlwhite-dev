@@ -15,9 +15,23 @@
     .summaryDetailsContainer {
         display: flex;
     }
-    
+
     li {
         list-style: none;
+    }
+}
+
+.viewAllLink {
+    color: $color-purple;
+    text-decoration: none;
+    font-family: $font-sub-heading;
+    letter-spacing: .2em;
+    display: block;
+    text-align: center;
+    font-size: 28px;
+
+    &:hover {
+        color: $color-green;
     }
 }
 

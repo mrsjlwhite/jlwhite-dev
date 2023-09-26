@@ -6,9 +6,10 @@ import { getGitConnectedPortfolio } from '@/lib/api';
 import { useEffect, useState } from 'react';
 import { getMonthName, getTechIconsByJobName } from '@/lib/utils';
 import Accordion from 'react-bootstrap/Accordion';
+import GitConnectedWork from '@/interfaces/gitConnectedWork';
 
 type Props = {
-    experiences: Experience[]
+    experiences: GitConnectedWork[]
 }
 
 const Experience = ({ experiences }: Props) => {
