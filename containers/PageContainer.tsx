@@ -8,6 +8,7 @@ const PageContainer = (props) => {
 
     useEffect(() => {
         const url = router.asPath.replace('/', '').toLowerCase();
+        const isDetailsPage = router.query && router.query.slug ? 'work details.' : '';
 
         let title = '';
 
@@ -16,7 +17,7 @@ const PageContainer = (props) => {
                 title = `${url} me.`
                 break;
             default:
-                title = `my ${url}s.`
+                title = isDetailsPage ?? `my ${url}s.`
                 break;
         }
 
