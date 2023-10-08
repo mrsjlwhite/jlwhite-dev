@@ -1,0 +1,23 @@
+@import '../../../styles/styles.scss';
+
+.socialsContainer {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+
+    img {
+        cursor: pointer;
+        font-size: 2em;
+        margin: 0 .2em;
+
+        &:hover {
+            color: $color-green;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .socialsContainer {
+        margin-bottom: 5%;
+    }
+}

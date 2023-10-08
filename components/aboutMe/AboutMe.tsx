@@ -1,4 +1,4 @@
-import styles from '@/styles/aboutMe.module.scss';
+import styles from './aboutMe.module.scss';
 import { useEffect, useState } from 'react';
 import AboutMeBanner from './AboutMeBanner';
 import AboutMeSkills from './AboutMeSkills';

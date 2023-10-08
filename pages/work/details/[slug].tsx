@@ -1,7 +1,7 @@
 import { projects } from '@/data/projects';
 import { IWorkProject } from '@/interfaces/workProject';
 import { useRouter } from 'next/router';
-import styles from '@/styles/work.module.scss';
+import styles from '../work.module.scss';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import placeholder from '@/imgs/placeholder.png';
@@ -20,7 +20,7 @@ import resume2 from '@/imgs/workSamples/digitalResume/resume2.png';
 import resume3 from '@/imgs/workSamples/digitalResume/resume3.png';
 import Image from 'next/image';
 import { ProjectNames } from 'constants/projectNames';
-import TypeBadge from '@/components/shared/TypeBadge';
+import TypeBadge from '@/components/shared/typeBadge/TypeBadge';
 import PageContainer from 'containers/PageContainer';
 
 type Props = {

@@ -1,6 +1,6 @@
-import styles from '@/styles/work.module.scss';
+import styles from './work.module.scss';
 import { projects } from '@/data/projects';
-import WorkPolaroid from '@/components/shared/WorkPolaroid';
+import WorkPolaroid from '@/components/shared/workPolaroid/WorkPolaroid';
 import { IWorkProject } from '@/interfaces/workProject';
 import PageContainer from 'containers/PageContainer';
 

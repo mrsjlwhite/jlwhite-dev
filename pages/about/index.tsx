@@ -3,7 +3,7 @@ import { aboutMe } from '@/data/aboutMe';
 import PageContainer from 'containers/PageContainer';
 import { getGitConnectedPortfolio } from '@/lib/api';
 import CardContainer from 'containers/card/CardContainer';
-import TechIcon from '@/components/myExperience/TechIcon';
+import TechIcon from '@/components/experienceCard/TechIcon';
 import AboutMeSkills from '@/components/aboutMe/AboutMeSkills';
 import AboutMeFun from '@/components/aboutMe/AboutMeFun';
 import { tldr } from '@/data/tldrExperience';

@@ -1,0 +1,99 @@
+@import '../../styles/styles.scss';
+
+.cardBody {
+    margin: 2% 0;
+    overflow: scroll;
+}
+
+.experienceCard {
+    background-color: rgba($color-white, 0.8);
+    border-radius: 25px;
+    border: solid rgba($color-green, 0.2) 2px;
+    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 28%);
+    height: 38rem;
+    margin: 0.2rem 1.5rem;
+    width: 38rem;
+}
+
+.experienceCardTitle {
+    color: $color-gold;
+    font-size: 36px;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include section-title-text;
+}
+
+.cardTextContainer {
+    align-content: center;
+    justify-content: center;
+
+    @include small-body-text;
+}
+
+.columnContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.gridContainer {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 50% 1fr;
+}
+
+.cardDesc {
+    padding: 0 0.5rem !important;
+}
+
+.cardListButtonContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.listTitle {
+    @include section-title-text;
+    color: $color-gold;
+    font-size: 30px;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.cardButton {
+    @include green-button;
+    margin: auto;
+}
+
+.cardFooter {
+    text-align: center;
+    min-height: 40px;
+
+    i {
+        margin: 5px 10px;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+
+    .experienceCard {
+        height: 45rem;
+        max-width: 90vw;
+    }
+
+    .cardTextContainer {
+        display: block;
+    }
+
+    .listTitle {
+        font-size: 20px;
+    }
+
+    .cardDesc,
+    .listBody {
+        font-size: 14px;
+    }
+
+    .cardButton {
+        margin-top: 3%;
+        width: 85%;
+    }
+}

@@ -1,4 +1,4 @@
-import styles from '@/styles/aboutMe.module.scss';
+import styles from './aboutMe.module.scss';
 import fun1 from '@/imgs/fun1.jpg';
 import fun2 from '@/imgs/fun2.jpeg';
 import fun3 from '@/imgs/fun3.jpg';
