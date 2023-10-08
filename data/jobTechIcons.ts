@@ -86,6 +86,7 @@ jobTechIcons.set('Laso Concepts', [
 ]);
 
 jobTechIcons.set('TL;DR', [
+    angular,
     react,
     vue,
     typescript,

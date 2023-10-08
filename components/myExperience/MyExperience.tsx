@@ -25,11 +25,11 @@ function MyExperience() {
                             <small>{experienceSummary.time}</small>
                         </h6>
                         <div className={styles.summaryDetailsContainer}>
-                            <div>
+                            <div className={styles.detailsDescriptionContainer}>
                                 <p className='section-body pr-4 pl-4'>
                                     {experienceSummary.description}
                                 </p>
-                                <p className='m-4'>
+                                <p className={styles.descriptionIcons}>
                                     {experienceSummary.techIcons.map((icon) => <TechIcon key={icon} icon={icon} className='m-1' />)}
                                 </p>
                                 <Link href='/experience' className={styles.viewAllLink}>View All</Link>
