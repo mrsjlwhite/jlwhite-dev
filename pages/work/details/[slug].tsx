@@ -101,7 +101,7 @@ const WorkDetails = ({ workProject }: Props) => {
     return (
         <PageContainer>
             <div className={styles.workDetailsCols}>
-                <div>
+                <div className='p-2'>
                     {workProject.tech.map((t, index) => {
                         const techName = t.toUpperCase();
                         const closing = index === workProject.tech.length - 1 ? '' : ' | ';
@@ -120,7 +120,7 @@ const WorkDetails = ({ workProject }: Props) => {
                     {!workProject.githubLink ? null : (<Link href={workProject.githubLink} target='_blank' className={styles.projectLink}>View Repo</Link>)}
                     {!workProject.liveLink ? null : (<Link href={workProject.liveLink} target='_blank' className={styles.projectLink}>View Live</Link>)}
                 </div>
-                <div>
+                <div className='p-1'>
                     <Image src={mainImg}
                         className={styles.mainImg}
                         priority
