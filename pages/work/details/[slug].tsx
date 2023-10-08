@@ -82,14 +82,14 @@ const WorkDetails = ({ workProject }: Props) => {
         const desc = descSplit[0];
 
         return (
-            <p className={styles.projectDescText}>
+            <div className={styles.projectDescText}>
                 {desc}
                 <ul>
                     {descSplit.map(function (name, index) {
                         return index === 0 ? null : <li key={index}>{name}</li>;
                     })}
                 </ul>
-            </p>
+            </div>
         )
     }
 
