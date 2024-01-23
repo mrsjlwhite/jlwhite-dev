@@ -12,7 +12,7 @@ type Props = {
     experiences: GitConnectedWork[]
 }
 
-const Experience = ({ experiences }: Props) => {
+const ExperiencePage = ({ experiences }: Props) => {
     const [jobExperiences, setJobExperiences] = useState<Experience[]>([]);
 
     useEffect(() => {
@@ -46,14 +46,9 @@ const Experience = ({ experiences }: Props) => {
                 {jobExperiences.map((je, index) =>
                     <Accordion.Item eventKey={`${index}`} key={je.name}>
                         <Accordion.Header className={styles.accordionHeader}>
-                            <div className='d-flex flex-column'>
-                                <div className='d-flex flex-row justify-content-between'>
-                                    <h3>{je.name} &#124; {je.title}</h3>
-                                    <h5>{je.time}</h5>
-                                </div>
-                                <p className='section-body-small pr-4 pl-4'>
-                                    {je.description}
-                                </p>
+                            <div className='d-flex flex-row justify-content-between align-items-center w-100'>
+                                <h3>{je.name} &#124; {je.title}</h3>
+                                <h5>{je.time}</h5>
                             </div>
                         </Accordion.Header>
                         <Accordion.Body className={styles.offWhiteBackground}>
@@ -105,4 +100,4 @@ export async function getServerSideProps() {
     }
 }
 
-export default Experience
+export default ExperiencePage
