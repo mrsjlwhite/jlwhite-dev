@@ -23,6 +23,18 @@ const trello = 'trello-plain';
 
 const jobTechIcons = new Map();
 
+jobTechIcons.set('Synergy', [
+    csharp,
+    net,
+    html5,
+    css,
+    javascript,
+    angular,
+    sql,
+    confluence,
+    jira
+])
+
 jobTechIcons.set('Xerox Business Solutions Southwest', [
     vue,
     javascript,
