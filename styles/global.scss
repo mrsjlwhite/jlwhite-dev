@@ -13,6 +13,10 @@ small {
     @include section-title-text;
 }
 
+.section-sub-title {
+    @include section-sub-title-text;
+}
+
 .section-title-small {
     @include section-title-text-small;
 }
