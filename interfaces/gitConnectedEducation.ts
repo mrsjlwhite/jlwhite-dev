@@ -1,4 +1,4 @@
-type GitConnectedEducation = {
+type IGitConnectedEducation = {
     institution: string
     url: string
     area: string
@@ -15,4 +15,4 @@ type GitConnectedEducation = {
     gpa: string
 }
 
-export default GitConnectedEducation;
+export default IGitConnectedEducation;

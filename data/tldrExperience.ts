@@ -1,7 +1,7 @@
-import Experience from "@/interfaces/experience";
+import IExperience from "@/interfaces/experience";
 import jobTechIcons from "./jobTechIcons";
 
-export const tldr: Experience = {
+export const tldr: IExperience = {
     name: 'TL;DR',
     time: '2017 to Present',
     title: 'Fullstack Software Developer',

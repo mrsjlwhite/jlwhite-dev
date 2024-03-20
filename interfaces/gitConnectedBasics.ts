@@ -1,4 +1,4 @@
-type GitConnectedBasics = {
+type IGitConnectedBasics = {
     name: string
     label: string
     image: string
@@ -21,4 +21,4 @@ type GitConnectedBasics = {
     website: string
 }
 
-export default GitConnectedBasics;
+export default IGitConnectedBasics;

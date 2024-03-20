@@ -25,6 +25,14 @@ $desktop-width: 1024px;
     font-weight: 200;
 }
 
+@mixin section-sub-title-text {
+    font-family: $font-sub-heading;
+    color: $color-green;
+    font-size: 30px;
+    font-weight: 100;
+    opacity: 0.7;
+}
+
 @mixin section-title-text-small {
     @include section-title-text;
     font-size: 25px;
