@@ -47,7 +47,10 @@ const ExperiencePage = ({ experiences }: Props) => {
                     <Accordion.Item eventKey={`${index}`} key={je.name}>
                         <Accordion.Header className={styles.accordionHeader}>
                             <div className='d-flex flex-row justify-content-between align-items-center w-100'>
-                                <h3>{je.name} &#124; {je.title}</h3>
+                                <h3>
+                                    {je.name} &#124;
+                                    <span> {je.title}</span>
+                                </h3>
                                 <h5>{je.time}</h5>
                             </div>
                         </Accordion.Header>
