@@ -1,6 +1,6 @@
 import styles from './experience.module.scss';
 import Experience from '@/interfaces/experience';
-import TechIcon from '@/components/experienceCard/TechIcon';
+import TechIcon from '@/components/shared/techIcon/TechIcon';
 import { getGitConnectedPortfolio } from '@/lib/api';
 import { useEffect, useState } from 'react';
 import { getMonthName, getTechIconsByJobName } from '@/lib/utils';
