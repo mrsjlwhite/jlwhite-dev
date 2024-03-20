@@ -1,14 +1,16 @@
 import { Button, Container } from 'react-bootstrap';
 import styles from './myLinks.module.scss';
-import LinkUrls from '@/data/linkUrls';
+
 import { openLink } from '@/lib/utils';
 import LinkUrl from '@/interfaces/linkUrl';
 import SocialIconImage, { IconSize } from '../shared/SocialIconImage';
+import { linkUrls } from '@/data/linkUrls';
 
 function MyLinks() {
     const renderSocialButton = (linkUrl: LinkUrl): JSX.Element => {
         return (
             <Button
+                key={linkUrl.name}
                 size='lg'
                 className={styles.linkButton}
                 onClick={() => openLink(linkUrl.url)}>
@@ -25,10 +27,7 @@ function MyLinks() {
             <Container className={styles.linksSectionContainer}>
                 <h4 className='section-title'>my links.</h4>
                 <div className={styles.buttonsContainer}>
-                    {renderSocialButton(LinkUrls.get('github'))}
-                    {renderSocialButton(LinkUrls.get('linkedin'))}
-                    {renderSocialButton(LinkUrls.get('instagram'))}
-                    {renderSocialButton(LinkUrls.get('twitter'))}
+                    {linkUrls.map(lu => renderSocialButton(lu))}
                 </div>
             </Container>
         </section>
