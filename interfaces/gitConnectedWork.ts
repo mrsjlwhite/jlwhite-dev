@@ -1,4 +1,4 @@
-type GitConnectedWork =   {
+type IGitConnectedWork =   {
   name: string
   location: string
   description: string
@@ -15,4 +15,4 @@ type GitConnectedWork =   {
   website: string
 }
 
-export default GitConnectedWork;
+export default IGitConnectedWork;

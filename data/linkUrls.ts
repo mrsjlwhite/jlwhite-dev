@@ -1,6 +1,6 @@
-import LinkUrl from "@/interfaces/linkUrl";
+import ILinkUrl from "@/interfaces/linkUrl";
 
-export const linkUrls: LinkUrl[] = [
+export const linkUrls: ILinkUrl[] = [
     {
         name: 'GitHub',
         url: 'https://github.com/mrsjlwhite'

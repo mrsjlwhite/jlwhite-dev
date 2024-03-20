@@ -1,13 +1,12 @@
 import { Button, Container } from 'react-bootstrap';
 import styles from './myLinks.module.scss';
-
 import { openLink } from '@/lib/utils';
-import LinkUrl from '@/interfaces/linkUrl';
+import ILinkUrl from '@/interfaces/linkUrl';
 import SocialIconImage, { IconSize } from '../shared/SocialIconImage';
 import { linkUrls } from '@/data/linkUrls';
 
 function MyLinks() {
-    const renderSocialButton = (linkUrl: LinkUrl): JSX.Element => {
+    const renderSocialButton = (linkUrl: ILinkUrl): JSX.Element => {
         return (
             <Button
                 key={linkUrl.name}
