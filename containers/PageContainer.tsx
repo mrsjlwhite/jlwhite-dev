@@ -17,7 +17,7 @@ const PageContainer = (props) => {
                 title = `${url} me.`
                 break;
             default:
-                title = isDetailsPage ?? `my ${url}s.`
+                title = isDetailsPage ? isDetailsPage : `my ${url}s.`
                 break;
         }
 
