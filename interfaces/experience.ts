@@ -1,4 +1,4 @@
-type Experience = {
+type IExperience = {
     name: string
     time: string //`${startDate} to ${endDate}`
     title: string
@@ -8,4 +8,4 @@ type Experience = {
     techIcons: string[]
 }
 
-export default Experience;
+export default IExperience;

@@ -23,7 +23,6 @@
             "@/components/*": [
                 "components/*",
                 "components/aboutMe/*",
-                "components/experienceCard/*",
                 "components/myNavbar/*",
                 "components/shared/*"
             ],

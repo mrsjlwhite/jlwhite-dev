@@ -1,6 +1,6 @@
-type LinkUrl = {
+type ILinkUrl = {
     url: string
     name: string
 }
 
-export default LinkUrl;
+export default ILinkUrl;

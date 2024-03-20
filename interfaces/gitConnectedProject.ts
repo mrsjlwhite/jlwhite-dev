@@ -1,4 +1,4 @@
-type GitConnectedProject = {
+type IGitConnectedProject = {
     name: string
     description: string
     url: string
@@ -23,4 +23,4 @@ type GitConnectedProject = {
     videos: []
 }
 
-export default GitConnectedProject;
+export default IGitConnectedProject;

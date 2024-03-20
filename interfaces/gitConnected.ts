@@ -1,21 +1,21 @@
-import GitConnectedBasics from "./gitConnectedBasics"
-import GitConnectedEducation from "./gitConnectedEducation"
-import GitConnectedInterest from "./gitConnectedInterest"
-import GitConnectedProject from "./gitConnectedProject"
-import GitConnectedSkill from "./gitConnectedSkill"
-import GitConnectedWork from "./gitConnectedWork"
+import IGitConnectedBasics from "./gitConnectedBasics"
+import IGitConnectedEducation from "./gitConnectedEducation"
+import IGitConnectedInterest from "./gitConnectedInterest"
+import IGitConnectedProject from "./gitConnectedProject"
+import IGitConnectedSkill from "./gitConnectedSkill"
+import IGitConnectedWork from "./gitConnectedWork"
 
-type GitConnectedPortfolio = {
-    basics: GitConnectedBasics
-    skills: GitConnectedSkill[]
-    projects: GitConnectedProject[]
-    work: GitConnectedWork[]
+type IGitConnectedPortfolio = {
+    basics: IGitConnectedBasics
+    skills: IGitConnectedSkill[]
+    projects: IGitConnectedProject[]
+    work: IGitConnectedWork[]
     publications: []
-    education: GitConnectedEducation[]
+    education: IGitConnectedEducation[]
     volunteer: []
     awards: []
     languages: []
-    interests: GitConnectedInterest[]
+    interests: IGitConnectedInterest[]
     references: []
     certificates: []
     meta: {
@@ -26,4 +26,4 @@ type GitConnectedPortfolio = {
     }
 }
 
-export default GitConnectedPortfolio;
+export default IGitConnectedPortfolio;

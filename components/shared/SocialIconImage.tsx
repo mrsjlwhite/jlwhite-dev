@@ -3,7 +3,7 @@ import gh from '@/svgs/github.svg';
 import li from '@/svgs/linkedin.svg';
 import tw from '@/svgs/twitter.svg';
 import Image from 'next/image';
-import LinkUrl from '@/interfaces/linkUrl';
+import ILinkUrl from '@/interfaces/linkUrl';
 import { useEffect, useState } from 'react';
 import { openLink } from '@/lib/utils';
 import { isMobile } from 'react-device-detect';
@@ -15,7 +15,7 @@ export enum IconSize {
 }
 
 type Props = {
-    link: LinkUrl,
+    link: ILinkUrl,
     size: IconSize
 }
 

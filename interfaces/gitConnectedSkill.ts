@@ -1,4 +1,4 @@
-type GitConnectedSkill = {
+type IGitConnectedSkill = {
     name: string
     level: string
     keywords: string[]
@@ -6,4 +6,4 @@ type GitConnectedSkill = {
     yearsOfExperience: number
 }
 
-export default GitConnectedSkill;
+export default IGitConnectedSkill;

@@ -1,6 +1,6 @@
-type GitConnectedInterest = {
+type IGitConnectedInterest = {
     name: string
     keywords: []
 }
 
-export default GitConnectedInterest;
+export default IGitConnectedInterest;

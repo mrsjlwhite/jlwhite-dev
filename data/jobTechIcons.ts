@@ -31,8 +31,10 @@ jobTechIcons.set('Synergy', [
     javascript,
     angular,
     sql,
+    github,
     confluence,
-    jira
+    jira,
+    atlassian
 ])
 
 jobTechIcons.set('Xerox Business Solutions Southwest', [

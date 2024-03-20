@@ -1,12 +1,12 @@
 import styles from './myExperience.module.scss'
 import { useEffect, useState } from 'react';
-import Experience from '@/interfaces/experience';
+import IExperience from '@/interfaces/experience';
 import { tldr } from '@/data/tldrExperience';
-import TechIcon from '../experienceCard/TechIcon';
+import TechIcon from '../shared/techIcon/TechIcon';
 import Link from 'next/link';
 
 function MyExperience() {
-    const [experienceSummary, setExperienceSummary] = useState<Experience>(null);
+    const [experienceSummary, setExperienceSummary] = useState<IExperience>(null);
 
     useEffect(() => {
         if (tldr) {

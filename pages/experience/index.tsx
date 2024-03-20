@@ -1,26 +1,26 @@
 import styles from './experience.module.scss';
-import Experience from '@/interfaces/experience';
-import TechIcon from '@/components/experienceCard/TechIcon';
+import IExperience from '@/interfaces/experience';
+import TechIcon from '@/components/shared/techIcon/TechIcon';
 import { getGitConnectedPortfolio } from '@/lib/api';
 import { useEffect, useState } from 'react';
 import { getMonthName, getTechIconsByJobName } from '@/lib/utils';
 import Accordion from 'react-bootstrap/Accordion';
-import GitConnectedWork from '@/interfaces/gitConnectedWork';
+import IGitConnectedWork from '@/interfaces/gitConnectedWork';
 import PageContainer from 'containers/PageContainer';
 
 type Props = {
-    experiences: GitConnectedWork[]
+    experiences: IGitConnectedWork[]
 }
 
 const ExperiencePage = ({ experiences }: Props) => {
-    const [jobExperiences, setJobExperiences] = useState<Experience[]>([]);
+    const [jobExperiences, setJobExperiences] = useState<IExperience[]>([]);
 
     useEffect(() => {
         if (!experiences) {
             return;
         }
 
-        const buildExperienceCard = (work): Experience => {
+        const buildExperienceCard = (work): IExperience => {
             const endDate = work.isCurrentRole ? 'Present' : `${getMonthName(work.end.month)} ${work.end.year}`;
             const timeResults = `${getMonthName(work.start.month)} ${work.start.year} to ${endDate}`;
 
@@ -47,7 +47,10 @@ const ExperiencePage = ({ experiences }: Props) => {
                     <Accordion.Item eventKey={`${index}`} key={je.name}>
                         <Accordion.Header className={styles.accordionHeader}>
                             <div className='d-flex flex-row justify-content-between align-items-center w-100'>
-                                <h3>{je.name} &#124; {je.title}</h3>
+                                <h3>
+                                    {je.name} &#124;
+                                    <span> {je.title}</span>
+                                </h3>
                                 <h5>{je.time}</h5>
                             </div>
                         </Accordion.Header>
