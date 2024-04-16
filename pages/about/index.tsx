@@ -28,7 +28,6 @@ const About = ({ blurbs, techIcons }: Props) => {
                             {blurb.content}
                         </p>
                         <br />
-                        <hr />
                     </section>
                 )
             })}
