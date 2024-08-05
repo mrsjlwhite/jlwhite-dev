@@ -18,6 +18,9 @@ const PageContainer = (props) => {
             case 'about':
                 title = `${url} me.`;
                 break;
+            case 'connect':
+                title = `let's ${url}!`;
+                break;
             case 'experience':
                 title = defaultTitle;
                 desc = 'an overview of my previous work experiences.';

@@ -45,7 +45,7 @@ function MyNavbar() {
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
-                            href="/my-links"
+                            href="/connect"
                             scroll={false}>
                             Connect
                         </Nav.Link>
