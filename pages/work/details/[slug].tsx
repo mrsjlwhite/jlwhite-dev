@@ -1,5 +1,5 @@
 import { projects } from '@/data/projects';
-import { IWorkProject } from '@/interfaces/workProject';
+import { IWorkProject } from 'core/interfaces/workProject';
 import { useRouter } from 'next/router';
 import styles from '../work.module.scss';
 import Link from 'next/link';
@@ -19,9 +19,9 @@ import resume1 from '@/imgs/workSamples/digitalResume/resume1.png';
 import resume2 from '@/imgs/workSamples/digitalResume/resume2.png';
 import resume3 from '@/imgs/workSamples/digitalResume/resume3.png';
 import Image from 'next/image';
-import { ProjectNames } from 'constants/projectNames';
-import TypeBadge from '@/components/shared/typeBadge/TypeBadge';
-import PageContainer from 'containers/PageContainer';
+import { ProjectNames } from 'core/constants/projectNames';
+import TypeBadge from 'shared/typeBadge/TypeBadge';
+import PageContainer from '@/components/containers/PageContainer';
 
 type Props = {
     workProject: IWorkProject

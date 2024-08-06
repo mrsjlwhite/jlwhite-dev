@@ -1,4 +1,4 @@
-import IExperience from "@/interfaces/experience";
+import IExperience from "core/interfaces/experience";
 import jobTechIcons from "./jobTechIcons";
 
 export const tldr: IExperience = {

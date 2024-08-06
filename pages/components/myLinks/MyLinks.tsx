@@ -1,8 +1,8 @@
 import { Button, Container } from 'react-bootstrap';
 import styles from './myLinks.module.scss';
 import { openLink } from '@/lib/utils';
-import ILinkUrl from '@/interfaces/linkUrl';
-import SocialIconImage, { IconSize } from '../shared/SocialIconImage';
+import ILinkUrl from 'core/interfaces/linkUrl';
+import SocialIconImage, { IconSize } from '../../../shared/SocialIconImage';
 import { linkUrls } from '@/data/linkUrls';
 
 function MyLinks() {

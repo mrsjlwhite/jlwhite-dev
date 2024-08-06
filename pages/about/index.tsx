@@ -1,11 +1,11 @@
 import styles from './about.module.scss';
 import { aboutMe } from '@/data/aboutMe';
-import PageContainer from 'containers/PageContainer';
-import TechIcon from '@/components/shared/techIcon/TechIcon';
+import PageContainer from '@/components/containers/PageContainer';
+import TechIcon from 'shared/techIcon/TechIcon';
 import { tldr } from '@/data/tldrExperience';
 import { IAboutMeBlurb } from '@/interfaces/aboutMeBlurb';
 import AboutMeGallery from '@/components/aboutMe/AboutMeGallery';
-import { GalleryType } from 'constants/galleryType';
+import { GalleryType } from 'core/constants/galleryType';
 
 type Props = {
     blurbs: IAboutMeBlurb[]

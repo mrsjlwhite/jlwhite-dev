@@ -1,6 +1,6 @@
-import { IWorkProject } from "@/interfaces/workProject";
-import { ProjectNames } from "constants/projectNames";
-import { ProjectTypes } from "constants/projectTypes";
+import { IWorkProject } from "core/interfaces/workProject";
+import { ProjectNames } from "core/constants/projectNames";
+import { ProjectTypes } from "core/constants/projectTypes";
 
 export const projects: IWorkProject[] = [
     {

@@ -1,4 +1,4 @@
-import { IAboutMeBlurb } from "@/interfaces/aboutMeBlurb";
+import { IAboutMeBlurb } from "core/interfaces/aboutMeBlurb";
 
 export const aboutMe: IAboutMeBlurb[] = [
     {

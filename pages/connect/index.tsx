@@ -1,4 +1,4 @@
-import PageContainer from "containers/PageContainer"
+import PageContainer from "@/components/containers/PageContainer"
 
 const Connect = () => {
     return (
