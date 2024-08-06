@@ -1,9 +1,9 @@
 import styles from './myWork.module.scss';
 import { useEffect, useState } from "react";
-import { projects } from "@/data/projects";
+import { projects } from "core/data/projects";
 import { IWorkProject } from "core/interfaces/workProject";
 import Link from 'next/link';
-import WorkPolaroid from '../../../shared/workPolaroid/WorkPolaroid';
+import WorkPolaroid from '../../../core/components/workPolaroid/WorkPolaroid';
 
 const MyWork = () => {
     const [workProjects, setWorkProjects] = useState([]);

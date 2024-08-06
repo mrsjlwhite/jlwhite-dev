@@ -1,8 +1,8 @@
 import styles from './work.module.scss';
-import { projects } from '@/data/projects';
-import WorkPolaroid from 'shared/workPolaroid/WorkPolaroid';
+import { projects } from 'core/data/projects';
+import WorkPolaroid from 'core/components/workPolaroid/WorkPolaroid';
 import { IWorkProject } from 'core/interfaces/workProject';
-import PageContainer from '@/components/containers/PageContainer';
+import PageContainer from 'core/components/containers/PageContainer';
 
 type Props = {
     workProjects: IWorkProject[]

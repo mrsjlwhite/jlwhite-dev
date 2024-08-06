@@ -2,8 +2,8 @@ import { Button, Container } from 'react-bootstrap';
 import styles from './myLinks.module.scss';
 import { openLink } from '@/lib/utils';
 import ILinkUrl from 'core/interfaces/linkUrl';
-import SocialIconImage, { IconSize } from '../../../shared/SocialIconImage';
-import { linkUrls } from '@/data/linkUrls';
+import SocialIconImage, { IconSize } from '../../../core/components/socialsIcons/SocialIconImage';
+import { linkUrls } from 'core/data/linkUrls';
 
 function MyLinks() {
     const renderSocialButton = (linkUrl: ILinkUrl): JSX.Element => {

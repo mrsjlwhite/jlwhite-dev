@@ -1,8 +1,8 @@
 import styles from './myExperience.module.scss'
 import { useEffect, useState } from 'react';
 import IExperience from 'core/interfaces/experience';
-import { tldr } from '@/data/tldrExperience';
-import TechIcon from '../../../shared/techIcon/TechIcon';
+import { tldr } from 'core/data/tldrExperience';
+import TechIcon from '../../../core/components/techIcon/TechIcon';
 import Link from 'next/link';
 
 function MyExperience() {

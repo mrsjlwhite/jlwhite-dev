@@ -21,10 +21,10 @@
         "baseUrl": ".",
         "paths": {
             "@/components/*": [
-                "pages/components/*",
-                "pages/components/aboutMe/*",
-                "shared/myNavbar/*",
-                "shared/*"
+                "pages/_home/*",
+                "pages/_home/aboutMe/*",
+                "core/components/myNavbar/*",
+                "core/components/*"
             ],
             "@/imgs/*": [
                 "public/imgs/*"
@@ -33,13 +33,13 @@
                 "public/svgs/*"
             ],
             "@/lib/*": [
-                "lib/*"
+                "core/lib/*"
             ],
             "@/styles/*": [
                 "styles/*"
             ],
             "@/data/*": [
-                "data/*"
+                "core/data/*"
             ],
             "@/hooks/*": [
                 "hooks/*"

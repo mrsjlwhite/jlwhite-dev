@@ -1,6 +1,6 @@
 import styles from './socialsIcons.module.scss';
-import SocialIconImage, { IconSize } from '../SocialIconImage';
-import { linkUrls } from '@/data/linkUrls';
+import SocialIconImage, { IconSize } from './SocialIconImage';
+import { linkUrls } from 'core/data/linkUrls';
 
 function SocialsIcons() {
     return (
