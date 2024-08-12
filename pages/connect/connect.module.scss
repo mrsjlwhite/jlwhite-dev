@@ -1,0 +1,17 @@
+@import '../../styles/styles.scss';
+
+.pageContentText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    p {
+        @include body-text;
+        text-align: center;
+    }
+
+    img {
+        margin: 5rem;
+    }
+}

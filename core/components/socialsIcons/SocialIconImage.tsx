@@ -19,9 +19,9 @@ type Props = {
     size: IconSize
 }
 
-const SocialIconImage = ({ link, size }: Props) => {
+const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
     const [imageSrc, setImageSrc] = useState(null);
-    const [imageSize, setImageSize] = useState<IconSize>(IconSize.large);
+    const [imageSize, setImageSize] = useState<IconSize>(size);
 
     useEffect(() => {
         switch (link.name.toLowerCase()) {

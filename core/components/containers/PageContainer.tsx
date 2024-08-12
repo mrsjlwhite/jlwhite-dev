@@ -20,6 +20,7 @@ const PageContainer = (props) => {
                 break;
             case 'connect':
                 title = `let's ${url}!`;
+                desc = '...or not, I\'m shy too. I get it.';
                 break;
             case 'experience':
                 title = defaultTitle;

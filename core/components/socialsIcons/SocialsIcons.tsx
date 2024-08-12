@@ -1,11 +1,22 @@
 import styles from './socialsIcons.module.scss';
 import SocialIconImage, { IconSize } from './SocialIconImage';
 import { linkUrls } from 'core/data/linkUrls';
+import { useEffect, useState } from 'react';
 
-function SocialsIcons() {
+function SocialsIcons({ iconSize = IconSize.small, messagingOnly = false, columnLayout = false }) {
+    const [links, setLinks] = useState([]);
+    const [stylesClasses, setStyleClasses] = useState('');
+
+    useEffect(() => {
+        const linksToDisplay = messagingOnly ? linkUrls.filter(j => j.allowsMessaging) : linkUrls;
+        setLinks(linksToDisplay);
+
+        setStyleClasses(columnLayout ? `${styles.socialsIconsContainer} ${styles.iconsColumn}` : `${styles.socialsIconsContainer} ${styles.iconsRow}`);
+    }, []);
+
     return (
-        <div className={styles.socialsContainer}>
-            {linkUrls.map(lu => <SocialIconImage link={lu} size={IconSize.small} key={lu.name} />)}
+        <div className={stylesClasses}>
+            {links.map(lu => <SocialIconImage link={lu} size={iconSize} key={lu.name} />)}
         </div>
     )
 }
