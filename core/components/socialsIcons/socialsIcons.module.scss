@@ -9,10 +9,6 @@
         cursor: pointer;
         font-size: 2em;
         margin: 0 .2em;
-
-        &:hover {
-            color: $color-green;
-        }
     }
 }
 
@@ -22,6 +18,17 @@
 
 .iconsColumn {
     flex-direction: column;
+}
+
+.hoverOverlay {
+    transition: padding 350ms;
+}
+
+.hoverOverlay:hover {
+    background-color: $color-green-faded;
+    overflow: hidden;
+    padding: 2rem;
+    border-radius: 4px;
 }
 
 @media screen and (max-width: $mobile-width) {

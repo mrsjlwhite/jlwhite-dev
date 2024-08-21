@@ -4,14 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    width: 40%;
+    margin: auto;
+    padding: 1rem 0;
 
     p {
         @include body-text;
         text-align: center;
-    }
-
-    img {
-        margin: 5rem;
+        margin: 2rem 0;
     }
 }

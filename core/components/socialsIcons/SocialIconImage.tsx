@@ -7,6 +7,7 @@ import ILinkUrl from 'core/interfaces/linkUrl';
 import { useEffect, useState } from 'react';
 import { openLink } from '@/lib/utils';
 import { isMobile } from 'react-device-detect';
+import styles from './socialsIcons.module.scss';
 
 export enum IconSize {
     small = 20,
@@ -16,12 +17,14 @@ export enum IconSize {
 
 type Props = {
     link: ILinkUrl,
-    size: IconSize
+    size: IconSize,
+    withHoverOverlay: boolean
 }
 
-const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
+const SocialIconImage = ({ link, size = IconSize.large, withHoverOverlay = false }: Props) => {
     const [imageSrc, setImageSrc] = useState(null);
     const [imageSize, setImageSize] = useState<IconSize>(size);
+    const [imageStyles, setImageStyle] = useState('filter-white');
 
     useEffect(() => {
         switch (link.name.toLowerCase()) {
@@ -56,6 +59,12 @@ const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
         }
     }, [size, isMobile])
 
+    useEffect(() => {
+        if (withHoverOverlay) {
+            setImageStyle(`${styles.hoverOverlay} filter-white`);
+        }
+    }, [withHoverOverlay])
+
     if (!imageSrc) {
         return <></>
     }
@@ -63,7 +72,7 @@ const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
     return (
         <Image
             src={imageSrc}
-            className='filter-white'
+            className={imageStyles}
             height={imageSize}
             width={imageSize}
             alt={`${link.name} Logo`}

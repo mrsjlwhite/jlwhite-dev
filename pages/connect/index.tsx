@@ -18,7 +18,7 @@ const Connect = () => {
             <div className={styles.pageContentText}>
                 <p>Want to discuss potential projects? Me too!</p>
                 <p>Message me on any of the platforms below.</p>
-                <SocialsIcons iconSize={iconSize} messagingOnly />
+                <SocialsIcons iconSize={iconSize} messagingOnly withHoverOverlay />
             </div>
         </PageContainer>
     )

@@ -3,7 +3,7 @@ import SocialIconImage, { IconSize } from './SocialIconImage';
 import { linkUrls } from 'core/data/linkUrls';
 import { useEffect, useState } from 'react';
 
-function SocialsIcons({ iconSize = IconSize.small, messagingOnly = false, columnLayout = false }) {
+function SocialsIcons({ iconSize = IconSize.small, messagingOnly = false, columnLayout = false, withHoverOverlay = false }) {
     const [links, setLinks] = useState([]);
     const [stylesClasses, setStyleClasses] = useState('');
 
@@ -16,7 +16,7 @@ function SocialsIcons({ iconSize = IconSize.small, messagingOnly = false, column
 
     return (
         <div className={stylesClasses}>
-            {links.map(lu => <SocialIconImage link={lu} size={iconSize} key={lu.name} />)}
+            {links.map(lu => <SocialIconImage link={lu} size={iconSize} key={lu.name} withHoverOverlay={withHoverOverlay} />)}
         </div>
     )
 }
