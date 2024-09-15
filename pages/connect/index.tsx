@@ -15,10 +15,12 @@ const Connect = () => {
 
     return (
         <PageContainer>
-            <div className={styles.pageContentText}>
+            <div className={styles.pageContentContainer}>
                 <p>Want to discuss potential projects? Me too!</p>
                 <p>Message me on any of the platforms below.</p>
-                <SocialsIcons iconSize={iconSize} messagingOnly withHoverOverlay />
+                <div className={styles.iconsContainer}>
+                    <SocialsIcons iconSize={iconSize} messagingOnly withHoverOverlay />
+                </div>
             </div>
         </PageContainer>
     )
