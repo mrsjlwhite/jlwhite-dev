@@ -1,0 +1,39 @@
+@import '../../../styles/styles.scss';
+
+.workCardsContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    align-content: center;
+    justify-content: space-evenly;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.viewAllLink {
+    color: $color-purple;
+    text-decoration: none;
+    font-family: $font-sub-heading;
+    letter-spacing: .2em;
+    display: block;
+    text-align: center;
+    font-size: 28px;
+
+    &:hover {
+        color: $color-green;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .workCardsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : 1180px) {
+    .workCardsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+}

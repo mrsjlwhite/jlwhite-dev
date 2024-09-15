@@ -1,12 +1,12 @@
 import styles from './experience.module.scss';
-import IExperience from '@/interfaces/experience';
-import TechIcon from '@/components/shared/techIcon/TechIcon';
-import { getGitConnectedPortfolio } from '@/lib/api';
+import IExperience from 'core/interfaces/experience';
+import TechIcon from 'core/components/techIcon/TechIcon';
+import { getGitConnectedPortfolio } from 'core/lib/api';
 import { useEffect, useState } from 'react';
 import { getMonthName, getTechIconsByJobName } from '@/lib/utils';
 import Accordion from 'react-bootstrap/Accordion';
-import IGitConnectedWork from '@/interfaces/gitConnectedWork';
-import PageContainer from 'containers/PageContainer';
+import IGitConnectedWork from 'core/interfaces/gitConnectedWork';
+import PageContainer from 'core/components/containers/PageContainer';
 
 type Props = {
     experiences: IGitConnectedWork[]
