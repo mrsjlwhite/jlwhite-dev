@@ -9,6 +9,7 @@ $color-off-white: #F0E8E5; //isabelline
 $color-black: #141414; // night
 $color-purple: #BAA1AD; //rose quartz
 $color-green: #5A7557; //reseda green
+$color-green-faded: rgba($color-green, 0.8);
 $color-gold: #BF984A; //satin sheen gold
 
 // variables
@@ -23,6 +24,14 @@ $desktop-width: 1024px;
     color: $color-green;
     font-size: 40px;
     font-weight: 200;
+}
+
+@mixin section-sub-title-text {
+    font-family: $font-sub-heading;
+    color: $color-green;
+    font-size: 30px;
+    font-weight: 100;
+    opacity: 0.7;
 }
 
 @mixin section-title-text-small {

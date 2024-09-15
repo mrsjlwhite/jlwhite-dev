@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import AboutMe from '@/components/aboutMe/AboutMe';
-import Header from '@/components/header/Header';
-import MyNavbar from '@/components/myNavbar/MyNavbar';
-import MyExperience from "@/components/myExperience/MyExperience";
-import MyLinks from "@/components/myLinks/MyLinks";
-import LoadingIcon from "@/components/shared/loadingIcon/LoadingIcon";
-import { getGitConnectedPortfolio } from "@/lib/api";
-import MyWork from "@/components/myWork/MyWork";
+import AboutMe from 'pages/_home/aboutMe/AboutMe';
+import Header from "./_home/header/Header";
+import MyNavbar from 'core/components/myNavbar/MyNavbar';
+import MyExperience from "./_home/myExperience/MyExperience";
+import MyLinks from "./_home/myLinks/MyLinks";
+import LoadingIcon from "pages/_home/loadingIcon/LoadingIcon";
+import { getGitConnectedPortfolio } from "core/lib/api";
+import MyWork from "./_home/myWork/MyWork";
 import { useRouter } from "next/router";
 
 type ResumeProps = {

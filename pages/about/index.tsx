@@ -1,73 +1,52 @@
 import styles from './about.module.scss';
-import { aboutMe } from '@/data/aboutMe';
-import PageContainer from 'containers/PageContainer';
-import { getGitConnectedPortfolio } from '@/lib/api';
-import CardContainer from 'containers/card/CardContainer';
-import TechIcon from '@/components/experienceCard/TechIcon';
-import AboutMeSkills from '@/components/aboutMe/AboutMeSkills';
-import AboutMeFun from '@/components/aboutMe/AboutMeFun';
-import { tldr } from '@/data/tldrExperience';
+import { aboutMe } from 'core/data/aboutMe';
+import PageContainer from 'core/components/containers/PageContainer';
+import TechIcon from 'core/components/techIcon/TechIcon';
+import { tldr } from 'core/data/tldrExperience';
+import { IAboutMeBlurb } from '@/interfaces/aboutMeBlurb';
+import AboutMeGallery from 'pages/_home/aboutMe/AboutMeGallery';
+import { GalleryType } from 'core/constants/galleryType';
 
 type Props = {
-    description: string
-    skillNames: string[]
-    funBlurb: string
+    blurbs: IAboutMeBlurb[]
+    techIcons: string[]
 }
 
-const About = ({ description, skillNames, funBlurb }: Props) => {
-
-    function renderAboutMeContent(): JSX.Element {
-        return (
-            <>
-                <p className='section-body'>
-                    {description}
-                </p>
-                <AboutMeSkills skillset={skillNames} />
-                <AboutMeFun funText={funBlurb} />
-            </>
-        )
-    }
-
-    function renderFooterContent(): JSX.Element {
-        return <>{tldr.techIcons.map((icon) => <TechIcon key={icon} icon={icon} className='m-1' />)}</>
-    }
+const About = ({ blurbs, techIcons }: Props) => {
 
     return (
         <PageContainer>
-            <CardContainer
-                title='hi'
-                content={renderAboutMeContent()}
-                footer={renderFooterContent()}
-                fullPage
-            />
+            {blurbs.map((blurb) => {
+                return (
+                    <section key={blurb.title}>
+                        <h2 className={styles.blurbTitle}>
+                            <span>
+                                {blurb.title}
+                            </span>
+                        </h2>
+                        <p className='section-body'>
+                            {blurb.content}
+                        </p>
+                        <br />
+                    </section>
+                )
+            })}
+            <AboutMeGallery photoSet={GalleryType.SET2} />
+            <div className={styles.iconFooter}>
+                {techIcons.map((icon) => <TechIcon key={icon} icon={icon} className='m-1' />)}
+            </div>
         </PageContainer>
     )
 }
 
-// export async function getStaticProps() {
-//     const description = aboutMe;
-
-//     return {
-//         props: {
-//             description
-//         }
-//     }
-// }
-
-export async function getServerSideProps() {
-    const data = await getGitConnectedPortfolio();
-
-    if (!data) {
-        return { notFound: true }
-    }
-
-    const { basics, skills, interests } = data;
+export async function getStaticProps() {
+    const blurbs = aboutMe;
+    const techIcons = tldr.techIcons;
 
     return {
         props: {
-            description: basics.summary,
-            skillNames: skills.map((skillset) => skillset.name),
-            interests: interests[0].name
+            blurbs,
+            techIcons
         }
     }
 }

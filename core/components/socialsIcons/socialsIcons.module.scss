@@ -1,0 +1,38 @@
+@import '../../../styles/styles.scss';
+
+.socialsIconsContainer {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+
+    img {
+        cursor: pointer;
+        font-size: 2em;
+        margin: 0 .2em;
+    }
+}
+
+.iconsRow {
+    flex-direction: row;
+}
+
+.iconsColumn {
+    flex-direction: column;
+}
+
+.hoverOverlay {
+    transition: padding 350ms;
+}
+
+.hoverOverlay:hover {
+    background-color: $color-green-faded;
+    overflow: hidden;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: $mobile-width) {
+    .socialsContainer {
+        margin-bottom: 5%;
+    }
+}

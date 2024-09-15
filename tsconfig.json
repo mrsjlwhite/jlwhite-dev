@@ -21,11 +21,10 @@
         "baseUrl": ".",
         "paths": {
             "@/components/*": [
-                "components/*",
-                "components/aboutMe/*",
-                "components/experienceCard/*",
-                "components/myNavbar/*",
-                "components/shared/*"
+                "pages/_home/*",
+                "pages/_home/aboutMe/*",
+                "core/components/myNavbar/*",
+                "core/components/*"
             ],
             "@/imgs/*": [
                 "public/imgs/*"
@@ -34,19 +33,19 @@
                 "public/svgs/*"
             ],
             "@/lib/*": [
-                "lib/*"
+                "core/lib/*"
             ],
             "@/styles/*": [
                 "styles/*"
             ],
             "@/data/*": [
-                "data/*"
+                "core/data/*"
             ],
             "@/hooks/*": [
                 "hooks/*"
             ],
             "@/interfaces/*": [
-                "interfaces/*"
+                "core/interfaces/*"
             ]
         }
     },
