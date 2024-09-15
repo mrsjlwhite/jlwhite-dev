@@ -18,7 +18,7 @@ export enum IconSize {
 type Props = {
     link: ILinkUrl,
     size: IconSize,
-    withHoverOverlay: boolean
+    withHoverOverlay?: boolean
 }
 
 const SocialIconImage = ({ link, size = IconSize.large, withHoverOverlay = false }: Props) => {
