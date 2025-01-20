@@ -49,7 +49,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             </Head>
             <div className={`${josefSans.variable} ${laBelleAurore.variable} ${robotoSlab.variable}`}>
                 <Component {...pageProps} />
-                <MyFooter />
+                {/* <MyFooter /> */}
             </div>
         </>
     )
