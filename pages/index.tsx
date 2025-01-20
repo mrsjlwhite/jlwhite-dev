@@ -8,6 +8,7 @@ import LoadingIcon from "pages/_home/loadingIcon/LoadingIcon";
 import { getGitConnectedPortfolio } from "core/lib/api";
 import MyWork from "./_home/myWork/MyWork";
 import { useRouter } from "next/router";
+import styles from '../styles/index.module.scss';
 
 type ResumeProps = {
   summary: string
@@ -20,76 +21,24 @@ type Props = {
 }
 
 function App({ resume }: Props) {
-  const [resumeSkills, setResumeSkills] = useState<string[]>([]);
-  const [resumeAbout, setResumeAbout] = useState('');
-  const [resumeFun, setResumeFun] = useState('');
+  // const [resumeSkills, setResumeSkills] = useState<string[]>([]);
+  // const [resumeAbout, setResumeAbout] = useState('');
+  // const [resumeFun, setResumeFun] = useState('');
   const [fetchingData, setFetchingData] = useState(true);
-  const [scrollingToSection, setIsScrolling] = useState(false);
-  const [successfullyScrolled, setSuccessfullyScrolled] = useState(false);
+  // const [scrollingToSection, setIsScrolling] = useState(false);
+  // const [successfullyScrolled, setSuccessfullyScrolled] = useState(false);
   const [routeUrl, setRouteUrl] = useState(undefined);
   const router = useRouter();
 
   useEffect(() => {
-    if (!resume) {
-      return;
-    }
-
-    const { summary, interests, skillNames } = resume;
-    setResumeAbout(summary);
-    setResumeFun(interests);
-    setResumeSkills(skillNames);
-
     // allow single spin for loading icon
     setTimeout(() => setFetchingData(false), 800);
-  }, [resume]);
+  }, []);
 
-  useEffect(() => {
-    const url = router.asPath.replace('/', '').toLowerCase();
-    setRouteUrl(url);
-    setIsScrolling(false);
-    setSuccessfullyScrolled(false);
-  }, [router.asPath]);
-
-  useEffect(() => {
-    if (!routeUrl || routeUrl.includes('work')) {
-      return;
-    }
-
-    const waitToScroll = () => {
-      return setTimeout(() => {
-        setIsScrolling(true);
-        scrollToSection();
-      }, 1000);
-    }
-
-    const scrollToSection = () => {
-      if (successfullyScrolled) {
-        return;
-      }
-
-      if (fetchingData && !scrollingToSection) {
-        return waitToScroll();
-      }
-
-      const section = document.getElementById(routeUrl);
-
-      if (!section) {
-        return waitToScroll();
-      }
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-      // section.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
-      setIsScrolling(false);
-      setSuccessfullyScrolled(true);
-    }
-
-    if (routeUrl) {
-      scrollToSection();
-    }
-  }, [routeUrl, scrollingToSection]);
 
   return (
-    <>
-      {fetchingData
+    <div className={styles.gridOverlay}>
+      {/* {fetchingData
         ?
         <LoadingIcon />
         :
@@ -101,8 +50,8 @@ function App({ resume }: Props) {
           <MyWork />
           <MyLinks />
         </>
-      }
-    </>
+      } */}
+    </div>
   );
 }
 
