@@ -1,5 +1,6 @@
-import NavTaskbar from 'components/navTaskbar/NavTaskbar';
+import NavTaskbar from '@/components/navTaskbar/NavTaskbar';
 import styles from '../styles/index.module.scss';
+// import 'bootstrap-css-only/css/bootstrap.min.css';
 
 function App() {
 
