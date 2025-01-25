@@ -18,7 +18,9 @@ function CardContainer({ title, subTitle, content, footer, fullPage }: Props) {
             return;
         }
         const newSize = fullPage ? styles.myCard : `${styles.myCard} ${styles.smallCard}`;
-        setCardSize(newSize);
+        if (newSize === cardSize) {
+            setCardSize(newSize);
+        }
     }, [fullPage])
 
     return (
