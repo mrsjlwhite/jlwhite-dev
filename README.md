@@ -20,7 +20,6 @@ This is a react app to talk a lil' about me, and for me to add some project exam
   - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - 📦 Packages
   -  [Sass](https://sass-lang.com/documentation/)
-  - [`react-loader-spinner`](https://mhnpd.github.io/react-loader-spinner/)
   - [`react-device-detect`](https://www.npmjs.com/package/react-device-detect)
   - [`@react95/core`](https://github.com/React95/React95/tree/master/packages/core)
 - 🍱 Assets

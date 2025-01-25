@@ -1,60 +1,69 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "esnext",
-        "jsx": "preserve",
-        "strict": false,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "esnext"
-        ],
-        "allowJs": true,
-        "noEmit": true,
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "incremental": true,
-        "baseUrl": ".",
-        "paths": {
-            "@/components/*": [
-                "pages/_home/*",
-                "pages/_home/aboutMe/*",
-                "core/components/myNavbar/*",
-                "core/components/*"
-            ],
-            "@/imgs/*": [
-                "public/imgs/*"
-            ],
-            "@/svgs/*": [
-                "public/svgs/*"
-            ],
-            "@/lib/*": [
-                "core/lib/*"
-            ],
-            "@/styles/*": [
-                "styles/*"
-            ],
-            "@/data/*": [
-                "core/data/*"
-            ],
-            "@/hooks/*": [
-                "hooks/*"
-            ],
-            "@/interfaces/*": [
-                "core/interfaces/*"
-            ]
-        }
-    },
-    "exclude": [
-        "node_modules"
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "jsx": "preserve",
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "include": [
-        "next-env.d.ts",
-        "**/*.ts",
-        "**/*.tsx"
-    ]
+    "allowJs": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": [
+        "pages/_home/*",
+        "pages/_home/aboutMe/*",
+        "core/components/myNavbar/*",
+        "core/components/*"
+      ],
+      "@/imgs/*": [
+        "public/imgs/*"
+      ],
+      "@/svgs/*": [
+        "public/svgs/*"
+      ],
+      "@/lib/*": [
+        "core/lib/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/data/*": [
+        "core/data/*"
+      ],
+      "@/hooks/*": [
+        "hooks/*"
+      ],
+      "@/interfaces/*": [
+        "core/interfaces/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
+  ]
 }
