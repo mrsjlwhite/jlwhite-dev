@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/global.scss';
 import Head from 'next/head';
 import { Josefin_Sans, La_Belle_Aurore, Roboto_Slab } from 'next/font/google';
-import MyFooter from './_home/myFooter/MyFooter';
+import '@react95/core/GlobalStyle';
+import '@react95/core/themes/win95.css';
 
 const josefSans = Josefin_Sans({
     weight: ['100', '200', '300'],
@@ -21,7 +22,6 @@ const robotoSlab = Roboto_Slab({
     subsets: ['latin'],
     variable: '--font-body'
 });
-
 
 const title = "J.L. White";
 const description = "Jeslyn L. White's personal developer website, in case you wanted to learn more about her.";
@@ -49,7 +49,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             </Head>
             <div className={`${josefSans.variable} ${laBelleAurore.variable} ${robotoSlab.variable}`}>
                 <Component {...pageProps} />
-                <MyFooter />
+                {/* <MyFooter /> */}
             </div>
         </>
     )

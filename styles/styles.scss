@@ -18,6 +18,10 @@ $mobile-width: 650px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
+// theme variables
+$background: linear-gradient(150deg, #b39ddb, #cea0e3, #fcb4d5);
+// background: linear-gradient(150deg, #aa9cfc, #fc9ce7);
+
 // shared classes
 @mixin section-title-text {
     font-family: $font-sub-heading;
