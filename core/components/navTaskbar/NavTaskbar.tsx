@@ -12,14 +12,14 @@ function NavTaskbar() {
 
 
   return (<>
-    {first && <Modal icon={<WindowsExplorer variant="16x16_4" />} title="Windows Explorer" titleBarOptions={[<TitleBar.Close key="close" onClick={closeFirst} />]} width="300px" height="200px" />}
+    {/* {first && <Modal icon={<WindowsExplorer variant="16x16_4" />} title="Windows Explorer" titleBarOptions={[<TitleBar.Close key="close" onClick={closeFirst} />]} width="300px" height="200px" />}
 
     {second && <Modal dragOptions={{
       defaultPosition: {
         x: 50,
         y: 50
       }
-    }} width="300px" height="200px" icon={<ReaderClosed variant="16x16_4" />} title="Local Disk (C:)" titleBarOptions={[<TitleBar.Close key="close" onClick={closeSecond} />]} />}
+    }} width="300px" height="200px" icon={<ReaderClosed variant="16x16_4" />} title="Local Disk (C:)" titleBarOptions={[<TitleBar.Close key="close" onClick={closeSecond} />]} />} */}
 
     <TaskBar list={<List>
       <List.Item icon={<ReaderClosed variant="32x32_4" />} onClick={() => toggleSecond(true)}>
