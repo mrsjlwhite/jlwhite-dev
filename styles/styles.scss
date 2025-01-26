@@ -1,6 +1,6 @@
 // fonts
 $font-sub-heading: var(--font-sub-heading); //'Josefin Sans', sans-serif;
-$font-heading-title: var(--font-heading-title); //'La Belle Aurore', cursive;
+$font-heading-title: var(--font-heading-title); //'Lora';
 $font-body: var(--font-body); //'Roboto Slab', serif;
 
 // colors
@@ -11,12 +11,18 @@ $color-purple: #BAA1AD; //rose quartz
 $color-green: #5A7557; //reseda green
 $color-green-faded: rgba($color-green, 0.8);
 $color-gold: #BF984A; //satin sheen gold
+$color-soft-white: #f2f3f2; //stone soft white
 
 // variables
 $box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 $mobile-width: 650px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
+
+// themes
+$background-color: $color-soft-white;
+
+$header-text-index: 100;
 
 // shared classes
 @mixin section-title-text {

@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/global.scss';
 import Head from 'next/head';
-import { Josefin_Sans, La_Belle_Aurore, Roboto_Slab } from 'next/font/google';
+import { Josefin_Sans, La_Belle_Aurore, Roboto_Slab, Lora } from 'next/font/google';
 import MyFooter from './_home/myFooter/MyFooter';
 
 const josefSans = Josefin_Sans({
@@ -11,7 +11,7 @@ const josefSans = Josefin_Sans({
     subsets: ['latin'],
     variable: '--font-sub-heading'
 });
-const laBelleAurore = La_Belle_Aurore({
+const headingFont = Lora({
     weight: ['400'],
     subsets: ['latin'],
     variable: '--font-heading-title'
@@ -47,7 +47,7 @@ const App = ({ Component, pageProps }: AppProps) => {
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description} />
             </Head>
-            <div className={`${josefSans.variable} ${laBelleAurore.variable} ${robotoSlab.variable}`}>
+            <div className={`${josefSans.variable} ${headingFont.variable} ${robotoSlab.variable}`}>
                 <Component {...pageProps} />
                 <MyFooter />
             </div>

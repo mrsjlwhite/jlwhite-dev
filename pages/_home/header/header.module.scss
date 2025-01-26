@@ -1,45 +1,40 @@
 @import '../../../styles/styles.scss';
 
 .header {
-    background-color: $color-off-white;
-    display: grid;
-    grid-template-columns: 50vw 1fr;
+    background-color: $background-color;
+    display: flex;
     height: 100vh;
     padding: 2rem;
+    justify-content: flex-start; //space-between;
+    align-items: center;
 }
 
 .textContainer {
-    align-self: center;
     animation: fade-in 2.5s;
-    position: absolute;
-    right: 3%;
+    z-index: $header-text-index;
 
     .headerName {
         color: $color-purple;
         font-family: $font-heading-title;
         font-size: 95px;
+        margin-left: -15rem;
     }
 }
 
 .headerMeta {
-    align-self: self-end;
     color: $color-gold;
     font-family: $font-sub-heading;
     font-size: 40px;
-    position: absolute;
-    right: 0;
     text-transform: uppercase;
+    margin-left: 15rem;
 }
 
 .headerImg {
     animation: 2.5s slide-right .5s forwards;
-    border: solid $color-white 26px;
-    box-shadow: $box-shadow;
-    height: 70vh;
+    height: 90vh;
+    width: 60vw;
     margin-top: 48px;
-    max-width: 750px;
     object-fit: cover;
-    opacity: .8;
     transform: translateX(-100%);
 }
 
@@ -76,11 +71,7 @@
 @media screen and (max-width: $mobile-width) {
 
     .header {
-        display: flex;
         flex-direction: column;
-        padding: 2rem;
-        align-items: center;
-        justify-content: space-between;
     }
 
     .headerImg {
