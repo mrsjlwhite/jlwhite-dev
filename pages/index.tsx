@@ -3,9 +3,9 @@ import Header from "./_home/header/Header";
 import MyNavbar from 'components/myNavbar/MyNavbar';
 import MyLinks from "./_home/myLinks/MyLinks";
 import LoadingIcon from "pages/_home/loadingIcon/LoadingIcon";
-import MyWork from "./_home/myWork/MyWork";
 import AboutMeBanner from "components/aboutMeBanner/AboutMeBanner";
 import WorkExperienceSection from "components/workExperienceSection/workExperienceSection";
+import ProjectsSection from "components/projectsSection/projectsSection";
 
 function App() {
   const [fetchingData, setFetchingData] = useState(true);
@@ -26,7 +26,7 @@ function App() {
           <MyNavbar />
           <AboutMeBanner />
           <WorkExperienceSection />
-          <MyWork />
+          <ProjectsSection />
           <MyLinks />
         </>
       }

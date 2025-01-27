@@ -1,10 +1,8 @@
-@import '../../../styles/styles.scss';
+@import '../../styles/styles.scss';
 
 .workCardsContainer {
     display: flex;
-    flex-direction: row;
     margin: 2rem;
-    align-content: center;
     justify-content: space-evenly;
     max-width: 100vw;
     overflow: hidden;

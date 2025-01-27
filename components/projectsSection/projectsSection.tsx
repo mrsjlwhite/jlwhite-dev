@@ -1,11 +1,11 @@
-import styles from './myWork.module.scss';
-import { useEffect, useState } from "react";
-import { projects } from "core/data/projects";
-import { IWorkProject } from "core/interfaces/workProject";
-import Link from 'next/link';
-import WorkPolaroid from 'components/workPolaroid/WorkPolaroid';
+import Link from 'next/link'
+import styles from './projectsSection.module.scss'
+import { useEffect, useState } from 'react';
+import { projects } from '@/data/projects';
+import { IWorkProject } from '@/interfaces/workProject';
+import ProjectCover from 'components/projectCover/ProjectCover';
 
-const MyWork = () => {
+const ProjectsSection = () => {
     const [workProjects, setWorkProjects] = useState([]);
 
     useEffect(() => {
@@ -19,11 +19,11 @@ const MyWork = () => {
             <h4 className='section-title section-title-margin mt-5'>my work.</h4>
             <div className={styles.workCardsContainer}>
                 {workProjects.map((project: IWorkProject, index: number) =>
-                    <WorkPolaroid key={index} slug={project.slug} name={project.name} date={project.date} type={project.projectType} />)}
+                    <ProjectCover key={index} slug={project.slug} name={project.name} />)}
             </div>
             <Link href='/work' className={styles.viewAllLink}>View All</Link>
         </section>
     )
 }
 
-export default MyWork
+export default ProjectsSection

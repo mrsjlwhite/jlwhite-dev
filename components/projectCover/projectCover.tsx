@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from './workPolaroid.module.scss';
+import styles from './projectCover.module.scss';
 import { useEffect, useState } from 'react';
 import placeholder from '@/imgs/placeholder.png';
 import kimba from '@/imgs/workSamples/kimba/kimba0.png';
@@ -9,16 +9,14 @@ import entourage from '@/imgs/workSamples/brideEntourage/entourage0.png';
 import resume from '@/imgs/workSamples/digitalResume/resume0.png';
 import Image from 'next/image';
 import { ProjectNames } from 'core/constants/projectNames';
-import TypeBadge from '../typeBadge/TypeBadge';
 
 type Props = {
     name: string
+    summary?: string
     slug: string
-    date: string
-    type: string
 }
 
-function WorkPolaroid({ name, slug, date, type }: Props) {
+function ProjectCover({ name, slug, summary }: Props) {
     const [imgSrc, setImgSrc] = useState(placeholder);
     const [imgAlt, setImgAlt] = useState('');
 
@@ -60,12 +58,10 @@ function WorkPolaroid({ name, slug, date, type }: Props) {
                     height={250}
                     width={350}
                 />
-                <h4>{name}</h4>
-                <p>{date}</p>
-                <TypeBadge type={type} />
+                {summary && <h4>{summary}</h4>}
             </Link>
         </div>
     )
 }
 
-export default WorkPolaroid
+export default ProjectCover

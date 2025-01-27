@@ -1,6 +1,6 @@
 import styles from './work.module.scss';
 import { projects } from 'core/data/projects';
-import WorkPolaroid from 'components/workPolaroid/WorkPolaroid';
+import ProjectCover from 'components/projectCover/ProjectCover';
 import { IWorkProject } from 'core/interfaces/workProject';
 import PageContainer from 'components/containers/PageContainer';
 
@@ -15,7 +15,7 @@ const Work = ({ workProjects }: Props) => {
             <ul className={styles.workGallery}>
                 {workProjects.map((project) =>
                     <li key={project.name}>
-                        <WorkPolaroid name={project.name} slug={project.slug} date={project.date} type={project.projectType} />
+                        <ProjectCover name={project.name} slug={project.slug} date={project.date} type={project.projectType} />
                     </li>)
                 }
             </ul>
