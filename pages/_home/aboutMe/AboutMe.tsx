@@ -1,6 +1,6 @@
 import styles from './aboutMe.module.scss';
 import { useEffect, useState } from 'react';
-import AboutMeBanner from './AboutMeBanner';
+import AboutMeBanner from '../aboutMeBanner/AboutMeBanner';
 import AboutMeSkills from './AboutMeSkills';
 import AboutMeFun from './AboutMeFun';
 
@@ -30,7 +30,6 @@ function AboutMe({ aboutBlurb, funBlurb, skillset }: Props) {
 
     return (
         <section id='about-me' className={styles.aboutMeSection}>
-            <AboutMeBanner bannerText={aboutMeBannerText} />
             <AboutMeSkills skillset={skillset} />
             <AboutMeFun funText={aboutMeFunText} />
         </section>

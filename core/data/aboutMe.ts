@@ -37,3 +37,11 @@ export const aboutMe: IAboutMeBlurb[] = [
         the color art that's presented. I aspire to bring elements of these inspirations in my own work.`
     }
 ]
+
+export const aboutMeSummary: string = `
+Hi there! I'm Jeslyn, a self-taught software developer who’s been turning ideas into beautiful, user-friendly applications since 2017. 
+Programming started as a curiosity and quickly grew into a passion, shaping both my career and my favorite pastime. 
+I specialize in crafting clean, reusable, and high-quality code, with a focus on modern best practices and delivering exceptional user experiences. 
+Whether I'm collaborating with a team or working independently, I love every opportunity to solve problems and create something meaningful. 
+Let's build something awesome together!
+`
