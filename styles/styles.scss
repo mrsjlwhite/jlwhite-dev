@@ -71,6 +71,24 @@ $background-color: $color-soft-white;
     }
 }
 
+@mixin fade-in {
+    opacity: 1;
+    animation: fade-in 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+
+    @keyframes fade-in {
+
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
 @mixin animated-box-shadow {
     -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
