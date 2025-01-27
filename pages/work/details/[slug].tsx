@@ -20,8 +20,8 @@ import resume2 from '@/imgs/workSamples/digitalResume/resume2.png';
 import resume3 from '@/imgs/workSamples/digitalResume/resume3.png';
 import Image from 'next/image';
 import { ProjectNames } from 'core/constants/projectNames';
-import TypeBadge from 'core/components/typeBadge/TypeBadge';
-import PageContainer from 'core/components/containers/PageContainer';
+import TypeBadge from 'components/typeBadge/TypeBadge';
+import PageContainer from 'components/containers/PageContainer';
 
 type Props = {
     workProject: IWorkProject

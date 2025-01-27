@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { projects } from "core/data/projects";
 import { IWorkProject } from "core/interfaces/workProject";
 import Link from 'next/link';
-import WorkPolaroid from '../../../core/components/workPolaroid/WorkPolaroid';
+import WorkPolaroid from 'components/workPolaroid/WorkPolaroid';
 
 const MyWork = () => {
     const [workProjects, setWorkProjects] = useState([]);

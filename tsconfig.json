@@ -23,8 +23,8 @@
             "@/components/*": [
                 "pages/_home/*",
                 "pages/_home/aboutMe/*",
-                "core/components/myNavbar/*",
-                "core/components/*"
+                "components/myNavbar/*",
+                "components/*"
             ],
             "@/imgs/*": [
                 "public/imgs/*"

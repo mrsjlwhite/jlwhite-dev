@@ -1,8 +1,7 @@
 import styles from './about.module.scss';
 import { aboutMe } from 'core/data/aboutMe';
-import PageContainer from 'core/components/containers/PageContainer';
-import TechIcon from 'core/components/techIcon/TechIcon';
-import { tldr } from 'core/data/tldrExperience';
+import PageContainer from 'components/containers/PageContainer';
+import TechIcon from 'components/techIcon/TechIcon';
 import { IAboutMeBlurb } from '@/interfaces/aboutMeBlurb';
 import AboutMeGallery from 'pages/_home/aboutMe/AboutMeGallery';
 import { GalleryType } from 'core/constants/galleryType';
@@ -41,12 +40,10 @@ const About = ({ blurbs, techIcons }: Props) => {
 
 export async function getStaticProps() {
     const blurbs = aboutMe;
-    const techIcons = tldr.techIcons;
 
     return {
         props: {
-            blurbs,
-            techIcons
+            blurbs
         }
     }
 }

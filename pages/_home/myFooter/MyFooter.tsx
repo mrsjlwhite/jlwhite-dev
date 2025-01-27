@@ -1,5 +1,5 @@
 import styles from './myFooter.module.scss';
-import SocialsIcons from 'core/components/socialsIcons/SocialsIcons';
+import SocialsIcons from 'components/socialsIcons/SocialsIcons';
 
 function MyFooter() {
   return (
