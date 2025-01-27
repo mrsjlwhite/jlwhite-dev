@@ -1,6 +1,6 @@
 // fonts
 $font-sub-heading: var(--font-sub-heading); //'Josefin Sans', sans-serif;
-$font-heading-title: NewYork; //var(--font-heading-title); //'Lora';
+$font-heading: var(--font-heading); //'Lora';
 $font-body: var(--font-body); //'Roboto Slab', serif;
 
 // colors
@@ -24,7 +24,7 @@ $background-color: $color-soft-white;
 
 // shared classes
 @mixin section-title-text {
-    font-family: $font-sub-heading;
+    font-family: $font-heading;
     color: $color-green;
     font-size: 40px;
     font-weight: 200;

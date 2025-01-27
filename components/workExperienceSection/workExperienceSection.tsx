@@ -21,7 +21,7 @@ const WorkExperienceSection = () => {
                     {experiences.map((experience, index) => {
                         return (
                             <div key={index} className={styles.experienceCard}>
-                                <h4 className={styles.cardName}>{experience.name} / {experience.title}</h4>
+                                <h4 className={styles.cardName}>{experience.name} | {experience.title}</h4>
                                 <p className={styles.cardDates}>{experience.dates}</p>
                                 <div className={styles.pillsContainer}>
                                     {experience.techStack.map((tech, index) => <span key={index} className={styles.experiencePill}>{tech}</span>)}
