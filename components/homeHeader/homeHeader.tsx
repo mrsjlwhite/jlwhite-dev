@@ -1,9 +1,9 @@
-import styles from './header.module.scss';
+import styles from './homeHeader.module.scss';
 import header from '@/imgs/header.jpeg';
 import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 
-function Header() {
+function HomeHeader() {
     return (
         <header className={styles.header}>
             <Image
@@ -37,4 +37,4 @@ function Header() {
     );
 };
 
-export default Header;
+export default HomeHeader;
