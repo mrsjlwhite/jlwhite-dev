@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './aboutMe.module.scss';
 import fun1 from '@/imgs/fun1.jpg';
 import fun2 from '@/imgs/fun2.jpeg';

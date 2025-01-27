@@ -2,17 +2,13 @@ import styles from './about.module.scss';
 import { aboutMe } from 'core/data/aboutMe';
 import PageContainer from 'components/containers/PageContainer';
 import TechIcon from 'components/techIcon/TechIcon';
-import { IAboutMeBlurb } from '@/interfaces/aboutMeBlurb';
-import AboutMeGallery from 'pages/_home/aboutMe/AboutMeGallery';
+import AboutMeGallery from 'components/aboutMeGallery/AboutMeGallery';
 import { GalleryType } from 'core/constants/galleryType';
 
-type Props = {
-    blurbs: IAboutMeBlurb[]
-    techIcons: string[]
-}
 
-const About = ({ blurbs, techIcons }: Props) => {
-
+const About = () => {
+    const blurbs = aboutMe;
+    // const techIcons = aboutMe
     return (
         <PageContainer>
             {blurbs.map((blurb) => {
@@ -31,21 +27,11 @@ const About = ({ blurbs, techIcons }: Props) => {
                 )
             })}
             <AboutMeGallery photoSet={GalleryType.SET2} />
-            <div className={styles.iconFooter}>
+            {/* <div className={styles.iconFooter}>
                 {techIcons.map((icon) => <TechIcon key={icon} icon={icon} className='m-1' />)}
-            </div>
+            </div> */}
         </PageContainer>
     )
-}
-
-export async function getStaticProps() {
-    const blurbs = aboutMe;
-
-    return {
-        props: {
-            blurbs
-        }
-    }
 }
 
 export default About

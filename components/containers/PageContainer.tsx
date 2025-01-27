@@ -1,15 +1,16 @@
+'use client'
 import MyNavbar from 'components/myNavbar/MyNavbar';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const PageContainer = (props) => {
     const [pageTitle, setPageTitle] = useState<string>('');
     const [pageDesc, setPageDesc] = useState<string>('');
-    const router = useRouter();
+    const pathname = usePathname();
 
     useEffect(() => {
-        const url = router.asPath.replace('/', '').toLowerCase();
-        const isDetailsPage = router.query && router.query.slug;
+        const url = pathname.replace('/', '').toLowerCase();
+        const isDetailsPage = pathname.split('/').length > 0; //router.query && router.query.slug;
         const defaultTitle = `my ${url}s.`;
         let title = '';
         let desc = '';
@@ -33,7 +34,7 @@ const PageContainer = (props) => {
 
         setPageTitle(title);
         setPageDesc(desc);
-    }, [router.asPath])
+    }, [pathname])
 
     return (
         <>

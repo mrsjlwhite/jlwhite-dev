@@ -1,5 +1,5 @@
 import styles from './aboutMe.module.scss';
-import AboutMeGallery from './AboutMeGallery';
+import AboutMeGallery from '../../../components/aboutMeGallery/AboutMeGallery';
 
 type Props = {
     funText: string
