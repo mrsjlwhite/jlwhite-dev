@@ -2,22 +2,27 @@
 
 .header {
     background-color: $background-color;
-    display: flex;
+    position: relative;
+    width: 100%;
     height: 100vh;
-    padding: 2rem;
-    justify-content: flex-start; //space-between;
-    align-items: center;
+    overflow: hidden;
 }
 
 .textContainer {
-    animation: fade-in 2.5s;
-    z-index: $header-text-index;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Optional background overlay */
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
 
     .headerName {
-        color: $color-purple;
+        color: $color-soft-white;
         font-family: $font-heading-title;
         font-size: 95px;
-        margin-left: -15rem;
     }
 }
 
@@ -26,26 +31,15 @@
     font-family: $font-sub-heading;
     font-size: 40px;
     text-transform: uppercase;
-    margin-left: 15rem;
 }
 
 .headerImg {
-    animation: 2.5s slide-right .5s forwards;
-    height: 90vh;
-    width: 60vw;
-    margin-top: 48px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transform: translateX(-100%);
 }
 
 // animations
-@keyframes slide-right {
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
 @keyframes fade-in {
 
     0% {
@@ -65,37 +59,5 @@
 
     100% {
         opacity: .4;
-    }
-}
-
-@media screen and (max-width: $mobile-width) {
-
-    .header {
-        flex-direction: column;
-    }
-
-    .headerImg {
-        animation: mini-fade-in 2s;
-        height: auto;
-        margin-top: 0;
-        opacity: .4;
-        padding: 5px;
-        transform: translateX(0);
-        width: 90vw;
-    }
-
-    .headerName {
-        font-size: 5em;
-    }
-
-    .headerMeta {
-        font-size: 2em;
-        left: 0;
-    }
-
-    .textContainer {
-        padding: 0 1rem;
-        text-align: center;
-        top: 36vh;
     }
 }

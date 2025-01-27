@@ -3,21 +3,16 @@ import { AppProps } from 'next/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/global.scss';
 import Head from 'next/head';
-import { Josefin_Sans, La_Belle_Aurore, Roboto_Slab, Lora } from 'next/font/google';
+import { Lora, Open_Sans } from 'next/font/google';
 import MyFooter from './_home/myFooter/MyFooter';
 
-const josefSans = Josefin_Sans({
-    weight: ['100', '200', '300'],
+const subHeadingFont = Lora({
+    weight: ['400'],// ['100', '200', '300'],
     subsets: ['latin'],
     variable: '--font-sub-heading'
 });
-const headingFont = Lora({
-    weight: ['400'],
-    subsets: ['latin'],
-    variable: '--font-heading-title'
-});
-const robotoSlab = Roboto_Slab({
-    weight: ['100', '200', '300', '400'],
+const bodyFont = Open_Sans({
+    weight: ['300', '400'],//['100', '200', '300', '400'],
     subsets: ['latin'],
     variable: '--font-body'
 });
@@ -47,7 +42,7 @@ const App = ({ Component, pageProps }: AppProps) => {
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description} />
             </Head>
-            <div className={`${josefSans.variable} ${headingFont.variable} ${robotoSlab.variable}`}>
+            <div className={`${subHeadingFont.variable} ${bodyFont.variable}`}>
                 <Component {...pageProps} />
                 <MyFooter />
             </div>
