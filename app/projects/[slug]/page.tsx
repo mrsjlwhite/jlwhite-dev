@@ -1,9 +1,11 @@
+'use client'
+
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 import { projects } from 'core/data/projects';
 import { IWorkProject } from 'core/interfaces/workProject';
-import { useRouter } from 'next/router';
 import styles from './workDetails.module.scss';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import placeholder from '@/imgs/placeholder.png';
 import kimba1 from '@/imgs/workSamples/kimba/kimba1.png';
 import kimba2 from '@/imgs/workSamples/kimba/kimba2.png';
@@ -23,51 +25,51 @@ import { ProjectNames } from 'core/constants/projectNames';
 import TypeBadge from 'components/typeBadge/TypeBadge';
 import PageContainer from 'components/containers/PageContainer';
 
-type Props = {
-    workProject: IWorkProject
-}
-
-const WorkDetails = ({ workProject }: Props) => {
+const WorkDetails = () => {
+    const { slug } = useParams();
+    const [workProject, setWorkProject] = useState<IWorkProject | null>(null);
     const [mainImg, setMainImg] = useState(placeholder);
     const [imgTwo, setSecondImg] = useState(placeholder);
     const [imgThree, setThirdImg] = useState(placeholder);
 
-    const router = useRouter();
-
     useEffect(() => {
-        if (workProject) {
-            switch (workProject.name) {
-                case ProjectNames.Kimba:
-                    setMainImg(kimba1);
-                    setSecondImg(kimba2);
-                    setThirdImg(kimba3);
-                    break;
-                case ProjectNames.Hundekey:
-                    setMainImg(hundekey1);
-                    setSecondImg(hundekey2);
-                    setThirdImg(null);
-                    break;
-                case ProjectNames.PokeQuiz:
-                    setMainImg(poke1);
-                    setSecondImg(poke2);
-                    setThirdImg(null);
-                    break;
-                case ProjectNames.Entourage:
-                    setMainImg(entourage1);
-                    setSecondImg(entourage2);
-                    setThirdImg(entourage3);
-                    break;
-                case ProjectNames.DigitalResume:
-                    setMainImg(resume1);
-                    setSecondImg(resume2);
-                    setThirdImg(resume3);
-                    break;
-                default:
-                    setMainImg(placeholder);
-                    break;
+        if (slug) {
+            const project = projects.find(proj => proj.slug === slug);
+            if (project) {
+                setWorkProject(project);
+                switch (project.name) {
+                    case ProjectNames.Kimba:
+                        setMainImg(kimba1);
+                        setSecondImg(kimba2);
+                        setThirdImg(kimba3);
+                        break;
+                    case ProjectNames.Hundekey:
+                        setMainImg(hundekey1);
+                        setSecondImg(hundekey2);
+                        setThirdImg(null);
+                        break;
+                    case ProjectNames.PokeQuiz:
+                        setMainImg(poke1);
+                        setSecondImg(poke2);
+                        setThirdImg(null);
+                        break;
+                    case ProjectNames.Entourage:
+                        setMainImg(entourage1);
+                        setSecondImg(entourage2);
+                        setThirdImg(entourage3);
+                        break;
+                    case ProjectNames.DigitalResume:
+                        setMainImg(resume1);
+                        setSecondImg(resume2);
+                        setThirdImg(resume3);
+                        break;
+                    default:
+                        setMainImg(placeholder);
+                        break;
+                }
             }
         }
-    }, [workProject]);
+    }, [slug]);
 
     function setProjectDescription() {
         if (!workProject.description.includes(':')) {
@@ -93,7 +95,7 @@ const WorkDetails = ({ workProject }: Props) => {
         )
     }
 
-    if (!router.isFallback && !workProject?.slug) {
+    if (!workProject) {
         console.log('no bueno');
         return;
     }
@@ -139,32 +141,6 @@ const WorkDetails = ({ workProject }: Props) => {
             </div>
         </PageContainer>
     )
-}
-
-type PropsParams = {
-    params: {
-        slug: string
-    }
-}
-export async function getStaticProps({ params }: PropsParams) {
-    const workProject = projects.find(p => p.slug === params.slug);
-
-    return {
-        props: { workProject }
-    }
-}
-
-export async function getStaticPaths() {
-    return {
-        paths: projects.map(({ slug }) => {
-            return {
-                params: {
-                    slug: slug
-                }
-            }
-        }),
-        fallback: false,
-    }
 }
 
 export default WorkDetails

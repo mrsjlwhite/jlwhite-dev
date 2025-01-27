@@ -51,7 +51,7 @@ function ProjectCover({ name, slug, summary }: Props) {
 
     return (
         <div className={styles.workPolaroidCard}>
-            <Link href={`/work/details/${slug}`}>
+            <Link href={`/projects/${slug}`}>
                 <Image
                     src={imgSrc}
                     alt={imgAlt}

@@ -21,7 +21,7 @@ const ProjectsSection = () => {
                 {workProjects.map((project: IWorkProject, index: number) =>
                     <ProjectCover key={index} slug={project.slug} name={project.name} />)}
             </div>
-            <Link href='/work' className={styles.viewAllLink}>View All</Link>
+            <Link href='/projects' className={styles.viewAllLink}>View All</Link>
         </section>
     )
 }
