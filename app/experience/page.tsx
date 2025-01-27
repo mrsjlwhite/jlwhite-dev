@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './experience.module.scss';
 import IExperience from 'core/interfaces/experience';
 import TechIcon from 'components/techIcon/TechIcon';
@@ -8,18 +10,10 @@ import Accordion from 'react-bootstrap/Accordion';
 import IGitConnectedWork from 'core/interfaces/gitConnectedWork';
 import PageContainer from 'components/containers/PageContainer';
 
-type Props = {
-    experiences: IGitConnectedWork[]
-}
-
-const ExperiencePage = ({ experiences }: Props) => {
+const ExperiencePage = () => {
     const [jobExperiences, setJobExperiences] = useState<IExperience[]>([]);
 
     useEffect(() => {
-        if (!experiences) {
-            return;
-        }
-
         const buildExperienceCard = (work): IExperience => {
             const endDate = work.isCurrentRole ? 'Present' : `${getMonthName(work.end.month)} ${work.end.year}`;
             const timeResults = `${getMonthName(work.start.month)} ${work.start.year} to ${endDate}`;
@@ -35,10 +29,15 @@ const ExperiencePage = ({ experiences }: Props) => {
             }
         };
 
-        const jobs = experiences.map(buildExperienceCard);
-        setJobExperiences(jobs);
-
-    }, [experiences]);
+        async function fetchData() {
+            const data = await getGitConnectedPortfolio();
+            if (data) {
+                const jobs = data.work.map(buildExperienceCard);
+                setJobExperiences(jobs);
+            }
+        }
+        fetchData();
+    }, []);
 
     return (
         <PageContainer>
@@ -85,22 +84,6 @@ const ExperiencePage = ({ experiences }: Props) => {
             </Accordion>
         </PageContainer>
     )
-}
-
-export async function getServerSideProps() {
-    const data = await getGitConnectedPortfolio();
-
-    if (!data) {
-        return { notFound: true }
-    }
-
-    const { work } = data;
-
-    return {
-        props: {
-            experiences: work
-        }
-    }
 }
 
 export default ExperiencePage
