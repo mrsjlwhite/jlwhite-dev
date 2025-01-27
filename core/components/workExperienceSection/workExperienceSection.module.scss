@@ -1,0 +1,45 @@
+@import '../../../styles/styles.scss';
+
+.sectionTitle {
+    @include section-title-text;
+    text-align: center;
+}
+
+.experienceContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.5rem;
+}
+
+.experienceCard {
+    width: 50vw;
+    margin: 2em 0;
+
+    .cardName {
+        @include section-title-text-small;
+        margin: 0;
+    }
+
+    .cardDates {
+        @include small-body-text;
+        margin: 0;
+    }
+
+    .cardDescription {
+        @include body-text;
+        margin: 1em 0 3em 0;
+    }
+
+    .pillsContainer {
+        display: flex;
+        flex-wrap: wrap;
+
+        .experiencePill {
+            @include small-body-text;
+            border: black 1.4px solid;
+            padding: .3em .5em;
+            border-radius: 50px;
+            margin: .5em;
+        }
+    }
+}

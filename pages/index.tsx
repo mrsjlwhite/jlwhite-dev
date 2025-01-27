@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Header from "./_home/header/Header";
 import MyNavbar from 'core/components/myNavbar/MyNavbar';
-import MyExperience from "./_home/myExperience/MyExperience";
 import MyLinks from "./_home/myLinks/MyLinks";
 import LoadingIcon from "pages/_home/loadingIcon/LoadingIcon";
 import MyWork from "./_home/myWork/MyWork";
-import { useRouter } from "next/router";
-import AboutMeBanner from "./_home/aboutMeBanner/AboutMeBanner";
+import AboutMeBanner from "../core/components/aboutMeBanner/AboutMeBanner";
+import WorkExperienceSection from "@/components/workExperienceSection/workExperienceSection";
 
 function App() {
   const [fetchingData, setFetchingData] = useState(true);
@@ -26,7 +25,7 @@ function App() {
           <Header />
           <MyNavbar />
           <AboutMeBanner />
-          <MyExperience />
+          <WorkExperienceSection />
           <MyWork />
           <MyLinks />
         </>

@@ -1,6 +1,6 @@
 import styles from './aboutMe.module.scss';
 import { useEffect, useState } from 'react';
-import AboutMeBanner from '../aboutMeBanner/AboutMeBanner';
+import AboutMeBanner from '../../../core/components/aboutMeBanner/AboutMeBanner';
 import AboutMeSkills from './AboutMeSkills';
 import AboutMeFun from './AboutMeFun';
 
