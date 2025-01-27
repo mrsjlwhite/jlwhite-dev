@@ -1,8 +1,10 @@
-import styles from './connect.module.scss';
+'use client'
+
+import styles from './contact.module.scss'
 import { IconSize } from "@/components/socialsIcons/SocialIconImage"
 import SocialsIcons from "@/components/socialsIcons/SocialsIcons"
-import PageContainer from "core/components/containers/PageContainer"
-import { useEffect, useState } from 'react';
+import PageContainer from "@/components/containers/PageContainer"
+import { useEffect, useState } from 'react'
 import { isMobile } from 'react-device-detect'
 
 const Connect = () => {
