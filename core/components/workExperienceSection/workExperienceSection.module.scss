@@ -5,10 +5,15 @@
     text-align: center;
 }
 
-.experienceContainer {
+.sectionContentContainer {
     display: flex;
     justify-content: space-between;
     padding: 4.5rem;
+
+    img {
+        height: 30rem;
+        object-fit: scale-down;
+    }
 }
 
 .experienceCard {

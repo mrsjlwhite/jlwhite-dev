@@ -1,12 +1,18 @@
 import { experiences } from '@/data/experiences'
 import styles from './workExperienceSection.module.scss'
+import Image from 'next/image'
+import coffeeStain from '@/imgs/coffeeStain.png'
 
 const WorkExperienceSection = () => {
     return (
         <section>
             <h2 className={styles.sectionTitle}>Where I've Contributed</h2>
-            <div className={styles.experienceContainer}>
-                <p>gonna be image</p>
+            <div className={styles.sectionContentContainer}>
+                <Image
+                    className={styles.bannerImg}
+                    src={coffeeStain}
+                    alt='A coffee stain'
+                />
                 <div>
                     {experiences.map((experience, index) => {
                         return (
