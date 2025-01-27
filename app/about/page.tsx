@@ -3,7 +3,7 @@ import { aboutMe } from 'core/data/aboutMe';
 import PageContainer from 'components/containers/PageContainer';
 import TechIcon from 'components/techIcon/TechIcon';
 import AboutMeGallery from 'components/aboutMeGallery/AboutMeGallery';
-import { GalleryType } from 'core/constants/galleryType';
+import { GalleryType } from 'lib/constants';
 
 
 const About = () => {

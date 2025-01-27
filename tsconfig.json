@@ -30,7 +30,7 @@
                 "public/svgs/*"
             ],
             "@/lib/*": [
-                "core/lib/*"
+                "lib/*"
             ],
             "@/styles/*": [
                 "styles/*"

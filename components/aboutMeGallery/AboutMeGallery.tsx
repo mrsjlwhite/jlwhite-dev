@@ -8,7 +8,7 @@ import fun4 from '@/imgs/fun4.jpeg';
 import fun5 from '@/imgs/fun5.jpeg';
 import fun6 from '@/imgs/fun6.jpeg';
 import fun7 from '@/imgs/fun7.jpeg';
-import { GalleryType } from 'core/constants/galleryType';
+import { GalleryType } from 'lib/constants';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 

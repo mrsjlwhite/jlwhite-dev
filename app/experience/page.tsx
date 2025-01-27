@@ -3,11 +3,10 @@
 import styles from './experience.module.scss';
 import IExperience from 'core/interfaces/experience';
 import TechIcon from 'components/techIcon/TechIcon';
-import { getGitConnectedPortfolio } from 'core/lib/api';
+import { getGitConnectedPortfolio } from '@/lib/api';
 import { useEffect, useState } from 'react';
 import { getMonthName, getTechIconsByJobName } from '@/lib/utils';
 import Accordion from 'react-bootstrap/Accordion';
-import IGitConnectedWork from 'core/interfaces/gitConnectedWork';
 import PageContainer from 'components/containers/PageContainer';
 
 const ExperiencePage = () => {
