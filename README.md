@@ -25,5 +25,6 @@ This is a react app to talk a lil' about me, and for me to add some project exam
 - 🍱 Assets
   - [Devicon Icons](https://devicon.dev/)
   - [Bootstrap Icons](https://icons.getbootstrap.com/)
+  - [NewYork Font](https://www.dafont.com/newyork.font)
 - 🚀 Deployment
   - [Vercel](https://vercel.com/docs)
