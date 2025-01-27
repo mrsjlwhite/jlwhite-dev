@@ -15,7 +15,7 @@ const Work = ({ workProjects }: Props) => {
             <ul className={styles.workGallery}>
                 {workProjects.map((project) =>
                     <li key={project.name}>
-                        <ProjectCover name={project.name} slug={project.slug} date={project.date} type={project.projectType} />
+                        <ProjectCover name={project.name} slug={project.slug} summary={project.summary} />
                     </li>)
                 }
             </ul>

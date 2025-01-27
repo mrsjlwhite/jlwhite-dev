@@ -1,0 +1,81 @@
+@import '../../../styles/styles.scss';
+
+.workDetailsCols {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin: 3% 0 2% 2%;
+
+    .imgSampleGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; // Use fractions to ensure equal column widths
+        grid-template-rows: 265px;
+        width: 80vw;
+        gap: 20px;
+
+        img {
+            object-fit: contain;
+            width: 100%; // Ensure the image takes the full width of the grid cell
+            height: auto; // Maintain the aspect ratio
+            max-width: 100%; // Ensure the image does not exceed the grid cell width
+        }
+    }
+
+    .workTechText {
+        font-family: $font-sub-heading;
+        color: $color-gold;
+        font-style: italic;
+        letter-spacing: .2em;
+    }
+
+    .projectNameText {
+        color: $color-green;
+        font-family: $font-sub-heading;
+        font-size: 90px;
+        line-height: 1.7em;
+    }
+
+    .projectDescText {
+        font-family: $font-sub-heading;
+        margin-left: 10%;
+        max-width: 34vw;
+    }
+
+    .projectLink {
+        color: $color-purple;
+        text-decoration: none;
+        font-family: $font-sub-heading;
+        letter-spacing: .2em;
+        margin-left: 10%;
+    }
+}
+
+.badgeContainer {
+    justify-content: center;
+    display: flex;
+}
+
+@media screen and (max-width: $mobile-width) {
+    .workDetailsCols {
+        flex-direction: column;
+
+        .projectNameText {
+            margin-left: 3%;
+            overflow-wrap: break-word;
+        }
+
+        .projectDescText {
+            max-width: 60vw !important;
+        }
+    }
+}
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
+    .workDetailsCols {
+        flex-direction: column;
+
+        .projectDescText {
+            max-width: unset !important;
+        }
+    }
+}

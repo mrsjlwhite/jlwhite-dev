@@ -1,7 +1,7 @@
 import { projects } from 'core/data/projects';
 import { IWorkProject } from 'core/interfaces/workProject';
 import { useRouter } from 'next/router';
-import styles from '../work.module.scss';
+import styles from './workDetails.module.scss';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import placeholder from '@/imgs/placeholder.png';
@@ -120,26 +120,22 @@ const WorkDetails = ({ workProject }: Props) => {
                     {!workProject.githubLink ? null : (<Link href={workProject.githubLink} target='_blank' className={styles.projectLink}>View Repo</Link>)}
                     {!workProject.liveLink ? null : (<Link href={workProject.liveLink} target='_blank' className={styles.projectLink}>View Live</Link>)}
                 </div>
-                <div className='p-1'>
-                    <Image src={mainImg}
-                        className={styles.mainImg}
+                <div className={styles.imgSampleGrid}>
+                    <Image
+                        src={mainImg}
                         priority
                         height={500}
                         alt={`Landing page details of ${workProject.name}`}
                     />
-                </div>
-            </div>
-            <div className={styles.secondaryImgsCol}>
-                <Image
-                    className={styles.secondImg}
-                    src={imgTwo}
-                    alt={`Showing a nested page from ${workProject.name}`} />
-                {imgThree && imgThree !== placeholder ? (
                     <Image
-                        className={styles.secondImg}
-                        src={imgThree}
+                        src={imgTwo}
                         alt={`Showing a nested page from ${workProject.name}`} />
-                ) : null}
+                    {imgThree && imgThree !== placeholder ? (
+                        <Image
+                            src={imgThree}
+                            alt={`Showing a nested page from ${workProject.name}`} />
+                    ) : null}
+                </div>
             </div>
         </PageContainer>
     )
