@@ -1,15 +1,22 @@
 @import '../../styles/styles.scss';
 
+.aboutMeSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        border-radius: 42px;
+    }
+}
+
+.aboutMeBlurb {
+    width: 30vw;
+}
+
 .blurbTitle {
     @include section-sub-title-text;
-    color: $color-off-white;
-    margin: 1rem 0 .8rem 0;
-
-    span {
-        border-radius: 4px;
-        background-color: $color-green-faded;
-        padding: 0.3rem .7rem .3rem .7rem;
-    }
+    margin-right: 8px;
 }
 
 .iconFooter {
@@ -26,6 +33,7 @@
 
     img {
         max-width: 20em;
+        object-fit: scale-down;
     }
 }
 

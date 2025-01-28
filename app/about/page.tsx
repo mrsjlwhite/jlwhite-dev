@@ -30,22 +30,26 @@ const About = () => {
 
     return (
         <PageContainer>
-            {blurbs.map((blurb) => {
-                return (
-                    <section key={blurb.title}>
-                        <h2 className={styles.blurbTitle}>
-                            <span>
-                                {blurb.title}
-                            </span>
-                        </h2>
-                        <p className='section-body'>
-                            {blurb.content}
-                        </p>
-                        <br />
-                    </section>
-                )
-            })}
-            
+            <section className={styles.aboutMeSection}>
+                <div className={styles.aboutMeBlurb}>
+                    {blurbs.map((blurb) => {
+                        return (
+                            <p key={blurb.title} className='section-body'>
+                                <span className={styles.blurbTitle}>
+                                    {blurb.title}
+                                </span>
+                                {blurb.content}
+                            </p>
+                        )
+                    })}
+                </div>
+                <Image
+                    src='/imgs/me.jpeg'
+                    alt='A photo of me'
+                    height={500}
+                    width={400} />
+            </section>
+
             <AboutMeSkills />
 
             <div className={styles.aboutMeGallery}>
