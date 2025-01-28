@@ -6,7 +6,7 @@ import TechIcon from 'components/techIcon/TechIcon';
 import Image from 'next/image';
 import jobTechIcons from '@/data/jobTechIcons';
 import { useEffect, useState } from 'react';
-import AboutMeSkills from 'components/aboutMeSkills/AboutMeSkills';
+import AboutMeSkills from 'components/aboutMeSkills/aboutMeSkills';
 
 const photoSet = [
     { img: '/imgs/fun1.jpeg', text: 'Wildflower from a hike' },
@@ -16,7 +16,7 @@ const photoSet = [
 
 const About = () => {
     const [techIcons, setTechIcons] = useState([]);
-    const [photos, setPhotos] = useState([]);
+    const [photos, setPhotos] = useState<any[]>([]);
     const blurbs = aboutMe;
 
     useEffect(() => {
@@ -47,7 +47,8 @@ const About = () => {
                     src='/imgs/me.jpeg'
                     alt='A photo of me'
                     height={500}
-                    width={400} />
+                    width={400}
+                    priority />
             </section>
 
             <AboutMeSkills />

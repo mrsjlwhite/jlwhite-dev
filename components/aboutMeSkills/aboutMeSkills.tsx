@@ -1,5 +1,3 @@
-'use client'
-
 import { mySkillset } from '@/data/aboutMe';
 import styles from './aboutMeSkills.module.scss';
 import { useEffect, useState } from 'react';
@@ -17,7 +15,7 @@ function AboutMeSkills() {
       const array4 = unsortedSkills.splice(0, divideBy);
       setSkills([array1, array2, array3, array4]);
     }
-  }, []);
+  }, [skills.length]);
 
   return (
     <div className={styles.skillsetContainer}>
