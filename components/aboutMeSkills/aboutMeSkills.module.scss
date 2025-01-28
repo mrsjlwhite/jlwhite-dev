@@ -1,0 +1,21 @@
+@import '../../styles/styles.scss';
+
+.skillsetContainer {
+    // background-color: $background-color;
+    padding: 4em 2em 0 2em;
+
+    // padding: 2rem 0;
+    .skillsetList {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+
+    .skillsetList {
+        display: block;
+    }
+}

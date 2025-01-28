@@ -1,7 +1,9 @@
 'use client'
+import MyFooter from 'components/myFooter/MyFooter';
 import MyNavbar from 'components/myNavbar/MyNavbar';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import styles from './pageContainer.module.scss';
 
 const PageContainer = (props) => {
     const [pageTitle, setPageTitle] = useState<string>('');
@@ -39,7 +41,7 @@ const PageContainer = (props) => {
     return (
         <>
             <MyNavbar />
-            <div className='wrapper'>
+            <div className={styles.pageContainer}>
                 <div className='container'>
                     <div className='row'>
                         <div className='col'>
@@ -56,6 +58,7 @@ const PageContainer = (props) => {
                     </div>
                 </div>
             </div>
+            <MyFooter />
         </>
     )
 }

@@ -3,38 +3,32 @@ import { IAboutMeBlurb } from "core/interfaces/aboutMeBlurb";
 export const aboutMe: IAboutMeBlurb[] = [
     {
         title: 'hi!',
-        content: `Thank you for visiting my site 🤍`
+        content: `Thank you for stopping by my site 🤍! I’m so glad you’re here.`
     },
     {
         title: 'intros.',
-        content: `I'm a Latina Fullstack Software Developer, who loves building web and mobile applications. 
-        My goal is to build clean, easy-to-use, and aestheticly-pleasing applications, while also staying within good coding practices. 
-      `
+        content: `I'm a proud Latina Fullstack Software Developer with a passion for building web and mobile applications. 
+      My goal is to create clean, user-friendly, and visually appealing applications while adhering to solid coding practices and modern best practices.`
     },
     {
         title: 'how I got here.',
-        content: `I graduated with an English degree, and shortly found myself in a masters program I was unhappy in.
-        It wasn't until I was introduced to a coding bootcamp, the same one that helped me start working in a startup environment
-        in the bootcamp, that I became enthralled in the world of programming and haven't looked back since.`
+        content: `I started my journey with an English degree but soon realized my true passion lay elsewhere. After leaving a master’s program that didn’t feel like the right fit, I discovered coding through a bootcamp, where I dove into startup projects and found my love for programming. It’s been an incredible journey ever since!`
     },
     {
         title: 'developer.',
-        content: `I've been doing fullstack web development work since 2017, working in larger and smaller teams.
-        I've worked closely with designers and product owners to match mockup expectations, while also meeting the techical
-        requirements and constraints of my team. I've happily been working fully remote since 2020, 
-        where my favorite kind of day is a fresh cup of coffee and hours upon hours of coding ahead of me - talk about bliss ☕️`
+        content: `I’ve been working as a fullstack developer since 2017, contributing to both small and large teams. 
+      From collaborating with designers and product owners to ensure pixel-perfect results, to addressing the technical requirements and constraints of each project, I thrive on delivering high-quality solutions. 
+      Since 2020, I’ve worked fully remote, where my perfect day involves a fresh cup of coffee and uninterrupted hours of coding bliss ☕️.`
     },
     {
         title: 'diverse experience.',
-        content: `Before becoming a developer, I worked in Marketing where I quickly experience
-        the importance of communication between creatives and engineers, and the importance of continously trying to understand 
-        the best way to bridge that communication.`
+        content: `Before becoming a developer, I worked in Marketing, where I quickly learned the importance of clear communication between creative teams and engineers. 
+      This experience taught me the value of bridging gaps between different roles, a skill I carry into every project I take on.`
     },
     {
         title: 'fun.',
-        content: `In my free time, I enjoy books, films and video games. 
-        I love the art of story telling they each uniquely bring, the aesthetic and world building they establish that can take you elsewhere,
-        the color art that's presented. I aspire to bring elements of these inspirations in my own work.`
+        content: `Outside of work, you’ll find me immersed in books, films, or video games. 
+      I’m captivated by the storytelling, world-building, and aesthetic artistry these mediums bring, and I draw inspiration from them in my own development work.`
     }
 ]
 
@@ -45,3 +39,29 @@ I specialize in crafting clean, reusable, and high-quality code, with a focus on
 Whether I'm collaborating with a team or working independently, I love every opportunity to solve problems and create something meaningful. 
 Let's build something awesome together!
 `
+
+export const mySkillset: string[] = [
+    'React',
+    'React Native',
+    'Redux',
+    'Vue',
+    'Node',
+    '.NET',
+    'Express',
+    'MongoDB',
+    'TypeScript',
+    'JavaScript',
+    'HTML5',
+    'CSS3',
+    'SASS',
+    'Bootstrap',
+    'C#',
+    'Entity Framework',
+    'MySQL',
+    'Material-UI',
+    'Git',
+    'AWS',
+    'RESTful APIs',
+    'Agile',
+    'Jira'
+]

@@ -6,6 +6,7 @@ import TechIcon from 'components/techIcon/TechIcon';
 import Image from 'next/image';
 import jobTechIcons from '@/data/jobTechIcons';
 import { useEffect, useState } from 'react';
+import AboutMeSkills from 'components/aboutMeSkills/AboutMeSkills';
 
 const photoSet = [
     { img: '/imgs/fun1.jpeg', text: 'Wildflower from a hike' },
@@ -44,6 +45,8 @@ const About = () => {
                     </section>
                 )
             })}
+            
+            <AboutMeSkills />
 
             <div className={styles.aboutMeGallery}>
                 {photoSet.map(({ img, text }) => {
