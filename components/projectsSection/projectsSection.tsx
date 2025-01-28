@@ -3,10 +3,10 @@ import styles from './projectsSection.module.scss'
 import { useEffect, useState } from 'react';
 import { projects } from '@/data/projects';
 import { IWorkProject } from '@/interfaces/workProject';
-import ProjectCover from 'components/projectCover/ProjectCover';
+import ProjectCover from 'components/projectCover/projectCover';
 
 const ProjectsSection = () => {
-    const [workProjects, setWorkProjects] = useState([]);
+    const [workProjects, setWorkProjects] = useState<IWorkProject[]>([]);
 
     useEffect(() => {
         if (projects && projects.length) {

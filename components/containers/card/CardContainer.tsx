@@ -11,10 +11,10 @@ type Props = {
 }
 
 function CardContainer({ title, subTitle, content, footer, fullPage }: Props) {
-    const [cardSize, setCardSize] = useState(null);
+    const [cardSize, setCardSize] = useState('');
 
     useEffect(() => {
-        if (cardSize !== null) {
+        if (cardSize.length) {
             return;
         }
         const newSize = fullPage ? styles.myCard : `${styles.myCard} ${styles.smallCard}`;

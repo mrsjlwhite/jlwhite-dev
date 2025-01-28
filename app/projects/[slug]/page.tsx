@@ -46,12 +46,12 @@ const WorkDetails = () => {
                     case ProjectNames.Hundekey:
                         setMainImg(hundekey1);
                         setSecondImg(hundekey2);
-                        setThirdImg(null);
+                        setThirdImg(placeholder);
                         break;
                     case ProjectNames.PokeQuiz:
                         setMainImg(poke1);
                         setSecondImg(poke2);
-                        setThirdImg(null);
+                        setThirdImg(placeholder);
                         break;
                     case ProjectNames.Entourage:
                         setMainImg(entourage1);
@@ -72,10 +72,10 @@ const WorkDetails = () => {
     }, [slug]);
 
     function setProjectDescription() {
-        if (!workProject.description.includes(':')) {
+        if (!workProject?.description.includes(':')) {
             return (
                 <p className={styles.projectDescText}>
-                    {workProject.description}
+                    {workProject?.description}
                 </p>
             )
         }
