@@ -21,7 +21,7 @@ import resume1 from '@/imgs/workSamples/digitalResume/resume1.png';
 import resume2 from '@/imgs/workSamples/digitalResume/resume2.png';
 import resume3 from '@/imgs/workSamples/digitalResume/resume3.png';
 import Image from 'next/image';
-import { ProjectNames } from 'core/constants/projectNames';
+import { ProjectNames } from 'lib/constants';
 import TypeBadge from 'components/typeBadge/TypeBadge';
 import PageContainer from 'components/containers/PageContainer';
 
