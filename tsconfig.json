@@ -21,9 +21,9 @@
         "baseUrl": ".",
         "paths": {
             "@/components/*": [
-                "oldPages/_home/*,
+                "components/*",
             ],
-   oldPages/_home/aboutMe/*[
+            "@/imgs/*": [
                 "public/imgs/*"
             ],
             "@/svgs/*": [
