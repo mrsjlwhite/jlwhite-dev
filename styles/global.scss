@@ -37,11 +37,6 @@ small {
     @include green-button;
 }
 
-// Thanks https://stackoverflow.com/a/53336754/16305154
-.filter-white {
-    filter: invert(100%) sepia(77%) saturate(86%) hue-rotate(58deg) brightness(113%) contrast(108%);
-}
-
 // Overiding default bootstrap accordion
 .accordion-button {
     &:not(.collapsed) {

@@ -24,7 +24,6 @@ function MyLinks() {
     return (
         <section id='my-links' className={styles.linksSection}>
             <Container className={styles.linksSectionContainer}>
-                <h4 className='section-title'>my links.</h4>
                 <div className={styles.buttonsContainer}>
                     {linkUrls.map(lu => renderSocialButton(lu))}
                 </div>

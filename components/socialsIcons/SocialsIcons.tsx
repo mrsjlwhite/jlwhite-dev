@@ -4,7 +4,7 @@ import { linkUrls } from 'core/data/linkUrls';
 import { useEffect, useState } from 'react';
 import ILinkUrl from '@/interfaces/linkUrl';
 
-function SocialsIcons({ iconSize = IconSize.small, messagingOnly = false, columnLayout = false, withHoverOverlay = false }) {
+function SocialsIcons({ iconSize = IconSize.small, messagingOnly = false, columnLayout = false }) {
     const [links, setLinks] = useState<ILinkUrl[]>([]);
     const [stylesClasses, setStyleClasses] = useState('');
 
@@ -17,7 +17,7 @@ function SocialsIcons({ iconSize = IconSize.small, messagingOnly = false, column
 
     return (
         <div className={stylesClasses}>
-            {links.map(lu => <SocialIconImage link={lu} size={iconSize} key={lu.name} withHoverOverlay={withHoverOverlay} />)}
+            {links.map(lu => <SocialIconImage link={lu} size={iconSize} key={lu.name} />)}
         </div>
     )
 }
