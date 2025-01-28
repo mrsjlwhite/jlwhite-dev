@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/global.scss';
 import Head from 'next/head';
 import { Lora, Open_Sans } from 'next/font/google';
-import MyFooter from '../components/myFooter/MyFooter';
+import MyFooter from '../myFooter/MyFooter';
 
 const subHeadingFont = Lora({
     weight: ['400'],// ['100', '200', '300'],
