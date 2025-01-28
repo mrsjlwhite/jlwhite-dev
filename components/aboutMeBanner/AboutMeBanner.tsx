@@ -1,6 +1,6 @@
 import { aboutMeSummary } from '@/data/aboutMe';
 import styles from './aboutMeBanner.module.scss';
-import me from '@/imgs/me.jpeg';
+import banner from '@/imgs/aboutBanner.jpeg';
 import Image from 'next/image';
 
 const AboutMeBanner = () => {
@@ -10,7 +10,7 @@ const AboutMeBanner = () => {
     <section className={styles.aboutMeSection}>
       <Image
         className={styles.bannerImg}
-        src={me}
+        src={banner}
         alt='Jeslyn'
       />
       <div className={styles.bannerTextContainer}>

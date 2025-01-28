@@ -1,28 +1,24 @@
-import styles from './aboutMe.module.scss';
+import { mySkillset } from '@/data/aboutMe';
+import styles from './aboutMeSkills.module.scss';
 import { useEffect, useState } from 'react';
 
-type Props = {
-  skillset: string[]
-}
-
-function AboutMeSkills({ skillset }: Props) {
+function AboutMeSkills() {
   const [skills, setSkills] = useState<string[][]>([]);
-  
+
   useEffect(() => {
-    if (!skillset.length) {
-        return;
+    if (skills.length === 0) {
+      const unsortedSkills = Array.from(mySkillset);
+      const divideBy = unsortedSkills.length / 4;
+      const array1 = unsortedSkills.splice(0, divideBy);
+      const array2 = unsortedSkills.splice(0, divideBy);
+      const array3 = unsortedSkills.splice(0, divideBy);
+      const array4 = unsortedSkills.splice(0, divideBy);
+      setSkills([array1, array2, array3, array4]);
     }
-    const unsortedSkills = Array.from(skillset);
-    const divideBy = unsortedSkills.length / 4;
-    const array1 = unsortedSkills.splice(0, divideBy);
-    const array2 = unsortedSkills.splice(0, divideBy);
-    const array3 = unsortedSkills.splice(0, divideBy);
-    const array4 = unsortedSkills.splice(0, divideBy);
-    setSkills([array1, array2, array3, array4]);
-}, [skillset]);
-  
+  }, [skills.length]);
+
   return (
-    <div className={styles.moreInfoCol}>
+    <div className={styles.skillsetContainer}>
       <h4 className='section-title'>my skills.</h4>
       <ul className={`section-body ${styles.skillsetList}`}>
         {skills.map((skillset, index) => {

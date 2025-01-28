@@ -1,8 +1,3 @@
-export enum GalleryType {
-    SET1,
-    SET2
-}
-
 export const ProjectNames = Object.freeze({
     DigitalResume: 'Digital Resume',
     Entourage: 'Bride Entourage',
