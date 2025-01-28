@@ -19,6 +19,6 @@ export const linkUrls: ILinkUrl[] = [
     {
         name: 'Twitter',
         url: 'https://twitter.com/jlwhite_dev',
-        allowsMessaging: true
+        allowsMessaging: false
     }
 ];

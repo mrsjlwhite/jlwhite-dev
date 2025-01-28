@@ -17,11 +17,10 @@ export enum IconSize {
 
 type Props = {
     link: ILinkUrl,
-    size: IconSize,
-    withHoverOverlay?: boolean
+    size: IconSize
 }
 
-const SocialIconImage = ({ link, size = IconSize.large, withHoverOverlay = false }: Props) => {
+const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
     const [imageSrc, setImageSrc] = useState(null);
     const [imageSize, setImageSize] = useState<IconSize>(size);
     const [imageStyles, setImageStyle] = useState('filter-white');
@@ -58,12 +57,6 @@ const SocialIconImage = ({ link, size = IconSize.large, withHoverOverlay = false
                 break;
         }
     }, [size, isMobile])
-
-    useEffect(() => {
-        if (withHoverOverlay) {
-            setImageStyle(`${styles.hoverOverlay} filter-white`);
-        }
-    }, [withHoverOverlay])
 
     if (!imageSrc) {
         return <></>
