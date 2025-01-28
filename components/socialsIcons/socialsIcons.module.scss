@@ -20,6 +20,14 @@
     flex-direction: column;
 }
 
+.iconImage {
+    filter: invert(100%) sepia(77%) saturate(86%) hue-rotate(58deg) brightness(113%) contrast(108%); // Changes SVG color to white thanks to https://stackoverflow.com/a/53336754/16305154
+
+    &:hover {
+        filter: invert(44%) sepia(4%) saturate(2655%) hue-rotate(67deg) brightness(93%) contrast(83%);
+    }
+}
+
 @media screen and (max-width: $mobile-width) {
     .socialsContainer {
         margin-bottom: 5%;

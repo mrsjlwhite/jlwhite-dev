@@ -1,7 +1,7 @@
 import ig from '@/svgs/instagram.svg';
 import gh from '@/svgs/github.svg';
 import li from '@/svgs/linkedin.svg';
-import tw from '@/svgs/twitter.svg';
+import x from '@/svgs/x.svg';
 import Image from 'next/image';
 import ILinkUrl from 'core/interfaces/linkUrl';
 import { useEffect, useState } from 'react';
@@ -23,7 +23,6 @@ type Props = {
 const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
     const [imageSrc, setImageSrc] = useState(null);
     const [imageSize, setImageSize] = useState<IconSize>(size);
-    const [imageStyles, setImageStyle] = useState('filter-white');
 
     useEffect(() => {
         switch (link.name.toLowerCase()) {
@@ -36,8 +35,8 @@ const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
             case 'instagram':
                 setImageSrc(ig);
                 break;
-            case 'twitter':
-                setImageSrc(tw);
+            case 'x':
+                setImageSrc(x);
                 break;
             default:
                 break;
@@ -65,7 +64,7 @@ const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
     return (
         <Image
             src={imageSrc}
-            className={imageStyles}
+            className={styles.iconImage}
             height={imageSize}
             width={imageSize}
             alt={`${link.name} Logo`}

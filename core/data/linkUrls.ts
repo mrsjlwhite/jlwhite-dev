@@ -17,8 +17,8 @@ export const linkUrls: ILinkUrl[] = [
         allowsMessaging: true
     },
     {
-        name: 'Twitter',
-        url: 'https://twitter.com/jlwhite_dev',
+        name: 'X',
+        url: 'https://x.com/jlwhite_dev',
         allowsMessaging: false
     }
 ];
