@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './typeBadge.module.scss';
-import { ProjectTypes } from 'core/constants/projectTypes';
+import { ProjectTypes } from 'lib/constants';
+
 
 type Props = {
     type: string

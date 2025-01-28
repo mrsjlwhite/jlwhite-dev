@@ -21,10 +21,7 @@
         "baseUrl": ".",
         "paths": {
             "@/components/*": [
-                "pages/_home/*",
-                "pages/_home/aboutMe/*",
-                "components/myNavbar/*",
-                "components/*"
+                "components/*",
             ],
             "@/imgs/*": [
                 "public/imgs/*"
@@ -33,7 +30,7 @@
                 "public/svgs/*"
             ],
             "@/lib/*": [
-                "core/lib/*"
+                "lib/*"
             ],
             "@/styles/*": [
                 "styles/*"
@@ -47,14 +44,23 @@
             "@/interfaces/*": [
                 "core/interfaces/*"
             ]
-        }
+        },
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "strictNullChecks": true
     },
     "exclude": [
         "node_modules"
     ],
     "include": [
-        "next-env.d.ts",
         "**/*.ts",
-        "**/*.tsx"
+        "**/*.tsx",
+        "app/**/*.ts",
+        "app/**/*.tsx",
+        "next-env.d.ts",
+        ".next/types/**/*.ts"
     ]
 }

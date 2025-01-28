@@ -8,7 +8,7 @@ import poke from '@/imgs/workSamples/poke/poke0.png';
 import entourage from '@/imgs/workSamples/brideEntourage/entourage0.png';
 import resume from '@/imgs/workSamples/digitalResume/resume0.png';
 import Image from 'next/image';
-import { ProjectNames } from 'core/constants/projectNames';
+import { ProjectNames } from 'lib/constants';
 
 type Props = {
     name: string
@@ -51,7 +51,7 @@ function ProjectCover({ name, slug, summary }: Props) {
 
     return (
         <div className={styles.workPolaroidCard}>
-            <Link href={`/work/details/${slug}`}>
+            <Link href={`/projects/${slug}`}>
                 <Image
                     src={imgSrc}
                     alt={imgAlt}

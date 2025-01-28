@@ -22,13 +22,14 @@
     margin: 2em 0;
 
     .cardName {
-        @include section-title-text-small;
+        @include section-sub-title-text;
         margin: 0;
     }
 
     .cardDates {
         @include small-body-text;
         margin: 0;
+        color: lightgray;
     }
 
     .cardDescription {

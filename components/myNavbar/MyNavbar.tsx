@@ -39,15 +39,15 @@ function MyNavbar() {
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
-                            href="/work">
-                            Work
+                            href="/projects">
+                            Projects
                         </Nav.Link>
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
-                            href="/connect"
+                            href="/contact"
                             scroll={false}>
-                            Connect
+                            Contact
                         </Nav.Link>
                         <MobileView>
                             <Nav.Link>
