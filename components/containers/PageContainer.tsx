@@ -57,7 +57,6 @@ const PageContainer = (props) => {
                     </div>
                 </div>
             </div>
-            <MyFooter />
         </>
     )
 }

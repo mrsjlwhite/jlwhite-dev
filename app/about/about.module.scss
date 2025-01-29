@@ -4,14 +4,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 55vw;
 
     img {
         border-radius: 42px;
+        width: 35vw;
+        object-fit: cover;
     }
 }
 
 .aboutMeBlurb {
-    width: 30vw;
+    padding-right: 5rem;
 }
 
 .blurbTitle {

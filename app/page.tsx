@@ -18,7 +18,6 @@ export default function HomePage() {
             <WorkExperienceSection />
             <ProjectsSection />
             <MyLinks />
-            <MyFooter />
         </>
     )
 }

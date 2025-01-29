@@ -1,3 +1,4 @@
+'use client'
 import styles from './socialsIcons.module.scss';
 import SocialIconImage, { IconSize } from './SocialIconImage';
 import { linkUrls } from 'core/data/linkUrls';

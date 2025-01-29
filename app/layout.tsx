@@ -1,3 +1,4 @@
+import MyFooter from '@/components/myFooter/MyFooter';
 import '@/styles/global.scss'
 import { Lora, Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local'
@@ -31,7 +32,10 @@ export default function RootLayout({
                     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossOrigin="anonymous" />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"></link>
             </head>
-            <body>{children}</body>
+            <body>
+                {children}
+                <MyFooter />
+            </body>
         </html>
     )
 }
