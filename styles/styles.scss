@@ -1,6 +1,6 @@
 // fonts
 $font-sub-heading: var(--font-sub-heading); //'Josefin Sans', sans-serif;
-$font-heading-title: var(--font-heading-title); //'La Belle Aurore', cursive;
+$font-heading: var(--font-heading); //'Lora';
 $font-body: var(--font-body); //'Roboto Slab', serif;
 
 // colors
@@ -11,6 +11,7 @@ $color-purple: #BAA1AD; //rose quartz
 $color-green: #5A7557; //reseda green
 $color-green-faded: rgba($color-green, 0.8);
 $color-gold: #BF984A; //satin sheen gold
+$color-soft-white: #f2f3f2; //stone soft white
 
 // variables
 $box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -18,12 +19,16 @@ $mobile-width: 650px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
+// themes
+$background-color: $color-soft-white;
+
 // shared classes
 @mixin section-title-text {
-    font-family: $font-sub-heading;
+    font-family: $font-heading;
     color: $color-green;
     font-size: 40px;
     font-weight: 200;
+    text-align: center;
 }
 
 @mixin section-sub-title-text {
@@ -64,6 +69,39 @@ $desktop-width: 1024px;
         background-color: rgba($color-green, 0.4) !important;
         box-shadow: 0 2px rgba($color-black, 0.2);
         transform: translateY(4px);
+    }
+}
+
+@mixin fade-in {
+    opacity: 1;
+    animation: fade-in 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+
+    @keyframes fade-in {
+
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin animated-shadow {
+    overflow: hidden;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    -webkit-transition: -webkit-box-shadow 0.5s ease;
+    transition: -webkit-box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
+
+    &:hover {
+        -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05), 0 20px 30px 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05), 0 20px 30px 0 rgba(0, 0, 0, 0.05);
     }
 }
 

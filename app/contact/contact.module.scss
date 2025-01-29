@@ -1,0 +1,34 @@
+@import '../../styles/styles.scss';
+
+.pageContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+    padding-top: 5rem;
+
+    .contactCard {
+        @include animated-box-shadow;
+        background: linear-gradient(135deg, $color-soft-white, $color-purple);
+        // background-color: $color-green-faded;
+        padding: 1rem;
+        justify-items: center;
+
+        p {
+            @include body-text;
+            text-align: center;
+            margin: 2.5rem 1rem;
+        }
+
+        .iconsContainer {
+            margin: 2.5rem 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .pageContentContainer {
+        width: unset;
+    }
+}

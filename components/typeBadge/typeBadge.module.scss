@@ -1,0 +1,34 @@
+@import '/styles/styles.scss';
+
+.typeBadge {
+    color: $color-white !important;
+    background-color: $color-green;
+    font-family: $font-body;
+    border-radius: 5px;
+    width: 8rem;
+    text-align: center;
+}
+
+.greenBadge {
+    background-color: $color-green;
+}
+
+.goldBadge {
+    background-color: $color-gold;
+}
+
+.purpleBadge {
+    background-color: $color-purple;
+}
+
+@media screen and (max-width: $mobile-width) {
+    .typeBadge {
+        margin: auto;
+    }
+}
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : 1180px) {
+    .typeBadge {
+        margin: auto;
+    }
+}

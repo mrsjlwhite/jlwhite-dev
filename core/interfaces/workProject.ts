@@ -1,5 +1,6 @@
 export interface IWorkProject {
     name: string
+    summary: string
     description: string
     date: string
     tech: string[]

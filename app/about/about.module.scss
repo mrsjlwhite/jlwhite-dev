@@ -1,0 +1,70 @@
+@import '../../styles/styles.scss';
+
+.aboutMeSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55vw;
+
+    img {
+        border-radius: 42px;
+        width: 35vw;
+        object-fit: cover;
+    }
+}
+
+.aboutMeBlurb {
+    padding-right: 5rem;
+}
+
+.blurbTitle {
+    @include section-sub-title-text;
+    margin-right: 8px;
+}
+
+.iconFooter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.8rem 0;
+}
+
+.aboutMeGallery {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4% 0;
+
+    img {
+        max-width: 20em;
+        object-fit: scale-down;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .aboutMeSection {
+        flex-direction: column;
+        width: 100vw;
+        text-align: center;
+        margin-left: 1em;
+
+        img {
+            border-radius: 42px;
+            width: 94vw;
+            object-fit: cover;
+            margin-left: -55px;
+        }
+    }
+
+    .aboutMeGallery {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10%;
+    }
+}
+
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
+    .aboutMeSection {
+        width: 90vw;
+    }
+}

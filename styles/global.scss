@@ -2,11 +2,16 @@
 
 body {
     margin: 0;
-    background-color: $color-off-white;
+    background-color: $background-color;
 }
 
 small {
     font-size: 80%;
+}
+
+.home-section {
+    background-color: $background-color;
+    padding: 4rem 1em;
 }
 
 .section-title {
@@ -35,16 +40,6 @@ small {
 
 .green-button {
     @include green-button;
-}
-
-// for nested pages
-.wrapper {
-    min-height: 95vh;
-}
-
-// Thanks https://stackoverflow.com/a/53336754/16305154
-.filter-white {
-    filter: invert(100%) sepia(77%) saturate(86%) hue-rotate(58deg) brightness(113%) contrast(108%);
 }
 
 // Overiding default bootstrap accordion
