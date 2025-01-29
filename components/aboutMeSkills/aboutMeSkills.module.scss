@@ -24,8 +24,15 @@
 }
 
 @media screen and (max-width: $mobile-width) {
+    .skillsetContainer {
+        .skillsetList {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-left: 3em;
 
-    .skillsetList {
-        display: block;
+            ul {
+                padding: 0;
+            }
+        }
     }
 }

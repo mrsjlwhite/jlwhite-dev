@@ -41,13 +41,30 @@
 }
 
 @media screen and (max-width: $mobile-width) {
+    .aboutMeSection {
+        flex-direction: column;
+        width: 100vw;
+        text-align: center;
+        margin-left: 1em;
+
+        img {
+            border-radius: 42px;
+            width: 94vw;
+            object-fit: cover;
+            margin-left: -55px;
+        }
+    }
+
     .aboutMeGallery {
         flex-direction: column;
         align-items: center;
         margin-top: 10%;
+    }
+}
 
-        img {
-            max-width: 17em;
-        }
+
+@media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
+    .aboutMeSection {
+        width: 90vw;
     }
 }
