@@ -89,15 +89,22 @@
 
 @media screen and (max-width: $mobile-width) {
     .workDetailsCols {
+        display: flex;
         flex-direction: column;
 
-        .projectNameText {
-            margin-left: 3%;
-            overflow-wrap: break-word;
+        .textColumn {
+            .projectNameText {
+                overflow-wrap: break-word;
+                font-size: 20vw;
+            }
+
+            .projectDescText {
+                max-width: 60vw !important;
+            }
         }
 
-        .projectDescText {
-            max-width: 60vw !important;
+        .imgGrid {
+            grid-auto-rows: unset;
         }
     }
 }
