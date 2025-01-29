@@ -8,8 +8,10 @@ import { useEffect, useState } from 'react';
 import { getMonthName, getTechIconsByJobName } from '@/lib/utils';
 import Accordion from 'react-bootstrap/Accordion';
 import PageContainer from '@/components/containers/PageContainer';
+import Spinner from 'react-bootstrap/Spinner';
 
 const ExperiencePage = () => {
+    const [loading, setLoading] = useState(true);
     const [jobExperiences, setJobExperiences] = useState<IExperience[]>([]);
 
     useEffect(() => {
@@ -33,10 +35,21 @@ const ExperiencePage = () => {
             if (data) {
                 const jobs = data.work.map(buildExperienceCard);
                 setJobExperiences(jobs);
+                setLoading(false);
             }
         }
         fetchData();
     }, []);
+
+    if (loading) {
+        return (
+            <PageContainer>
+                <Spinner animation="border" role="status" className='d-flex mx-auto'>
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>
+            </PageContainer>
+        );
+    }
 
     return (
         <PageContainer>
