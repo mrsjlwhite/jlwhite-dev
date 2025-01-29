@@ -15,8 +15,8 @@ const ProjectsSection = () => {
     }, [projects])
 
     return (
-        <section id="my-work">
-            <h4 className='section-title section-title-margin mt-5'>my work.</h4>
+        <section id="my-work" className='home-section'>
+            <h4 className='section-title'>Some of My Projects</h4>
             <div className={styles.workCardsContainer}>
                 {workProjects.map((project: IWorkProject, index: number) =>
                     <ProjectCover key={index} slug={project.slug} name={project.name} />)}

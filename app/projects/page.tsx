@@ -1,7 +1,7 @@
 'use client'
 import styles from './projects.module.scss';
 import { projects } from 'core/data/projects';
-import PageContainer from 'components/containers/PageContainer';
+import PageContainer from '@/components/containers/PageContainer';
 import ProjectCover from 'components/projectCover/projectCover';
 
 const Work = () => {

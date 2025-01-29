@@ -7,7 +7,7 @@ import { getGitConnectedPortfolio } from '@/lib/api';
 import { useEffect, useState } from 'react';
 import { getMonthName, getTechIconsByJobName } from '@/lib/utils';
 import Accordion from 'react-bootstrap/Accordion';
-import PageContainer from 'components/containers/PageContainer';
+import PageContainer from '@/components/containers/PageContainer';
 
 const ExperiencePage = () => {
     const [jobExperiences, setJobExperiences] = useState<IExperience[]>([]);

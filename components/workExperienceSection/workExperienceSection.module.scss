@@ -1,10 +1,5 @@
 @import '/styles/styles.scss';
 
-.sectionTitle {
-    @include section-title-text;
-    text-align: center;
-}
-
 .sectionContentContainer {
     display: flex;
     justify-content: space-between;

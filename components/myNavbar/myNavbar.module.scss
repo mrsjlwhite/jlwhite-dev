@@ -1,8 +1,9 @@
 @import '/styles/styles.scss';
 
 .myNavbar {
-    background-color: $background-color !important;
+    background-color: $color-purple !important;
     width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navLinksContainer {
@@ -10,16 +11,21 @@
 }
 
 .navBrand {
-    color: $color-purple !important;
+    color: $color-soft-white !important;
     font-family: $font-heading;
     font-size: 35px !important;
     letter-spacing: 1px;
 }
 
 .myNavLink {
+    color: $color-soft-white !important;
     font-family: $font-sub-heading;
     font-size: 20px !important;
     text-transform: lowercase;
     font-weight: 200 !important;
     letter-spacing: .1rem;
+
+    &:hover {
+        color: $color-green !important;
+    }
 }

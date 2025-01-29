@@ -9,6 +9,11 @@ small {
     font-size: 80%;
 }
 
+.home-section {
+    background-color: $background-color;
+    padding: 4rem 1em;
+}
+
 .section-title {
     @include section-title-text;
 }

@@ -1,7 +1,7 @@
 'use client'
 import styles from './about.module.scss';
 import { aboutMe } from 'core/data/aboutMe';
-import PageContainer from 'components/containers/PageContainer';
+import PageContainer from '@/components/containers/PageContainer';
 import TechIcon from 'components/techIcon/TechIcon';
 import Image from 'next/image';
 import jobTechIcons from '@/data/jobTechIcons';

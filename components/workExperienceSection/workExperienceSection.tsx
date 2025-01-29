@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 const WorkExperienceSection = () => {
     return (
-        <section>
-            <h2 className={styles.sectionTitle}>Where I've Contributed</h2>
+        <section className='home-section'>
+            <h2 className='section-title'>Where I've Contributed</h2>
             <div className={styles.sectionContentContainer}>
                 <div>
                     <Image

@@ -9,8 +9,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ProjectNames } from 'lib/constants';
 import TypeBadge from 'components/typeBadge/TypeBadge';
-import PageContainer from 'components/containers/PageContainer';
-// import { Modal } from 'react-bootstrap';
+import PageContainer from '@/components/containers/PageContainer';
 import Modal from 'react-bootstrap/Modal';
 
 const WorkDetails = () => {

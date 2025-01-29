@@ -22,7 +22,7 @@ function MyLinks() {
     }
 
     return (
-        <section id='my-links' className={styles.linksSection}>
+        <section id='my-links' className={`home-section ${styles.linksSection}`}>
             <Container className={styles.linksSectionContainer}>
                 <div className={styles.buttonsContainer}>
                     {linkUrls.map(lu => renderSocialButton(lu))}
