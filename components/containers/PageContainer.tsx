@@ -3,6 +3,7 @@ import MyNavbar from 'components/myNavbar/MyNavbar'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './pageContainer.module.scss'
+import { Col, Container, Row } from 'react-bootstrap'
 
 const PageContainer = (props) => {
     const [pageTitle, setPageTitle] = useState<string>('');
@@ -40,9 +41,9 @@ const PageContainer = (props) => {
         <>
             <MyNavbar />
             <div className={styles.pageContainer}>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col'>
+                <Container>
+                    <Row>
+                        <Col>
                             <div className='d-flex justify-content-between align-items-center mt-5'>
                                 <h4 className='section-title'>
                                     {pageTitle}
@@ -52,9 +53,9 @@ const PageContainer = (props) => {
                                 </p>
                             </div>
                             {props.children}
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </>
     )

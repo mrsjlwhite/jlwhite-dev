@@ -1,7 +1,11 @@
-import MyFooter from '@/components/myFooter/MyFooter';
+'use client'
+
+import MyFooter from '@/components/myFooter/MyFooter'
 import '@/styles/global.scss'
-import { Lora, Open_Sans } from 'next/font/google';
+import { Lora, Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { useEffect } from 'react'
 
 // Font files can be colocated inside of `app`
 const titleFont = localFont({
@@ -25,6 +29,11 @@ export default function RootLayout({
 }: {
     children: React.ReactNode
 }) {
+
+    useEffect(() => {
+        import('bootstrap/dist/js/bootstrap.bundle.min.js');
+    }, []);
+
     return (
         <html lang="en" className={`${titleFont.variable} ${subHeadingFont.variable} ${bodyFont.variable}`}>
             <head>
