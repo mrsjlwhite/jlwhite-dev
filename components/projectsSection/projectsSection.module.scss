@@ -1,37 +1,51 @@
 @import '../../styles/styles.scss';
 
-.workCardsContainer {
-    display: flex;
-    margin: 2rem;
-    justify-content: space-evenly;
-    max-width: 100vw;
-    overflow: hidden;
-    padding: 4.5rem;
+.projectsContainer {
+    max-width: 40vw;
+    margin: auto;
+    padding: 2em 0;
+}
+
+.imgGrid {
+    @include image-grid;
 }
 
 .viewAllLink {
-    color: $color-purple;
+    @include section-title-text;
+    @include animated-box-shadow;
+    background-color: rgba($color-gold, 0.2);
+    border: solid 2px rgba($color-gold, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
     text-decoration: none;
     font-family: $font-sub-heading;
     letter-spacing: .2em;
     display: block;
     text-align: center;
     font-size: 28px;
+    max-width: 20vw;
+    margin: auto;
 
     &:hover {
-        color: $color-green;
+        background-color: rgba($color-gold, 0.6) !important;
+        color: $color-off-white;
+
+        .buttonText {
+            color: rgba($color-off-white, 0.9) !important;
+            opacity: 1;
+        }
     }
 }
 
 @media screen and (max-width: $mobile-width) {
-    .workCardsContainer {
+    .projectsContainer {
         flex-direction: column;
         align-items: center;
     }
 }
 
 @media screen and (min-device-width : $tablet-width) and (max-device-width : 1180px) {
-    .workCardsContainer {
+    .projectsContainer {
         flex-direction: column;
         align-items: center;
     }
