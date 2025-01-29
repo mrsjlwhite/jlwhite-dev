@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^5.2.3",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-bootstrap": "^2.7.2",
