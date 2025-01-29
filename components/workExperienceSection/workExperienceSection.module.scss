@@ -37,8 +37,11 @@
         flex-wrap: wrap;
 
         .experiencePill {
-            @include small-body-text;
-            border: black 1.4px solid;
+            // @include small-body-text;
+            @include section-sub-title-text;
+            font-size: 16px;
+            border: $color-green-faded 1.4px solid;
+            color: $color-green-faded;
             padding: .3em .5em;
             border-radius: 50px;
             margin: .5em;

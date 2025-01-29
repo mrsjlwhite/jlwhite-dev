@@ -1,6 +1,6 @@
 import { aboutMeSummary } from '@/data/aboutMe';
 import styles from './aboutMeBanner.module.scss';
-import banner from '@/imgs/aboutBanner.jpeg';
+import banner from '@/imgs/aboutBanner.png';
 import Image from 'next/image';
 
 const AboutMeBanner = () => {

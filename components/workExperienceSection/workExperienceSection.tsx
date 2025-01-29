@@ -1,7 +1,7 @@
 import { experiences } from '@/data/experiences'
 import styles from './workExperienceSection.module.scss'
 import Image from 'next/image'
-import coffeeStain from '@/imgs/coffeeStain.png'
+import coffee from '@/imgs/coffee.png'
 import Link from 'next/link'
 
 const WorkExperienceSection = () => {
@@ -9,11 +9,12 @@ const WorkExperienceSection = () => {
         <section className='home-section'>
             <h2 className='section-title'>Where I've Contributed</h2>
             <div className={styles.sectionContentContainer}>
-                <div>
+                <div className="align-self-center">
                     <Image
                         className={styles.experienceImage}
-                        src={coffeeStain}
+                        src={coffee}
                         alt='A coffee stain'
+                        width={600}
                     />
                     <Link href='/experience' className={styles.viewAllLink}>Learn More</Link>
                 </div>

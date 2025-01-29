@@ -12,7 +12,7 @@ const titleFont = localFont({
     src: '../public/fonts/NewYork.otf',
     display: 'swap',
     variable: '--font-heading'
-})
+});
 const subHeadingFont = Lora({
     subsets: ['latin'],
     variable: '--font-sub-heading'

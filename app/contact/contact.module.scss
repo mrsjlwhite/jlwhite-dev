@@ -11,7 +11,8 @@
 
     .contactCard {
         @include animated-box-shadow;
-        background-color: $color-purple;
+        background: linear-gradient(135deg, $color-soft-white, $color-purple);
+        // background-color: $color-green-faded;
         padding: 1rem;
         justify-items: center;
 
