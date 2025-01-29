@@ -16,7 +16,6 @@ const WorkExperienceSection = () => {
                         alt='A coffee stain'
                         width={600}
                     />
-                    <Link href='/experience' className={styles.viewAllLink}>Learn More</Link>
                 </div>
                 <div>
                     {experiences.map((experience, index) => {

@@ -32,13 +32,6 @@ function MyNavbar() {
                         <Nav.Link
                             as={Link}
                             className={styles.myNavLink}
-                            href="/experience"
-                            scroll={false}>
-                            Experience
-                        </Nav.Link>
-                        <Nav.Link
-                            as={Link}
-                            className={styles.myNavLink}
                             href="/projects">
                             Projects
                         </Nav.Link>
