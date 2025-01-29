@@ -20,3 +20,14 @@
     object-fit: scale-down;
     border-radius: 50%;
 }
+
+@media screen and (max-width: $mobile-width) {
+    .aboutMeSection {
+        flex-direction: column;
+        padding: 7rem 0;
+
+        .bannerTextContainer {
+            max-width: 90vw;
+        }
+    }
+}

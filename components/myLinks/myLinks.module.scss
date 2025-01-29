@@ -48,7 +48,6 @@
 
     .linksSection {
         height: unset;
-        margin-top: 10%;
 
         .linksSectionContainer {
             display: flex;
@@ -76,15 +75,10 @@
 @media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
     .linksSection {
         height: unset;
-        margin: 5% 0;
 
         .buttonsContainer {
             display: grid;
-
-            /* define only 2 columns*/
             grid-template-columns: 1fr 1fr;
-
-            /* control the gap between both columns*/
             column-gap: 4em;
         }
     }
