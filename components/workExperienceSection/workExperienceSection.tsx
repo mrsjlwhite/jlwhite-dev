@@ -2,12 +2,12 @@ import { experiences } from '@/data/experiences'
 import styles from './workExperienceSection.module.scss'
 import Image from 'next/image'
 import coffee from '@/imgs/coffee.png'
-import Link from 'next/link'
+import SectionHeader from '../sectionHeader/sectionHeader'
 
 const WorkExperienceSection = () => {
     return (
         <section className='home-section'>
-            <h2 className='section-title'>Where I've Contributed</h2>
+            <SectionHeader title="Where I\'ve Contributed" />
             <div className={styles.sectionContentContainer}>
                 <div className="align-self-center">
                     <Image

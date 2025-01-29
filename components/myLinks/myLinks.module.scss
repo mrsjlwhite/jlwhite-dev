@@ -1,26 +1,22 @@
 @import '../../styles/styles.scss';
 
-.linksSection {
-    height: 65vh;
+.linksSectionContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
 
-    .linksSectionContainer {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: center;
+    p {
+        @include body-text;
+        text-align: center;
+        padding-bottom: 1em;
+        max-width: 30vw;
+    }
 
-        p {
-            @include body-text;
-            text-align: center;
-            padding-bottom: 1em;
-            max-width: 30vw;
-        }
-
-        .iconsContainer {
-            max-width: 30vw;
-            margin-bottom: 3em;
-        }
+    .iconsContainer {
+        max-width: 30vw;
+        margin-bottom: 3em;
     }
 }
 
@@ -59,19 +55,16 @@
 
 @media screen and (max-width: $mobile-width) {
 
-    .linksSection {
-        height: unset;
 
-        .linksSectionContainer {
+    .linksSectionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .iconsContainer {
+            align-items: center;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-
-            .iconsContainer {
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-            }
         }
     }
 
@@ -86,14 +79,11 @@
 }
 
 @media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
-    .linksSection {
-        height: unset;
 
-        .iconsContainer {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 4em;
-        }
+    .iconsContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4em;
     }
 
     .linkButton {

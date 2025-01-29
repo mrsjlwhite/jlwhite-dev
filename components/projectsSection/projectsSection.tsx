@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { projects } from '@/data/projects';
 import { IWorkProject } from '@/interfaces/workProject';
 import ProjectCover from 'components/projectCover/projectCover';
+import SectionHeader from '../sectionHeader/sectionHeader';
 
 const ProjectsSection = () => {
     const [workProjects, setWorkProjects] = useState<IWorkProject[]>([]);
@@ -16,7 +17,7 @@ const ProjectsSection = () => {
 
     return (
         <section id="my-work" className='home-section'>
-            <h4 className='section-title'>Some of My Projects</h4>
+            <SectionHeader title='Some of My Projects' />
             <div className={styles.projectsContainer}>
                 <div className={styles.imgGrid}>
                     {workProjects.map((project: IWorkProject, index: number) =>
