@@ -1,9 +1,8 @@
 'use client'
-import MyFooter from 'components/myFooter/MyFooter';
-import MyNavbar from 'components/myNavbar/MyNavbar';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import styles from './pageContainer.module.scss';
+import MyNavbar from 'components/myNavbar/MyNavbar'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import styles from './pageContainer.module.scss'
 
 const PageContainer = (props) => {
     const [pageTitle, setPageTitle] = useState<string>('');
@@ -12,24 +11,24 @@ const PageContainer = (props) => {
 
     useEffect(() => {
         const url = pathname.replace('/', '').toLowerCase();
-        const isDetailsPage = pathname.split('/').length > 0; //router.query && router.query.slug;
-        const defaultTitle = `my ${url}s.`;
+        const isDetailsPage = pathname.split('/').length > 2; //router.query && router.query.slug;
+        const defaultTitle = `my ${url}.`;
         let title = '';
         let desc = '';
 
         switch (url) {
             case 'about':
-                title = `${url} me.`;
+                title = `about me.`;
                 break;
             case 'contact':
                 title = `let’s get in touch!`;
                 break;
             case 'experience':
-                title = defaultTitle;
-                desc = 'an overview of my previous work experiences.';
+                title = `my work experience.`;
+                desc = 'an overview of my previous contributions.';
                 break;
             default:
-                title = isDetailsPage ? 'work details.' : defaultTitle;
+                title = isDetailsPage ? 'project details.' : defaultTitle;
                 break;
         }
 
