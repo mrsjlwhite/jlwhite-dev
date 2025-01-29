@@ -42,29 +42,7 @@
     }
 
     .imgGrid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        grid-auto-rows: 100px; // Adjust this value to control the row height
-        gap: 20px;
-
-        .imgGridItem {
-            @include animated-shadow;
-            position: relative;
-            width: 100%;
-            padding-bottom: 75%; // Aspect ratio 4:3
-            overflow: hidden;
-            grid-row: span 2; // Adjust this value to control the row span
-            // cursor: pointer;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
+        @include image-grid;
     }
 }
 

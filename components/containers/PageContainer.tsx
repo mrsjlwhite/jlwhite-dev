@@ -21,13 +21,6 @@ const PageContainer = (props) => {
             case 'about':
                 title = `about me.`;
                 break;
-            case 'contact':
-                title = `let’s get in touch!`;
-                break;
-            case 'experience':
-                title = `my work experience.`;
-                desc = 'an overview of my previous contributions.';
-                break;
             default:
                 title = isDetailsPage ? 'project details.' : defaultTitle;
                 break;

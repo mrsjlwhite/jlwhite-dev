@@ -1,0 +1,29 @@
+@import '../../styles/styles.scss';
+
+.sectionHeader {
+    @include section-title-text;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+
+    .line {
+        height: 2px;
+        background-color: $color-green-faded;
+        flex-grow: 1; // Takes up all available space;
+        opacity: 0.4;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .sectionHeader {
+        .title {
+            font-size: 2rem;
+            width: 60vw;
+        }
+    }
+}

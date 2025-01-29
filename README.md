@@ -1,8 +1,7 @@
-# My About-Me Site 🌲🏕️☁️ _est. Feb 2023_
-[![pages-build-deployment](https://github.com/mrsjlwhite/jlwhite-dev/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/mrsjlwhite/jlwhite-dev/actions/workflows/pages/pages-build-deployment)
+# My Developer Portfolio Site 💻
 
-## About 🍵
-This is a react app to talk a lil' about me, and for me to add some project examples along the way.
+## About ☕️
+This is a React app built with Next.js to talk a lil' about me, and for me to add some project examples along the way.
 
 ### Preview 🖼️
 <image src='./public/imgs/siteSample.png'>
