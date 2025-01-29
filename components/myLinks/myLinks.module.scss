@@ -6,8 +6,21 @@
     .linksSectionContainer {
         align-items: center;
         display: flex;
+        flex-direction: column;
         height: 100%;
         justify-content: center;
+
+        p {
+            @include body-text;
+            text-align: center;
+            padding-bottom: 1em;
+            max-width: 30vw;
+        }
+
+        .iconsContainer {
+            max-width: 30vw;
+            margin-bottom: 3em;
+        }
     }
 }
 
@@ -54,7 +67,7 @@
             flex-direction: column;
             justify-content: space-between;
 
-            .buttonsContainer {
+            .iconsContainer {
                 align-items: center;
                 display: flex;
                 flex-direction: column;
@@ -76,7 +89,7 @@
     .linksSection {
         height: unset;
 
-        .buttonsContainer {
+        .iconsContainer {
             display: grid;
             grid-template-columns: 1fr 1fr;
             column-gap: 4em;

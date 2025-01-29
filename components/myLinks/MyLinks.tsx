@@ -1,31 +1,18 @@
-import { Button, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import styles from './myLinks.module.scss';
-import { openLink } from '@/lib/utils';
-import ILinkUrl from 'core/interfaces/linkUrl';
-import SocialIconImage, { IconSize } from 'components/socialsIcons/SocialIconImage';
-import { linkUrls } from 'core/data/linkUrls';
+import { IconSize } from 'components/socialsIcons/SocialIconImage';
+import SocialsIcons from '../socialsIcons/SocialsIcons';
 
 function MyLinks() {
-    const renderSocialButton = (linkUrl: ILinkUrl): JSX.Element => {
-        return (
-            <Button
-                key={linkUrl.name}
-                size='lg'
-                className={styles.linkButton}
-                onClick={() => openLink(linkUrl.url)}>
-                <SocialIconImage link={linkUrl} size={IconSize.large} />
-                <span className={styles.buttonText}>
-                    {linkUrl.name}
-                </span>
-            </Button>
-        )
-    }
-
     return (
         <section id='my-links' className={`home-section ${styles.linksSection}`}>
             <Container className={styles.linksSectionContainer}>
-                <div className={styles.buttonsContainer}>
-                    {linkUrls.map(lu => renderSocialButton(lu))}
+                <p>
+                    I’d love to hear from you—whether it’s to discuss a potential project, share ideas, or just connect.
+                    Feel free to message me on any of these platforms.
+                </p>
+                <div className={styles.iconsContainer}>
+                    <SocialsIcons iconSize={IconSize.large} />
                 </div>
             </Container>
         </section>
