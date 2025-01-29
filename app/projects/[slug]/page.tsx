@@ -10,12 +10,15 @@ import Image from 'next/image';
 import { ProjectNames } from 'lib/constants';
 import TypeBadge from 'components/typeBadge/TypeBadge';
 import PageContainer from 'components/containers/PageContainer';
-import Carousel from 'react-bootstrap/Carousel';
+// import { Modal } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
 
 const WorkDetails = () => {
     const { slug } = useParams();
     const [workProject, setWorkProject] = useState<IWorkProject | null>(null);
     const [images, setImages] = useState<string[]>([]);
+    const [showModal, setShowModal] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     useEffect(() => {
         if (slug) {
@@ -70,6 +73,16 @@ const WorkDetails = () => {
         )
     }
 
+    function handleImageClick(img: string) {
+        setSelectedImage(img);
+        setShowModal(true);
+    };
+
+    function handleCloseModal() {
+        setShowModal(false);
+        setSelectedImage(null);
+    };
+
     if (!workProject) {
         console.log('no bueno');
         return;
@@ -96,24 +109,42 @@ const WorkDetails = () => {
                     <div className={styles.badgeContainer}>
                         <TypeBadge type={workProject.projectType} />
                     </div>
-                    {!workProject.githubLink ? null : (<Link href={workProject.githubLink} target='_blank' className={styles.projectLink}>View Repo</Link>)}
-                    {!workProject.liveLink ? null : (<Link href={workProject.liveLink} target='_blank' className={styles.projectLink}>View Live</Link>)}
+                    <div>
+                        {!workProject.githubLink ? null : (<Link href={workProject.githubLink} target='_blank' className={styles.projectLink}>View Repo</Link>)}
+                        {!workProject.liveLink ? null : (<Link href={workProject.liveLink} target='_blank' className={styles.projectLink}>View Live</Link>)}
+                    </div>
                 </div>
                 {images.length > 0 && (
                     <div className={styles.imgGrid}>
                         {images.map((img, index) => (
+                            // <div key={index} className={styles.imgGridItem} onClick={() => handleImageClick(img)}>
                             <div key={index} className={styles.imgGridItem}>
                                 <Image
                                     src={img}
                                     alt={`Image ${index + 1} of ${workProject.name}`}
-                                    layout="fill"
-                                    objectFit="cover"
+                                    height={300}
+                                    width={600}
                                 />
                             </div>
                         ))}
                     </div>
                 )}
             </div>
+
+            {showModal && (
+                <Modal show={showModal} onHide={handleCloseModal} centered>
+                    <Modal.Body className={styles.modalBody}>
+                        {selectedImage && (
+                            <Image
+                                src={selectedImage}
+                                alt={`Selected Image sample of ${workProject.name}`}
+                                width={800}
+                                height={600}
+                            />
+                        )}
+                    </Modal.Body>
+                </Modal>
+            )}
         </PageContainer>
     )
 }
