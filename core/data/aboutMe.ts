@@ -1,6 +1,4 @@
-import { IAboutMeBlurb } from "core/interfaces/aboutMeBlurb";
-
-export const aboutMe: IAboutMeBlurb[] = [
+export const aboutMe = [
     {
         title: 'hi!',
         content: `Thank you for stopping by my site 🤍! I’m so glad you’re here.`

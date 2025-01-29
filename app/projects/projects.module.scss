@@ -25,6 +25,70 @@
     }
 }
 
+.magazineList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+
+    .magazineItem {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        border-bottom: 1px solid gray;
+        padding-bottom: 1.5rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .text {
+            flex: 1;
+            text-align: left;
+
+            h2 {
+                @include section-sub-title-text;
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                @include section-sub-title-text;
+                font-size: 1.5rem;
+                color: $color-purple;
+            }
+
+            p {
+                @include body-text;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .badge {
+                color: $color-white !important;
+                background-color: $color-gold;
+                font-family: $font-body;
+                border-radius: 5px;
+                width: 8rem;
+                text-align: center;
+            }
+        }
+
+        .image {
+            flex: 0 0 200px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width: $mobile-width) {
     .workGallery {
         grid-template-columns: 1fr;

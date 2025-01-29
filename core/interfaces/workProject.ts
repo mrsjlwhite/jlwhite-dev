@@ -8,4 +8,5 @@ export interface IWorkProject {
     githubLink: string
     liveLink: string
     slug: string
+    imageCover: string
 }

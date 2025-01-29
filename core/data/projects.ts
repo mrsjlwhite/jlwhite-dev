@@ -18,7 +18,8 @@ export const projects: IWorkProject[] = [
         githubLink: '',
         liveLink: '',
         date: 'September 18, 2023',
-        slug: 'digital-resume'
+        slug: 'digital-resume',
+        imageCover: '/imgs/workSamples/digitalResume/resume0.png'
     },
     {
         name: ProjectNames.Entourage,
@@ -37,7 +38,8 @@ export const projects: IWorkProject[] = [
         githubLink: '',
         liveLink: '',
         date: 'May 16, 2023',
-        slug: 'bride-entourage'
+        slug: 'bride-entourage',
+        imageCover: '/imgs/workSamples/brideEntourage/entourage0.png'
     },
     {
         name: ProjectNames.PokeQuiz,
@@ -51,7 +53,8 @@ export const projects: IWorkProject[] = [
         githubLink: 'https://github.com/mrsjlwhite/poke-quiz',
         liveLink: 'https://mrsjlwhite.github.io/poke-quiz/',
         date: 'March 27, 2023',
-        slug: 'poke-quiz'
+        slug: 'poke-quiz',
+        imageCover: '/imgs/workSamples/poke/poke0.png'
     },
     {
         name: ProjectNames.Kimba,
@@ -65,7 +68,8 @@ export const projects: IWorkProject[] = [
         githubLink: 'https://github.com/mrsjlwhite/heyyo-kimba',
         liveLink: 'https://heyyokimba.com',
         date: 'September 4, 2022',
-        slug: 'heyyo-kimba'
+        slug: 'heyyo-kimba',
+        imageCover: '/imgs/workSamples/kimba/kimba0.png'
     },
     {
         name: ProjectNames.Hundekey,
@@ -79,6 +83,7 @@ export const projects: IWorkProject[] = [
         githubLink: 'https://github.com/mrsjlwhite/hundekeycreeates',
         liveLink: 'https://hundekeycreeates.com/',
         date: 'December 10, 2022',
-        slug: 'hundekey-creeates'
+        slug: 'hundekey-creeates',
+        imageCover: '/imgs/workSamples/hundekey/hundekey0.png'
     }
 ]
