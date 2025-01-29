@@ -13,7 +13,7 @@ function MyLinks() {
                     Feel free to message me on any of these platforms.
                 </p>
                 <div className={styles.iconsContainer}>
-                    <SocialsIcons iconSize={IconSize.large} />
+                    <SocialsIcons iconSize={IconSize.large} messagingOnly />
                 </div>
             </div>
         </section>

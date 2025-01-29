@@ -18,3 +18,12 @@
         font-size: 40px;
     }
 }
+
+@media screen and (max-width: $mobile-width) {
+    .sectionHeader {
+        .title {
+            font-size: 2rem;
+            width: 60vw;
+        }
+    }
+}
