@@ -1,10 +1,8 @@
-import styles from './myNavbar.module.scss';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import SocialsIcons from '../socialsIcons/SocialsIcons';
-import Link from 'next/link';
-import { MobileView } from 'react-device-detect';
+import styles from './myNavbar.module.scss'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import Link from 'next/link'
 
 function MyNavbar() {
 
@@ -35,11 +33,6 @@ function MyNavbar() {
                             href="/projects">
                             Projects
                         </Nav.Link>
-                        <MobileView>
-                            <Nav.Link>
-                                <SocialsIcons />
-                            </Nav.Link>
-                        </MobileView>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
