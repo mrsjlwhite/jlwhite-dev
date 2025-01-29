@@ -35,13 +35,6 @@ function MyNavbar() {
                             href="/projects">
                             Projects
                         </Nav.Link>
-                        <Nav.Link
-                            as={Link}
-                            className={styles.myNavLink}
-                            href="/contact"
-                            scroll={false}>
-                            Contact
-                        </Nav.Link>
                         <MobileView>
                             <Nav.Link>
                                 <SocialsIcons />
