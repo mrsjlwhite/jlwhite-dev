@@ -20,6 +20,7 @@ This is a React app built with Next.js to talk a lil' about me, and for me to ad
 - 📦 Packages
   -  [Sass](https://sass-lang.com/documentation/)
   - [`react-device-detect`](https://www.npmjs.com/package/react-device-detect)
+  - [`react-animation-on-scroll`](https://www.npmjs.com/package/react-animation-on-scroll)
 - 🍱 Assets
   - [Devicon Icons](https://devicon.dev/)
   - [Bootstrap Icons](https://icons.getbootstrap.com/)

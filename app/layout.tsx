@@ -6,6 +6,7 @@ import { Lora, Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect } from 'react'
+import "animate.css/animate.min.css"
 
 // Font files can be colocated inside of `app`
 const titleFont = localFont({

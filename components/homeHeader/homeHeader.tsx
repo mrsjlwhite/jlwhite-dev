@@ -1,3 +1,4 @@
+'use client';
 import styles from './homeHeader.module.scss';
 import header from '@/imgs/header.jpeg';
 import { TypeAnimation } from 'react-type-animation';
