@@ -9,4 +9,5 @@ export interface IWorkProject {
     liveLink: string
     slug: string
     imageCover: string
+    images: string[]
 }

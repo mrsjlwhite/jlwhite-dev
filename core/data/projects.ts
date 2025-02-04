@@ -19,7 +19,8 @@ export const projects: IWorkProject[] = [
         liveLink: '',
         date: 'September 18, 2023',
         slug: 'digital-resume',
-        imageCover: '/imgs/workSamples/digitalResume/resume0.png'
+        imageCover: '/imgs/workSamples/digitalResume/resume0.png',
+        images: ['/imgs/workSamples/digitalResume/resume1.png', '/imgs/workSamples/digitalResume/resume2.png', '/imgs/workSamples/digitalResume/resume3.png']
     },
     {
         name: ProjectNames.Entourage,
@@ -39,7 +40,8 @@ export const projects: IWorkProject[] = [
         liveLink: '',
         date: 'May 16, 2023',
         slug: 'bride-entourage',
-        imageCover: '/imgs/workSamples/brideEntourage/entourage0.png'
+        imageCover: '/imgs/workSamples/brideEntourage/entourage0.png',
+        images: ['/imgs/workSamples/brideEntourage/entourage1.png', '/imgs/workSamples/brideEntourage/entourage2.png', '/imgs/workSamples/brideEntourage/entourage3.png']
     },
     {
         name: ProjectNames.PokeQuiz,
@@ -54,7 +56,8 @@ export const projects: IWorkProject[] = [
         liveLink: 'https://mrsjlwhite.github.io/poke-quiz/',
         date: 'March 27, 2023',
         slug: 'poke-quiz',
-        imageCover: '/imgs/workSamples/poke/poke0.png'
+        imageCover: '/imgs/workSamples/poke/poke0.png',
+        images: ['/imgs/workSamples/poke/poke1.png', '/imgs/workSamples/poke/poke2.png']
     },
     {
         name: ProjectNames.Kimba,
@@ -69,7 +72,8 @@ export const projects: IWorkProject[] = [
         liveLink: 'https://heyyokimba.com',
         date: 'September 4, 2022',
         slug: 'heyyo-kimba',
-        imageCover: '/imgs/workSamples/kimba/kimba0.png'
+        imageCover: '/imgs/workSamples/kimba/kimba0.png',
+        images: ['/imgs/workSamples/kimba/kimba1.png', '/imgs/workSamples/kimba/kimba2.png', '/imgs/workSamples/kimba/kimba3.png']
     },
     {
         name: ProjectNames.Hundekey,
@@ -84,6 +88,7 @@ export const projects: IWorkProject[] = [
         liveLink: 'https://hundekeycreeates.com/',
         date: 'December 10, 2022',
         slug: 'hundekey-creeates',
-        imageCover: '/imgs/workSamples/hundekey/hundekey0.png'
+        imageCover: '/imgs/workSamples/hundekey/hundekey0.png',
+        images: ['/imgs/workSamples/hundekey/hundekey1.png', '/imgs/workSamples/hundekey/hundekey2.png']
     }
 ]
