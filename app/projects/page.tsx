@@ -14,7 +14,7 @@ const ProjectsMagazineList = () => {
                         <div className={styles.text}>
                             <h2>{article.name}</h2>
                             <h3>{article.summary}</h3>
-                            <p>{article.description}</p>
+                            <p>{article.preview}</p>
                             <p className={styles.badge}>{article.projectType}</p>
                         </div>
                         <div className={styles.image}>
