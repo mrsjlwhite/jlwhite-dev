@@ -1,0 +1,30 @@
+@import '../../styles/styles.scss';
+
+.imgGrid {
+    @include image-grid;
+    // display: flex;
+    // flex-direction: column;
+
+    // .imgGridItem {
+    //     @include animated-box-shadow;
+    //     background-color: white;
+    //     padding: 1.5rem 1rem 4.5rem 1rem;
+    //     margin-bottom: 1rem;
+    //     border-radius: 0;
+
+    //     img {
+    //         object-fit: scale-down;
+    //         max-height: 25vh;
+    //     }
+
+    //     &:last-child {
+    //         margin-bottom: unset;
+    //     }
+    // }
+}
+
+// @media screen and (max-width: $mobile-width) {
+//     .imgGrid {
+//         grid-auto-rows: unset;
+//     }
+// }

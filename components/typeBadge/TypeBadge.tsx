@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import styles from './typeBadge.module.scss';
 import { ProjectTypes } from 'lib/constants';

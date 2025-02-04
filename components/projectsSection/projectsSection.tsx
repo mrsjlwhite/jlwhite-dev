@@ -1,19 +1,21 @@
+'use client'
 import Link from 'next/link'
 import styles from './projectsSection.module.scss'
 import { useEffect, useState } from 'react';
-import { projects } from '@/data/projects';
 import { IWorkProject } from '@/interfaces/workProject';
 import ProjectCover from 'components/projectCover/projectCover';
 import SectionHeader from '../sectionHeader/sectionHeader';
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ projects }) => {
     const [workProjects, setWorkProjects] = useState<IWorkProject[]>([]);
 
     useEffect(() => {
         if (projects && projects.length) {
-            setWorkProjects(projects.splice(0, 4));
+            setWorkProjects(projects);
         }
     }, [projects])
+
+    if (!workProjects.length) return null;
 
     return (
         <section id="my-work" className='home-section'>

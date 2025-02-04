@@ -1,41 +1,41 @@
-'use client'
 import styles from './projects.module.scss';
 import { projects } from 'core/data/projects';
 import PageContainer from '@/components/containers/PageContainer';
-import ProjectCover from 'components/projectCover/projectCover';
-import { useEffect, useState } from 'react';
-import Spinner from 'react-bootstrap/Spinner';
+import { Suspense } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Work = () => {
-    const [loading, setLoading] = useState(true);
-    const [loadedProjects, setLoadedProjects] = useState<any[]>([]);
-
-    useEffect(() => {
-        setLoadedProjects(projects);
-        setLoading(false);
-    }, [projects]);
-
-    if (loading) {
-        return (
-            <PageContainer>
-                <Spinner animation="border" role="status" className='d-flex mx-auto'>
-                    <span className="visually-hidden">Loading...</span>
-                </Spinner>
-            </PageContainer>
-        );
-    }
-
+const ProjectsMagazineList = () => {
     return (
         <PageContainer>
-            <ul className={styles.workGallery}>
-                {loadedProjects.map((project) =>
-                    <li key={project.name}>
-                        <ProjectCover name={project.name} slug={project.slug} summary={project.summary} />
-                    </li>)
-                }
-            </ul>
+            <div className={styles.magazineList}>
+                {projects.map((article, index) => (
+                    <Link key={index} href={`/projects/${article.slug}`} className={styles.magazineItem}>
+                        <div className={styles.text}>
+                            <h2>{article.name}</h2>
+                            <h3>{article.summary}</h3>
+                            <p>{article.preview}</p>
+                            <p className={styles.badge}>{article.projectType}</p>
+                        </div>
+                        <div className={styles.image}>
+                            <Image
+                                src={article.imageCover}
+                                alt={article.name}
+                                height={250}
+                                width={350}
+                            />
+                        </div>
+                    </Link>
+                ))}
+            </div>
         </PageContainer>
     )
 }
 
-export default Work
+export default function MagazineListWrapper() {
+    return (
+        <Suspense fallback={<p className="loading">Loading articles...</p>}>
+            <ProjectsMagazineList />
+        </Suspense>
+    );
+}
