@@ -24,6 +24,7 @@ type Props = {
 const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
     const [imageSrc, setImageSrc] = useState(null);
     const [imageSize, setImageSize] = useState<IconSize>(size);
+    const [imageClass, setImageClass] = useState(styles.iconImageWhite);
 
     useEffect(() => {
         switch (link.name.toLowerCase()) {
@@ -51,9 +52,11 @@ const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
             case IconSize.large:
                 newSize = isMobile ? IconSize.largeMobile : IconSize.large;
                 setImageSize(newSize);
+                setImageClass(styles.iconImageGreen);
                 break;
             default:
                 setImageSize(size);
+                setImageClass(styles.iconImageWhite);
                 break;
         }
     }, [size, isMobile])
@@ -65,7 +68,7 @@ const SocialIconImage = ({ link, size = IconSize.large }: Props) => {
     return (
         <Image
             src={imageSrc}
-            className={styles.iconImage}
+            className={imageClass}
             height={imageSize}
             width={imageSize}
             alt={`${link.name} Logo`}

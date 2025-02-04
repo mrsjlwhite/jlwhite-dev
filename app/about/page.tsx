@@ -1,12 +1,13 @@
 'use client'
-import styles from './about.module.scss';
-import { aboutMe } from 'core/data/aboutMe';
-import PageContainer from '@/components/containers/PageContainer';
-import TechIcon from 'components/techIcon/TechIcon';
-import Image from 'next/image';
-import jobTechIcons from '@/data/jobTechIcons';
-import { useEffect, useState } from 'react';
-import AboutMeSkills from 'components/aboutMeSkills/aboutMeSkills';
+import styles from './about.module.scss'
+import { aboutMe } from 'core/data/aboutMe'
+import PageContainer from '@/components/containers/PageContainer'
+import TechIcon from 'components/techIcon/TechIcon'
+import Image from 'next/image'
+import jobTechIcons from '@/data/jobTechIcons'
+import { useEffect, useState } from 'react'
+import AboutMeSkills from 'components/aboutMeSkills/aboutMeSkills'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const photoSet = [
     { img: '/imgs/fun1.jpeg', text: 'Wildflower from a hike' },
@@ -51,20 +52,24 @@ const About = () => {
                     priority />
             </section>
 
-            <AboutMeSkills />
+            <AnimationOnScroll animateIn="animate__fadeIn">
+                <AboutMeSkills />
+            </AnimationOnScroll>
 
-            <div className={styles.aboutMeGallery}>
-                {photoSet.map(({ img, text }) => {
-                    return (
-                        <Image
-                            src={img}
-                            alt={text}
-                            key={text}
-                            height={350}
-                            width={385} />
-                    )
-                })}
-            </div>
+            <AnimationOnScroll animateIn="animate__fadeIn">
+                <div className={styles.aboutMeGallery}>
+                    {photoSet.map(({ img, text }) => {
+                        return (
+                            <Image
+                                src={img}
+                                alt={text}
+                                key={text}
+                                height={350}
+                                width={385} />
+                        )
+                    })}
+                </div>
+            </AnimationOnScroll>
 
             <div className={styles.iconFooter}>
                 {techIcons.map((icon) => <TechIcon key={icon} icon={icon} className='m-1' />)}
