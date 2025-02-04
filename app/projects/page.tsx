@@ -3,13 +3,14 @@ import { projects } from 'core/data/projects';
 import PageContainer from '@/components/containers/PageContainer';
 import { Suspense } from "react";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ProjectsMagazineList = () => {
     return (
         <PageContainer>
             <div className={styles.magazineList}>
                 {projects.map((article, index) => (
-                    <div key={index} className={styles.magazineItem}>
+                    <Link key={index} href={`/projects/${article.slug}`} className={styles.magazineItem}>
                         <div className={styles.text}>
                             <h2>{article.name}</h2>
                             <h3>{article.summary}</h3>
@@ -24,7 +25,7 @@ const ProjectsMagazineList = () => {
                                 width={350}
                             />
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </PageContainer>
