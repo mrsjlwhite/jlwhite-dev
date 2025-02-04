@@ -11,4 +11,5 @@ export interface IWorkProject {
     slug: string
     imageCover: string
     images: string[]
+    previewOnHomepage: boolean
 }

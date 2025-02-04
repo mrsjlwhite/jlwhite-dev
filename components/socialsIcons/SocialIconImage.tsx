@@ -1,3 +1,4 @@
+'use client';
 import ig from '@/svgs/instagram.svg';
 import gh from '@/svgs/github.svg';
 import li from '@/svgs/linkedin.svg';
