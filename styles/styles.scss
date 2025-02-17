@@ -4,13 +4,16 @@ $font-heading: var(--font-heading); //'Lora';
 $font-body: var(--font-body); //'Roboto Slab', serif;
 
 // colors
-$color-white: #F5F0EE; //isabelline
+$color-white: #F5F0EE;
 $color-off-white: #F0E8E5; //isabelline
-$color-black: #141414; // night
+$color-black: #0D1821; // rick black
+// $color-black: #141414; // night
 $color-purple: #BAA1AD; //rose quartz
+$color-blue: #344966; //indigo dye
+$color-red: #8C271E; //burnt umber
 $color-green: #5A7557; //reseda green
 $color-green-faded: rgba($color-green, 0.8);
-$color-gold: #BF984A; //satin sheen gold
+// $color-gold: #BF984A; //satin sheen gold
 $color-soft-white: #f2f3f2; //stone soft white
 
 // variables
@@ -24,6 +27,8 @@ $transform-grow-on-hover: scale(1.05);
 
 // themes
 $background-color: $color-soft-white;
+$accent-color1: $color-red;
+$accent-color2: $color-blue;
 
 // shared classes
 @mixin section-title-text {
