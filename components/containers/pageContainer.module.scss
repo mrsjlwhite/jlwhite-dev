@@ -4,3 +4,8 @@
     background-color: $background-color;
     min-height: 88vh;
 }
+
+.pageTitle {
+    @include section-title-text;
+    color: $color-black;
+}
