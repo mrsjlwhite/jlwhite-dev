@@ -1,101 +1,70 @@
 @import '../../styles/styles.scss';
 
+.linksSection {
+    background-color: $color-black;
+    padding: 4rem 1em;
+
+    .sectionTitle {
+        @include section-title-text;
+        color: $color-white;
+        font-size: clamp(2rem, 60vw, 9rem); // (minimum size for small screens), (scales based on viewport width), (maximum size for large screens).
+    }
+
+    .blurbTitle {
+        text-transform: uppercase;
+        text-align: start;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        padding-bottom: 9px;
+        padding-top: 12px;
+    }
+
+    hr {
+        color: $color-white;
+    }
+}
+
 .linksSectionContainer {
-    align-items: center;
     display: flex;
-    flex-direction: column;
     height: 100%;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: .5em;
 
     p {
         @include body-text;
         text-align: center;
         padding-bottom: 1em;
         max-width: 30vw;
+        color: $color-white;
+        text-align: start;
     }
 
-    .iconsContainer {
-        max-width: 30vw;
-        margin-bottom: 3em;
-    }
-}
+    .linksContainer {
+        display: flex;
+        flex-direction: column;
 
-.linkButton {
-    background-color: rgba($color-gold, 0.2) !important;
-    border: solid 2px rgba($color-gold, 0.8) !important;
-    margin: 1.5rem 2rem;
-    padding: 1rem 1.5rem 0 !important;
-    min-width: 173px;
+        a {
+            @include body-text;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: transform 0.2s ease-in-out;
 
-    i {
-        font-size: 100px;
-        padding: 0 8px;
-    }
-
-    .buttonText {
-        @include section-title-text;
-        display: block;
-        font-size: 30px;
-    }
-
-    &:hover {
-        background-color: rgba($color-gold, 0.6) !important;
-
-
-        .buttonText {
-            color: rgba($color-off-white, 0.9) !important;
-            opacity: 1;
+            &:hover {
+                color: $color-purple;
+                transform: scale(1.05);
+            }
         }
-    }
-
-    &:active {
-        background-color: rgba($color-gold, 0.8) !important;
     }
 }
 
 @media screen and (max-width: $mobile-width) {
 
-
     .linksSectionContainer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-        p {
-            max-width: 90vw;
-        }
-
-        .iconsContainer {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    .linkButton {
-        margin: 1rem 1.5rem;
-
-        .buttonText {
-            color: rgba($color-off-white, 0.9) !important;
-            opacity: 1;
-        }
-    }
-}
-
-@media screen and (min-device-width : $tablet-width) and (max-device-width : $desktop-width) {
-
-    .iconsContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 4em;
-    }
-
-    .linkButton {
-        margin: 1rem 1.5rem;
-
-        .buttonText {
-            color: rgba($color-off-white, 0.9) !important;
-            opacity: 1;
-        }
     }
 }
