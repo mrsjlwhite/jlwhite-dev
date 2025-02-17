@@ -7,6 +7,8 @@ import localFont from 'next/font/local'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect } from 'react'
 import "animate.css/animate.min.css"
+import { usePathname } from 'next/navigation'
+import MyLinks from '@/components/myLinks/MyLinks'
 
 // Font files can be colocated inside of `app`
 const titleFont = localFont({
@@ -30,6 +32,8 @@ export default function RootLayout({
 }: {
     children: React.ReactNode
 }) {
+    const pathname = usePathname();
+    const isHomePage = pathname === '/';
 
     useEffect(() => {
         import('bootstrap/dist/js/bootstrap.bundle.min.js');
@@ -44,7 +48,7 @@ export default function RootLayout({
             </head>
             <body>
                 {children}
-                <MyFooter />
+                {isHomePage ? <MyLinks /> : <MyFooter />}
             </body>
         </html>
     )
