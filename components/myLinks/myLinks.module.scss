@@ -50,11 +50,11 @@
             color: $color-white;
             text-decoration: none;
             text-transform: uppercase;
-            transition: transform 0.2s ease-in-out;
+            transition: $transition-grow-on-hover;
 
             &:hover {
                 color: $color-purple;
-                transform: scale(1.05);
+                transform: $transform-grow-on-hover;
             }
         }
     }

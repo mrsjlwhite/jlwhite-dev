@@ -17,7 +17,7 @@ const AboutMeBanner = () => {
           alt='Jeslyn'
         />
         <div className={styles.bannerTextContainer}>
-          <h4 className='section-title text-start'>About Me</h4>
+          <h4 className={styles.sectionTitle}>About Me</h4>
           <p className='section-body'>
             {bannerText}
           </p>
