@@ -63,8 +63,25 @@
 @media screen and (max-width: $mobile-width) {
 
     .linksSectionContainer {
-        display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+
+        .linksContainer {
+
+            a {
+                text-align: center;
+            }
+        }
+
+        .blurbTitle {
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        p {
+            text-align: center;
+            max-width: 80vw;
+        }
     }
 }
