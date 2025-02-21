@@ -65,18 +65,30 @@ $accent-color2: $color-blue;
     font-size: 16px;
 }
 
-@mixin green-button {
-    color: $color-green !important;
-    font-family: $font-sub-heading !important;
+@mixin default-button {
+    @include section-title-text;
+    @include animated-box-shadow;
+    background-color: rgba($accent-color1, 0.2);
+    border: solid 2px rgba($accent-color1, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: $font-sub-heading;
+    letter-spacing: .2em;
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    max-width: 20vw;
+    margin: auto;
 
     &:hover {
-        background-color: rgba($color-green, 0.2) !important;
-    }
+        background-color: rgba($accent-color1, 0.6) !important;
+        color: $color-off-white;
 
-    &:active {
-        background-color: rgba($color-green, 0.4) !important;
-        box-shadow: 0 2px rgba($color-black, 0.2);
-        transform: translateY(4px);
+        .buttonText {
+            color: rgba($color-off-white, 0.9) !important;
+            opacity: 1;
+        }
     }
 }
 
