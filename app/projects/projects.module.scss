@@ -98,3 +98,12 @@
         transform: translateY(0);
     }
 }
+
+@media screen and (max-width: $mobile-width) {
+    .magazineList {
+
+        .magazineItem {
+            flex-direction: column;
+        }
+    }
+}

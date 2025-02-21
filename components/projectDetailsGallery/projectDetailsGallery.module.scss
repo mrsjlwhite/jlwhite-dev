@@ -41,8 +41,10 @@
     }
 }
 
-// @media screen and (max-width: $mobile-width) {
-//     .imgGrid {
-//         grid-auto-rows: unset;
-//     }
-// }
+@media screen and (max-width: $mobile-width) {
+    .imgGrid {
+        .imgGridItem {
+            padding: .2em;
+        }
+    }
+}
