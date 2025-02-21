@@ -1,5 +1,5 @@
 'use client'
-import { experiences } from '@/data/experiences'
+import { experiences } from 'data/experiences'
 import styles from './workExperienceSection.module.scss'
 import Image from 'next/image'
 import coffee from '@/imgs/coffee.png'

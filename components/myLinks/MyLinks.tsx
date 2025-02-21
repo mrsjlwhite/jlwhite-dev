@@ -1,9 +1,9 @@
 'use client'
 import styles from './myLinks.module.scss'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
-import ILinkUrl from '@/interfaces/linkUrl'
+import ILinkUrl from '@/lib/interfaces/linkUrl'
 import { useEffect, useState } from 'react'
-import { linkUrls } from '@/data/linkUrls'
+import { linkUrls } from 'data/linkUrls'
 
 function MyLinks() {
     const [links, setLinks] = useState<ILinkUrl[]>([]);

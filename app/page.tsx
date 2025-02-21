@@ -4,7 +4,7 @@ import MyNavbar from '../components/myNavbar/MyNavbar'
 import AboutMeBanner from '../components/aboutMeBanner/AboutMeBanner'
 import WorkExperienceSection from '../components/workExperienceSection/workExperienceSection'
 import ProjectsSection from '../components/projectsSection/projectsSection'
-import { projects } from '@/data/projects'
+import { projects } from 'data/projects'
 
 export default function HomePage() {
     return (

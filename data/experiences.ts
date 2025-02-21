@@ -1,4 +1,4 @@
-import { IExperienceJob } from "@/interfaces/experienceJob";
+import { IExperienceJob } from "@/lib/interfaces/experienceJob";
 
 const react = 'React';
 const reactnative = 'React Native';

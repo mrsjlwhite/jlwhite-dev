@@ -1,4 +1,4 @@
-import { projects } from 'core/data/projects';
+import { projects } from 'data/projects';
 import styles from './workDetails.module.scss';
 import Link from 'next/link';
 import TypeBadge from 'components/typeBadge/TypeBadge';
