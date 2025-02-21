@@ -2,25 +2,43 @@
 
 .imgGrid {
     @include image-grid;
-    // display: flex;
-    // flex-direction: column;
+}
 
-    // .imgGridItem {
-    //     @include animated-box-shadow;
-    //     background-color: white;
-    //     padding: 1.5rem 1rem 4.5rem 1rem;
-    //     margin-bottom: 1rem;
-    //     border-radius: 0;
+.imgGridItem {
+    cursor: pointer;
+}
 
-    //     img {
-    //         object-fit: scale-down;
-    //         max-height: 25vh;
-    //     }
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+    z-index: 10000;
+}
 
-    //     &:last-child {
-    //         margin-bottom: unset;
-    //     }
-    // }
+.modalContent {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 // @media screen and (max-width: $mobile-width) {
