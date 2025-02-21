@@ -1,7 +1,32 @@
 import { IWorkProject } from "@/lib/interfaces/workProject";
 import { ProjectTypes, ProjectNames } from 'lib/constants';
+import { next, react, typescript, bootstrap, sass, html, css, javascript } from "./languages";
 
 export const projects: IWorkProject[] = [
+    {
+        name: ProjectNames.MusicianWebsite,
+        summary: "Singer-Songwriter's Aura Website",
+        preview: "A high visual, aura aesthetic musician website featuring an aesthetic UI and dynamic content management.",
+        description: `
+        Helped co-develop a musician website for a singer-songwriter to showcase her music, announcements, accreditations, and accolades.
+        Features included;
+        : Youthful aura aesthetic with an aura-moving background.
+        : Headless CMS with Notion for easy content updates by the client.
+        : Responsive design for optimal viewing on all devices.
+        : Integration with social media platforms for easy sharing.
+        : Custom audio player for streaming the artist's music.
+        : SEO optimization for better search engine visibility.
+        `,
+        tech: [react, next, typescript, sass],
+        projectType: ProjectTypes.Client,
+        githubLink: '',
+        liveLink: '',
+        date: 'May 5, 2024',
+        slug: 'musician-website',
+        imageCover: '/imgs/workSamples/musicianWebsite/musician0.png',
+        images: ['/imgs/workSamples/musicianWebsite/musician1.png', '/imgs/workSamples/musicianWebsite/musician2.png', '/imgs/workSamples/musicianWebsite/musician3.png'],
+        previewOnHomepage: false
+    },
     {
         name: ProjectNames.DigitalResume,
         summary: "A Neurologist's Digital Resume",
@@ -13,8 +38,9 @@ export const projects: IWorkProject[] = [
         : Seamless homepage with endless scroll and fade-in informational cards.
         : Client-controlled content updates via Markdown.
         : Document downloads for user accessibility.
+        : Detailed sections for publications, research, and academic achievements.
         `,
-        tech: ['react', 'next.js', 'typescript', 'bootstrap', 'sass'],
+        tech: [react, next, typescript, bootstrap, sass],
         projectType: ProjectTypes.Client,
         githubLink: '',
         liveLink: '',
@@ -37,7 +63,7 @@ export const projects: IWorkProject[] = [
         : Curated links from the bride.
         : Photo gallery to share special moments.
         `,
-        tech: ['react', 'next.js', 'sass'],
+        tech: [react, next, typescript, sass],
         projectType: ProjectTypes.Client,
         githubLink: '',
         liveLink: '',
@@ -56,8 +82,10 @@ export const projects: IWorkProject[] = [
         Features included;
         : Randomly generates Pokémon based on user selections.
         : Clean, simple interface for easy interaction.
+        : Uses a PokéAPI to update the UI based on the user's selected Pokémon type.
+        : Fully vanilla project to practice JavaScript without frameworks.
         `,
-        tech: ['html', 'css', 'javascript'],
+        tech: [html, css, javascript],
         projectType: ProjectTypes.Interview,
         githubLink: 'https://github.com/mrsjlwhite/poke-quiz',
         liveLink: 'https://mrsjlwhite.github.io/poke-quiz/',
@@ -76,8 +104,10 @@ export const projects: IWorkProject[] = [
         Features included;
         : Fully responsive design for all devices.
         : Integrated SendGrid for email communication, secured with reCAPTCHA validation.
+        : Uses static markdown files for the blog posts, ensuring high performance.
+        : Clean and modern UI for an optimal reading experience.
         `,
-        tech: ['react', 'next.js', 'typescript', 'sass'],
+        tech: [react, next, typescript, sass],
         projectType: ProjectTypes.Personal,
         githubLink: 'https://github.com/mrsjlwhite/heyyo-kimba',
         liveLink: 'https://heyyokimba.com',
@@ -97,7 +127,7 @@ export const projects: IWorkProject[] = [
         : Custom photo and video viewer for enhanced artwork display.
         : Fully responsive design, hosted via GitHub Pages.
         `,
-        tech: ['react', 'javascript', 'sass'],
+        tech: [react, javascript, sass],
         projectType: ProjectTypes.Client,
         githubLink: 'https://github.com/mrsjlwhite/hundekeycreeates',
         liveLink: 'https://hundekeycreeates.com/',

@@ -16,6 +16,7 @@ export const materialUI = 'Material-UI';
 export const mongoDB = 'MongoDB';
 export const mySql = 'MySQL';
 export const nodejs = 'Node.js';
+export const next = 'Next.js';
 export const react = 'React';
 export const reactnative = 'React Native';
 export const redux = 'Redux';
