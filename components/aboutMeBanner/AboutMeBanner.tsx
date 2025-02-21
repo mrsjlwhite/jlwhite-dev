@@ -1,5 +1,5 @@
 'use client'
-import { aboutMeSummary } from '@/data/aboutMe';
+import { aboutMeSummary } from 'data/aboutMe';
 import styles from './aboutMeBanner.module.scss';
 import banner from '@/imgs/aboutBanner.png';
 import Image from 'next/image';
@@ -17,7 +17,7 @@ const AboutMeBanner = () => {
           alt='Jeslyn'
         />
         <div className={styles.bannerTextContainer}>
-          <h4 className='section-title text-start'>About Me</h4>
+          <h4 className={styles.sectionTitle}>About Me</h4>
           <p className='section-body'>
             {bannerText}
           </p>

@@ -1,12 +1,12 @@
-import { projects } from 'core/data/projects';
+import { projects } from 'data/projects';
 import styles from './workDetails.module.scss';
 import Link from 'next/link';
 import TypeBadge from 'components/typeBadge/TypeBadge';
 import PageContainer from '@/components/containers/PageContainer';
 import ProjectDetailsGallery from '@/components/projectDetailsGallery/projectDetailsGallery';
 
-const WorkDetails = ({ params }) => {
-    const { slug } = params;
+const WorkDetails = async ({ params }) => {
+    const { slug } = await params;
     const workProject = projects.find(proj => proj.slug === slug);
 
     function setProjectDescription() {

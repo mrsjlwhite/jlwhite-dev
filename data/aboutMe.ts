@@ -1,3 +1,5 @@
+import { react, javascript, typescript, csharp, dotNet, entityFramework, nodejs, vuejs, html, css, express, materialUI, git, aws, restfulAPIs, agile, jira, mySql, reactnative, bootstrap, sass, redux, mongoDB } from "./languages";
+
 export const aboutMe = [
   {
     title: 'hi!',
@@ -39,27 +41,27 @@ Let's build something awesome together!
 `
 
 export const mySkillset: string[] = [
-  'React',
-  'React Native',
-  'Redux',
-  'Vue',
-  'Node',
-  '.NET',
-  'Express',
-  'MongoDB',
-  'TypeScript',
-  'JavaScript',
-  'HTML5',
-  'CSS3',
-  'SASS',
-  'Bootstrap',
-  'C#',
-  'Entity Framework',
-  'MySQL',
-  'Material-UI',
-  'Git',
-  'AWS',
-  'RESTful APIs',
-  'Agile',
-  'Jira'
+  react,
+  reactnative,
+  redux,
+  vuejs,
+  nodejs,
+  dotNet,
+  express,
+  mongoDB,
+  typescript,
+  javascript,
+  html,
+  css,
+  sass,
+  bootstrap,
+  csharp,
+  entityFramework,
+  mySql,
+  materialUI,
+  git,
+  aws,
+  restfulAPIs,
+  agile,
+  jira
 ]

@@ -38,7 +38,7 @@ const PageContainer = (props) => {
                     <Row>
                         <Col>
                             <div className='d-flex justify-content-between align-items-center mt-5'>
-                                <h4 className='section-title'>
+                                <h4 className={styles.pageTitle}>
                                     {pageTitle}
                                 </h4>
                                 <p className='section-sub-title'>

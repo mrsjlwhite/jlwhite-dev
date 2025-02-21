@@ -1,4 +1,4 @@
-import { mySkillset } from '@/data/aboutMe';
+import { mySkillset } from 'data/aboutMe';
 import styles from './aboutMeSkills.module.scss';
 import { useEffect, useState } from 'react';
 

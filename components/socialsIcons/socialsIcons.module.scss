@@ -22,9 +22,11 @@
 
 .iconImageWhite {
     filter: invert(100%) sepia(77%) saturate(86%) hue-rotate(58deg) brightness(113%) contrast(108%); // Changes SVG color to white thanks to https://stackoverflow.com/a/53336754/16305154
+    transition: $transition-grow-on-hover;
 
     &:hover {
-        filter: invert(44%) sepia(4%) saturate(2655%) hue-rotate(67deg) brightness(93%) contrast(83%);
+        filter: invert(0%) brightness(0%);
+        transform: $transform-grow-on-hover;
     }
 }
 
@@ -32,7 +34,7 @@
     filter: invert(44%) sepia(4%) saturate(2655%) hue-rotate(67deg) brightness(93%) contrast(83%);
 
     &:hover {
-        filter: invert(100%) sepia(77%) saturate(86%) hue-rotate(58deg) brightness(113%) contrast(108%);
+        filter: invert(10%) sepia(5%) saturate(10%) hue-rotate(0deg) brightness(20%) contrast(90%);
     }
 }
 

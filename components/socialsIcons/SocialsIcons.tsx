@@ -1,9 +1,9 @@
 'use client'
 import styles from './socialsIcons.module.scss';
 import SocialIconImage, { IconSize } from './SocialIconImage';
-import { linkUrls } from 'core/data/linkUrls';
+import { linkUrls } from 'data/linkUrls';
 import { useEffect, useState } from 'react';
-import ILinkUrl from '@/interfaces/linkUrl';
+import ILinkUrl from '@/lib/interfaces/linkUrl';
 
 function SocialsIcons({ iconSize = IconSize.small, messagingOnly = false, columnLayout = false }) {
     const [links, setLinks] = useState<ILinkUrl[]>([]);

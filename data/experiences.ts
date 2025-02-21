@@ -1,20 +1,5 @@
-import { IExperienceJob } from "@/interfaces/experienceJob";
-
-const react = 'React';
-const reactnative = 'React Native';
-const vuejs = 'Vue.js';
-const javascript = 'JavaScript';
-const typescript = 'TypeScript';
-const csharp = 'C#';
-const css = 'CSS';
-const dotNet = '.NET';
-const entityFramework = 'Entity Framework';
-const sqlServer = 'SQL Server';
-const nodejs = 'Node.js';
-const html = 'HTML5';
-const angular = 'Angular';
-const jQuery = 'jQuery';
-const mySql = 'MySQL';
+import { IExperienceJob } from "@/lib/interfaces/experienceJob";
+import { angular, javascript, typescript, csharp, dotNet, entityFramework, nodejs, vuejs, html, css, sqlServer, reactnative, mySql } from "./languages";
 
 export const experiences: IExperienceJob[] = [
     {

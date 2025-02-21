@@ -4,13 +4,16 @@ $font-heading: var(--font-heading); //'Lora';
 $font-body: var(--font-body); //'Roboto Slab', serif;
 
 // colors
-$color-white: #F5F0EE; //isabelline
+$color-white: #F5F0EE;
 $color-off-white: #F0E8E5; //isabelline
-$color-black: #141414; // night
+$color-black: #0D1821; // rick black
+// $color-black: #141414; // night
 $color-purple: #BAA1AD; //rose quartz
+$color-blue: #344966; //indigo dye
+$color-red: #8C271E; //burnt umber
 $color-green: #5A7557; //reseda green
 $color-green-faded: rgba($color-green, 0.8);
-$color-gold: #BF984A; //satin sheen gold
+// $color-gold: #BF984A; //satin sheen gold
 $color-soft-white: #f2f3f2; //stone soft white
 
 // variables
@@ -19,8 +22,13 @@ $mobile-width: 650px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
+$transition-grow-on-hover: transform 0.2s ease-in-out;
+$transform-grow-on-hover: scale(1.05);
+
 // themes
 $background-color: $color-soft-white;
+$accent-color1: $color-red;
+$accent-color2: $color-blue;
 
 // shared classes
 @mixin section-title-text {
@@ -57,18 +65,30 @@ $background-color: $color-soft-white;
     font-size: 16px;
 }
 
-@mixin green-button {
-    color: $color-green !important;
-    font-family: $font-sub-heading !important;
+@mixin default-button {
+    @include section-title-text;
+    @include animated-box-shadow;
+    background-color: rgba($accent-color1, 0.2);
+    border: solid 2px rgba($accent-color1, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: $font-sub-heading;
+    letter-spacing: .2em;
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    max-width: 20vw;
+    margin: auto;
 
     &:hover {
-        background-color: rgba($color-green, 0.2) !important;
-    }
+        background-color: rgba($accent-color1, 0.6) !important;
+        color: $color-off-white;
 
-    &:active {
-        background-color: rgba($color-green, 0.4) !important;
-        box-shadow: 0 2px rgba($color-black, 0.2);
-        transform: translateY(4px);
+        .buttonText {
+            color: rgba($color-off-white, 0.9) !important;
+            opacity: 1;
+        }
     }
 }
 

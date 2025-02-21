@@ -11,30 +11,7 @@
 }
 
 .viewAllLink {
-    @include section-title-text;
-    @include animated-box-shadow;
-    background-color: rgba($color-gold, 0.2);
-    border: solid 2px rgba($color-gold, 0.8);
-    padding: 1rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-family: $font-sub-heading;
-    letter-spacing: .2em;
-    display: block;
-    text-align: center;
-    font-size: 28px;
-    max-width: 20vw;
-    margin: auto;
-
-    &:hover {
-        background-color: rgba($color-gold, 0.6) !important;
-        color: $color-off-white;
-
-        .buttonText {
-            color: rgba($color-off-white, 0.9) !important;
-            opacity: 1;
-        }
-    }
+    @include default-button;
 }
 
 @media screen and (max-width: $mobile-width) {

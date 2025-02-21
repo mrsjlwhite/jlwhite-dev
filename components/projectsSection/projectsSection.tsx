@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import styles from './projectsSection.module.scss'
 import { useEffect, useState } from 'react'
-import { IWorkProject } from '@/interfaces/workProject'
+import { IWorkProject } from '@/lib/interfaces/workProject'
 import ProjectCover from 'components/projectCover/projectCover'
 import SectionHeader from '../sectionHeader/sectionHeader'
 import { AnimationOnScroll } from 'react-animation-on-scroll'

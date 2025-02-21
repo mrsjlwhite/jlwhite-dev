@@ -1,4 +1,4 @@
-import jobTechIcons from "core/data/jobTechIcons";
+import jobTechIcons from "data/jobTechIcons";
 
 export const openLink = (url: string) => window.open(url, '_blank', 'noreferrer');
 

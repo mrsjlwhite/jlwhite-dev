@@ -4,7 +4,7 @@ import gh from '@/svgs/github.svg';
 import li from '@/svgs/linkedin.svg';
 import x from '@/svgs/x.svg';
 import Image from 'next/image';
-import ILinkUrl from 'core/interfaces/linkUrl';
+import ILinkUrl from '@/lib/interfaces/linkUrl';
 import { useEffect, useState } from 'react';
 import { openLink } from '@/lib/utils';
 import { isMobile } from 'react-device-detect';
