@@ -4,6 +4,7 @@ import PageContainer from '@/components/containers/PageContainer';
 import { Suspense } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
+import TypeBadge from '@/components/typeBadge/TypeBadge';
 
 const ProjectsMagazineList = () => {
     return (
@@ -15,7 +16,7 @@ const ProjectsMagazineList = () => {
                             <h2>{article.name}</h2>
                             <h3>{article.summary}</h3>
                             <p>{article.preview}</p>
-                            <p className={styles.badge}>{article.projectType}</p>
+                            <TypeBadge type={article.projectType} />
                         </div>
                         <div className={styles.image}>
                             <Image

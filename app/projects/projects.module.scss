@@ -60,7 +60,7 @@
 
             .badge {
                 color: $color-white !important;
-                background-color: $color-gold;
+                background-color: $accent-color1;
                 font-family: $font-body;
                 border-radius: 5px;
                 width: 8rem;
@@ -96,5 +96,14 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .magazineList {
+
+        .magazineItem {
+            flex-direction: column;
+        }
     }
 }

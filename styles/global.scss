@@ -38,10 +38,6 @@ small {
     margin: 0 1em .5em 1em;
 }
 
-.green-button {
-    @include green-button;
-}
-
 // Overiding default bootstrap accordion
 .accordion-button {
     &:not(.collapsed) {
