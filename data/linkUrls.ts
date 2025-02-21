@@ -1,4 +1,4 @@
-import ILinkUrl from "core/interfaces/linkUrl";
+import ILinkUrl from "@/lib/interfaces/linkUrl";
 
 export const linkUrls: ILinkUrl[] = [
     {

@@ -1,5 +1,5 @@
 'use client'
-import { aboutMeSummary } from '@/data/aboutMe';
+import { aboutMeSummary } from 'data/aboutMe';
 import styles from './aboutMeBanner.module.scss';
 import banner from '@/imgs/aboutBanner.png';
 import Image from 'next/image';

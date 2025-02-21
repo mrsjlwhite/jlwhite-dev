@@ -1,5 +1,5 @@
 import styles from './projects.module.scss';
-import { projects } from 'core/data/projects';
+import { projects } from 'data/projects';
 import PageContainer from '@/components/containers/PageContainer';
 import { Suspense } from "react";
 import Image from 'next/image';
