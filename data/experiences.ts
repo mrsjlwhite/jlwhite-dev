@@ -1,11 +1,20 @@
 import { IExperienceJob } from "@/lib/interfaces/experienceJob";
-import { angular, javascript, typescript, csharp, dotNet, entityFramework, nodejs, vuejs, html, css, sqlServer, reactnative, mySql } from "./languages";
+import { angular, javascript, typescript, csharp, dotNet, entityFramework, nodejs, vuejs, html, css, sqlServer, reactnative, mySql, esri } from "./languages";
 
 export const experiences: IExperienceJob[] = [
     {
+        name: 'Sun Ridge Systems',
+        title: 'Full Stack Developer',
+        dates: 'May 2025 to Present',
+        techStack: [angular, typescript, csharp, dotNet, sqlServer, nodejs, esri],
+        description: `At Sun Ridge Systems, I contribute to the development of public safety software used by law enforcement agencies. 
+        I focus on building intuitive, user-friendly map features using Esri tools, ensuring a smooth and responsive experience across both desktop and mobile platforms. 
+        My work helps support mission-critical workflows for emergency dispatch and situational awareness.`
+    },
+    {
         name: 'Synergy',
         title: 'Full Stack Engineer',
-        dates: 'Jan 2024 to Present',
+        dates: 'Jan 2024 to May 2025',
         techStack: [angular, javascript, typescript, csharp, dotNet, entityFramework, nodejs],
         description: `As a Full Stack Engineer at Synergy, I spearheaded critical projects supporting the U.S. Department of Agriculture's Forest Service. 
         From rewriting legacy applications to enhancing geospatial tools and mobile platforms, I delivered high-impact solutions under tight deadlines, ensuring performance, security, and usability across the board.
