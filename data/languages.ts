@@ -25,3 +25,4 @@ export const sass = 'SASS';
 export const sqlServer = 'SQL Server';
 export const typescript = 'TypeScript';
 export const vuejs = 'Vue.js';
+export const esri = 'Esri';
