@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './projectCover.module.scss';
 import { useEffect, useState } from 'react';
 import placeholder from '@/imgs/placeholder.png';
-import kimba from '@/imgs/workSamples/kimba/kimba0.png';
+import tinkerfairy from '@/imgs/workSamples/tinkerfairy/tinkerfairy0.png';
 import hundekey from '@/imgs/workSamples/hundekey/hundekey0.png';
 import poke from '@/imgs/workSamples/poke/poke0.png';
 import entourage from '@/imgs/workSamples/brideEntourage/entourage0.png';
@@ -22,8 +22,8 @@ function ProjectCover({ name, slug, summary }: Props) {
 
     useEffect(() => {
         switch (name) {
-            case ProjectNames.Kimba:
-                setImgSrc(kimba);
+            case ProjectNames.Tinkerfairy:
+                setImgSrc(tinkerfairy);
                 setImgAlt(`${name} blog logo`);
                 break;
             case ProjectNames.Hundekey:

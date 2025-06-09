@@ -96,25 +96,25 @@ export const projects: IWorkProject[] = [
         previewOnHomepage: false
     },
     {
-        name: ProjectNames.Kimba,
-        summary: "Tech & Lifestyle Blog",
-        preview: "A modern, responsive tech and lifestyle blog optimized for performance with secure contact integrations.",
+        name: ProjectNames.Tinkerfairy,
+        summary: "🧚‍♀️ Tech & Lifestyle Blog with a Spark of Magic",
+        preview: "A whimsical yet modern blog that blends code, creativity, and everyday fairy life—crafted for performance, designed for joy, and built with secure, thoughtful tech.",
         description: `
-        Designed and developed a static blog site focusing on tech and lifestyle topics.
-        Features included;
-        : Fully responsive design for all devices.
-        : Integrated SendGrid for email communication, secured with reCAPTCHA validation.
-        : Uses static markdown files for the blog posts, ensuring high performance.
-        : Clean and modern UI for an optimal reading experience.
+        Built from the ground up, this static blog site is where tech meets lifestyle—with a sprinkle of Tinkerfairy charm. ✨;
+        : 🪄 Fully responsive design, fluttering beautifully across all screen sizes
+        : 📬 Integrated SendGrid for seamless contact, secured with reCAPTCHA to keep out the trolls
+        : 📚 Powered by static markdown files for ultra-fast performance and simple content management
+        : 🧼 Clean, modern UI focused on an engaging and delightful reading experience
+        : This blog is my cozy little corner of the internet—where I share helpful code tutorials, fairy-sized life updates, and a few favorite magical thing-a-lings along the way. ✨💻🌸
         `,
         tech: [react, next, typescript, sass],
         projectType: ProjectTypes.Personal,
-        githubLink: 'https://github.com/mrsjlwhite/heyyo-kimba',
-        liveLink: 'https://heyyokimba.com',
+        githubLink: 'https://github.com/mrsjlwhite/tinkerfairy',
+        liveLink: 'https://tinkerfairy.dev',
         date: 'September 4, 2022',
-        slug: 'heyyo-kimba',
-        imageCover: '/imgs/workSamples/kimba/kimba0.png',
-        images: ['/imgs/workSamples/kimba/kimba1.png', '/imgs/workSamples/kimba/kimba2.png', '/imgs/workSamples/kimba/kimba3.png'],
+        slug: 'tinkerfairy',
+        imageCover: '/imgs/workSamples/tinkerfairy/tinkerfairy0.png',
+        images: ['/imgs/workSamples/tinkerfairy/tinkerfairy1.png', '/imgs/workSamples/tinkerfairy/tinkerfairy2.png', '/imgs/workSamples/tinkerfairy/kimba3.png'],
         previewOnHomepage: true
     },
     {
